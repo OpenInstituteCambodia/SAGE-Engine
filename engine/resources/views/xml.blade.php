@@ -43,6 +43,11 @@
                                 <td><code>{{ $xpath->evaluate('string(/elements/unit['.$i.']/choice['.$c.']/text)') }}</code></td>
                               </tr>
                               <tr>
+                                <td><code>{{ html_entity_decode('<choice id='.$c.'><image></image>') }}</code></td>
+                                <td><code>placeholder_choice_{{$c}}_image</code></td>
+                                <td><code>{{ $xpath->evaluate('string(/elements/unit['.$i.']/choice['.$c.']/image)') }}</code></td>
+                              </tr>
+                              <tr>
                                 <td><code>{{ html_entity_decode('<choice id='.$c.'><audio></audio>') }}</code></td>
                                 <td><code>placeholder_choice_{{$c}}_audio</code></td>
                                 <td><code>{{ $xpath->evaluate('string(/elements/unit['.$i.']/choice['.$c.']/audio)') }}</code></td>
