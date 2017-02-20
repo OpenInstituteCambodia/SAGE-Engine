@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<elements>
+  <unit id="L3P36Q1" style="M1">
+    <pre-audio>M1.mp3</pre-audio>
+    <audio></audio>
+    <choice_1>
+      <text>Button 1</text>
+      <audio>L3P36_1.mp3</audio>
+    </choice_1>
+    <choice_2>
+      <text>Button 2</text>
+      <audio>L3P36_2.mp3</audio>
+    </choice_2>
+    <correct>1</correct>
+    <next>L3P36Q2</next>
+  </unit>
+  <unit id="L3P36Q2" style="M2">
+    <pre-audio>M2.mp3</pre-audio>
+    <audio></audio>
+    <choice_1>
+      <text>Button 1</text>
+      <audio>L3P36_1.mp3</audio>
+    </choice_1>
+    <choice_2>
+      <text>Button 2</text>
+      <audio>L3P36_2.mp3</audio>
+    </choice_2>
+    <correct>1</correct>
+    <next>L3P36Q2</next>
+  </unit>
+  <unit id="L3P36Q3" style="M1">
+    <pre-audio>M1.mp3</pre-audio>
+    <audio></audio>
+    <choice_1>
+      <text>Button 1</text>
+      <audio>L3P36_1.mp3</audio>
+    </choice_1>
+    <choice_2>
+      <text>Button 2</text>
+      <audio>L3P36_2.mp3</audio>
+    </choice_2>
+    <correct>1</correct>
+    <next>L3P36Q2</next>
+  </unit>
+</elements>
