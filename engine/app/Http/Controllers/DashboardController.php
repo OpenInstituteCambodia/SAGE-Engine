@@ -36,7 +36,7 @@ class DashboardController extends Controller
       $xpath = new \DOMXPath($xml);
 
       $template_m1 = <<<EOT
-      
+
   <div id="{{placeholder_unit_id}}" audio-1="{{placeholder_pre-audio}}" audio-2="{{placeholder_audio}}" *ngIf="question_id == {{placeholder_unit_id}}" >
     <div [attr.overlay]="isNextButton"></div>
 
@@ -76,7 +76,4 @@ EOT;
 
     }
 
-      public function viewXML() {
-      return view('xml');
-    }
 }
