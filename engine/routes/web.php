@@ -19,4 +19,5 @@ Auth::routes();
 
 Route::get('/dashboard', 'DashboardController@index');
 
+Route::get('/xml', 'DashboardController@viewXML');
 Route::post('/xmlparser', 'DashboardController@parseXML');

@@ -33,8 +33,13 @@ class DashboardController extends Controller
 
       $xml = new \DOMDocument('1.0', 'utf-8');
       $xml->load(storage_path('app/public/').$path);
+      $xpath = new \DOMXPath($xml);
 
-      return view('xml', compact('xml'));
+      return view('xml', compact('xpath'));
 
+    }
+
+      public function viewXML() {
+      return view('xml');
     }
 }
