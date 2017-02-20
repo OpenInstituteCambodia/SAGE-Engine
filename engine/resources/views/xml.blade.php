@@ -3,13 +3,13 @@
 @section('content')
   <div class="container-fluid">
       <div class="row">
+        @if( !empty($xpath) )
           <div class="col-md-12">
               <div class="panel panel-default">
                   <div class="panel-heading">XML Contents</div>
 
                   <div class="panel-body">
                     <!-- Table -->
-                    @if( !empty($xpath) )
                       @for($i = 1; $i <= $xpath->query('/elements/unit')->length; $i++ )
                         <h3>Element ID: <code>{{ $xpath->evaluate('string(/elements/unit['.$i.']/@id)') }}</code></h3>
                         <table class="table">
@@ -82,10 +82,10 @@
                           </tbody>
                         </table>
                       @endfor
-                    @endif
                   </div>
               </div>
-          </div>
+            </div>
+          @endif
 
           <div class="col-md-12">
               <div class="panel panel-default">
