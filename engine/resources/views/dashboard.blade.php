@@ -8,16 +8,17 @@
                 <div class="panel-heading">Dashboard</div>
 
                 <div class="panel-body">
-                    <!-- You are logged in! -->
+                    You are logged in!
+                </div>
+            </div>
+        </div>
 
-                    <form class="form" action="/" method="post">
-                      <div class="form-group">
-                        <label for="">XML template</label>
-                        <input class="form-control" type="file" name="" value="">
-                      </div>
+        <div class="col-md-8 col-md-offset-2">
+            <div class="panel panel-default">
+                <div class="panel-heading">XML Parser</div>
 
-                      <button type="submit" name="button">Submit</button>
-                    </form>
+                <div class="panel-body">
+                    @include('import.demo')
                 </div>
             </div>
         </div>
