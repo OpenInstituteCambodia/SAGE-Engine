@@ -11,7 +11,7 @@
                     <!-- Table -->
                     @if( !empty($xpath) )
                       @for($i = 1; $i <= $xpath->query('/elements/unit')->length; $i++ )
-                        <h3>{{ $xpath->evaluate('string(/elements/unit['.$i.']/@id)') }}</h3>
+                        <h3>Element ID: <code>{{ $xpath->evaluate('string(/elements/unit['.$i.']/@id)') }}</code></h3>
                         <table class="table">
                           <thead>
                             <tr>
@@ -35,6 +35,38 @@
                               <td><code>{{ html_entity_decode('<audio></audio>') }}</code></td>
                               <td><code>@{{placeholder_audio}}</code></td>
                               <td><code>{{ $xpath->evaluate('string(/elements/unit['.$i.']/audio)') }}</code></td>
+                            </tr>
+                            @for($c = 1; $c <= $xpath->query('/elements/unit['.$i.']/choice')->length; $c++ )
+                              <tr>
+                                <td><code>{{ html_entity_decode('<choice id='.$c.'><text></text>') }}</code></td>
+                                <td><code>placeholder_choice_{{$c}}_text</code></td>
+                                <td><code>{{ $xpath->evaluate('string(/elements/unit['.$i.']/choice['.$c.']/text)') }}</code></td>
+                              </tr>
+                              <tr>
+                                <td><code>{{ html_entity_decode('<choice id='.$c.'><audio></audio>') }}</code></td>
+                                <td><code>placeholder_choice_{{$c}}_audio</code></td>
+                                <td><code>{{ $xpath->evaluate('string(/elements/unit['.$i.']/choice['.$c.']/audio)') }}</code></td>
+                              </tr>
+                            @endfor
+                            <tr>
+                              <td><code>{{ html_entity_decode('<correct></correct>') }}</code></td>
+                              <td><code>@{{placeholder_correct}}</code></td>
+                              <td><code>{{ $xpath->evaluate('string(/elements/unit['.$i.']/correct)') }}</code></td>
+                            </tr>
+                            <tr>
+                              <td><code>{{ html_entity_decode('<correct_answer></correct_answer>') }}</code></td>
+                              <td><code>@{{placeholder_correct_answer}}</code></td>
+                              <td><code>{{ $xpath->evaluate('string(/elements/unit['.$i.']/correct_answer)') }}</code></td>
+                            </tr>
+                            <tr>
+                              <td><code>{{ html_entity_decode('<wrong_answer></wrong_answer>') }}</code></td>
+                              <td><code>@{{placeholder_wrong_answer}}</code></td>
+                              <td><code>{{ $xpath->evaluate('string(/elements/unit['.$i.']/wrong_answer)') }}</code></td>
+                            </tr>
+                            <tr>
+                              <td><code>{{ html_entity_decode('<next></next>') }}</code></td>
+                              <td><code>@{{placeholder_next}}</code></td>
+                              <td><code>{{ $xpath->evaluate('string(/elements/unit['.$i.']/next)') }}</code></td>
                             </tr>
                           </tbody>
                         </table>
