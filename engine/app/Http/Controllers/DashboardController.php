@@ -25,4 +25,16 @@ class DashboardController extends Controller
     {
         return view('dashboard');
     }
+
+    public function parseXML(Request $request) {
+
+      $xmlfile = $request->file('xmlfile');
+      $path = $request->file('xmlfile')->store('xml', 'public');
+
+      $xml = new \DOMDocument('1.0', 'utf-8');
+      $xml->load(storage_path('app/public/').$path);
+
+      return view('xml', compact('xml'));
+
+    }
 }
