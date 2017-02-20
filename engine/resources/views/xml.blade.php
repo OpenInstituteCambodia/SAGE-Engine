@@ -9,27 +9,37 @@
 
                   <div class="panel-body">
                     <!-- Table -->
-                    <table class="table">
-                      <thead>
-                        <tr>
-                          <th>ID</th>
-                          <th>XML Key</th>
-                          <th>XML Value</th>
-                          <th>HTML Key<th>
-                          <th>HTML Value</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        @if( !empty($xpath) )
-                          @for($i = 0; $i <= $xpath->query('/elements/unit')->length; $i++ )
+                    @if( !empty($xpath) )
+                      @for($i = 1; $i <= $xpath->query('/elements/unit')->length; $i++ )
+                        <h3>{{ $xpath->evaluate('string(/elements/unit['.$i.']/@id)') }}</h3>
+                        <table class="table">
+                          <thead>
                             <tr>
-                              <td>{{ $xpath->evaluate('string(/elements/unit['.$i.']/@id)') }}</td>
-                              <td>{{ $xpath->evaluate('string(/elements/unit['.$i.'])') }}</td>
+                              <th width="35%">XML Key</th>
+                              <th width="35%">HTML Key</th>
+                              <th width="30%">Value</th>
                             </tr>
-                          @endfor
-                        @endif
-                      </tbody>
-                    </table>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td><code>{{ html_entity_decode('<unit id="">') }}</code></td>
+                              <td><code>@{{placeholder_unit_id}}</code></td>
+                              <td><code>{{ $xpath->evaluate('string(/elements/unit['.$i.']/@id)') }}</code></td>
+                            </tr>
+                            <tr>
+                              <td><code>{{ html_entity_decode('<pre-audio></pre-audio>') }}</code></td>
+                              <td><code>@{{placeholder_pre-audio}}</code></td>
+                              <td><code>{{ $xpath->evaluate('string(/elements/unit['.$i.']/pre-audio)') }}</code></td>
+                            </tr>
+                            <tr>
+                              <td><code>{{ html_entity_decode('<audio></audio>') }}</code></td>
+                              <td><code>@{{placeholder_audio}}</code></td>
+                              <td><code>{{ $xpath->evaluate('string(/elements/unit['.$i.']/audio)') }}</code></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      @endfor
+                    @endif
                   </div>
               </div>
           </div>

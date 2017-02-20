@@ -16,7 +16,7 @@
   </unit>
   <unit id="L3P36Q2" style="M2">
     <pre-audio>M2.mp3</pre-audio>
-    <audio></audio>
+    <audio>L3P36_2.mp3</audio>
     <choice_1>
       <text>Button 1</text>
       <audio>L3P36_1.mp3</audio>
