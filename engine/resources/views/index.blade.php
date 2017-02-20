@@ -79,15 +79,13 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    {{ config('app.name', 'Laravel') }}
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                  <a href="https://github.com/socheatsok78/SAGE-Engine/blob/master/readme.md">Getting Started</a>
+                    <a href="https://github.com/socheatsok78/SAGE-Engine/tree/master/docs">Documentation</a>
+                    <a href="https://github.com/socheatsok78/SAGE-Engine">GitHub</a>
                 </div>
             </div>
         </div>
