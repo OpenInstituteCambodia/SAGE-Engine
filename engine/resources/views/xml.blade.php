@@ -8,15 +8,28 @@
                   <div class="panel-heading">XML Contents</div>
 
                   <div class="panel-body">
-                    <code>
-                      @if( !empty($xpath) )
-                        @for($i = 0; $i <= $xpath->query('/elements/unit')->length; $i++ )
-                          {{ $xpath->evaluate('string(/elements/unit['.$i.']/@id)') }}
-                          {{ $xpath->evaluate('string(/elements/unit['.$i.'])') }}
-                          <br>
-                        @endfor
-                      @endif
-                    </code>
+                    <!-- Table -->
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th>ID</th>
+                          <th>XML Key</th>
+                          <th>XML Value</th>
+                          <th>HTML Key<th>
+                          <th>HTML Value</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        @if( !empty($xpath) )
+                          @for($i = 0; $i <= $xpath->query('/elements/unit')->length; $i++ )
+                            <tr>
+                              <td>{{ $xpath->evaluate('string(/elements/unit['.$i.']/@id)') }}</td>
+                              <td>{{ $xpath->evaluate('string(/elements/unit['.$i.'])') }}</td>
+                            </tr>
+                          @endfor
+                        @endif
+                      </tbody>
+                    </table>
                   </div>
               </div>
           </div>
