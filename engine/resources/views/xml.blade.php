@@ -31,22 +31,28 @@
                               <td><code>@{{placeholder_pre-audio}}</code></td>
                               <td><code>{{ $xpath->evaluate('string(/elements/unit['.$i.']/pre-audio)') }}</code></td>
                             </tr>
-                            <tr>
-                              <td><code>{{ html_entity_decode('<audio></audio>') }}</code></td>
-                              <td><code>@{{placeholder_audio}}</code></td>
-                              <td><code>{{ $xpath->evaluate('string(/elements/unit['.$i.']/audio)') }}</code></td>
-                            </tr>
+                            @if( !empty($xpath->evaluate('string(/elements/unit['.$i.']/audio)')) )
+                              <tr>
+                                <td><code>{{ html_entity_decode('<audio></audio>') }}</code></td>
+                                <td><code>@{{placeholder_audio}}</code></td>
+                                <td><code>{{ $xpath->evaluate('string(/elements/unit['.$i.']/audio)') }}</code></td>
+                              </tr>
+                            @endif
                             @for($c = 1; $c <= $xpath->query('/elements/unit['.$i.']/choice')->length; $c++ )
-                              <tr>
-                                <td><code>{{ html_entity_decode('<choice id='.$c.'><text></text>') }}</code></td>
-                                <td><code>placeholder_choice_{{$c}}_text</code></td>
-                                <td><code>{{ $xpath->evaluate('string(/elements/unit['.$i.']/choice['.$c.']/text)') }}</code></td>
-                              </tr>
-                              <tr>
-                                <td><code>{{ html_entity_decode('<choice id='.$c.'><image></image>') }}</code></td>
-                                <td><code>placeholder_choice_{{$c}}_image</code></td>
-                                <td><code>{{ $xpath->evaluate('string(/elements/unit['.$i.']/choice['.$c.']/image)') }}</code></td>
-                              </tr>
+                              @if( !empty($xpath->evaluate('string(/elements/unit['.$i.']/choice['.$c.']/text)')) )
+                                <tr>
+                                  <td><code>{{ html_entity_decode('<choice id='.$c.'><text></text>') }}</code></td>
+                                  <td><code>placeholder_choice_{{$c}}_text</code></td>
+                                  <td><code>{{ $xpath->evaluate('string(/elements/unit['.$i.']/choice['.$c.']/text)') }}</code></td>
+                                </tr>
+                              @endif
+                              @if( !empty($xpath->evaluate('string(/elements/unit['.$i.']/choice['.$c.']/image)')) )
+                                <tr>
+                                  <td><code>{{ html_entity_decode('<choice id='.$c.'><image></image>') }}</code></td>
+                                  <td><code>placeholder_choice_{{$c}}_image</code></td>
+                                  <td><code>{{ $xpath->evaluate('string(/elements/unit['.$i.']/choice['.$c.']/image)') }}</code></td>
+                                </tr>
+                              @endif
                               <tr>
                                 <td><code>{{ html_entity_decode('<choice id='.$c.'><audio></audio>') }}</code></td>
                                 <td><code>placeholder_choice_{{$c}}_audio</code></td>
