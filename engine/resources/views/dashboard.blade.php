@@ -8,7 +8,16 @@
                 <div class="panel-heading">Dashboard</div>
 
                 <div class="panel-body">
-                    You are logged in!
+                    <!-- You are logged in! -->
+
+                    <form class="form" action="/" method="post">
+                      <div class="form-group">
+                        <label for="">XML template</label>
+                        <input class="form-control" type="file" name="" value="">
+                      </div>
+
+                      <button type="submit" name="button">Submit</button>
+                    </form>
                 </div>
             </div>
         </div>
