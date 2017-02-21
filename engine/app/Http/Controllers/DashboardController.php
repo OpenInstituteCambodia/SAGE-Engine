@@ -35,6 +35,17 @@ class DashboardController extends Controller
       $xml->load(storage_path('app/public/').$path);
       $xpath = new \DOMXPath($xml);
 
+      $rootElement;
+      if ($xpath->query('/elements')->length > 0) {
+        $rootElement = '/elements/unit';
+      }else {
+        $rootElement = '/unit';
+      }
+
+      // for ($i=0; $i <  ; $i++) {
+      //   # code...
+      // }
+
       $template_m1 = <<<EOT
 
   <div id="{{placeholder_unit_id}}" audio-1="{{placeholder_pre-audio}}" audio-2="{{placeholder_audio}}" *ngIf="question_id == {{placeholder_unit_id}}" >
@@ -72,7 +83,7 @@ class DashboardController extends Controller
 
 EOT;
 
-      return view('xml', compact('xpath', 'template_m1'));
+      return view('xml', compact('rootElement', 'xpath', 'template_m1'));
 
     }
 
