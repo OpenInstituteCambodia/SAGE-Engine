@@ -28,55 +28,98 @@ class DashboardController extends Controller
 
     public function parseXML(Request $request) {
 
-      $xmlfile = $request->file('xmlfile');
-      $path = $request->file('xmlfile')->store('xml', 'public');
+      // Reading Uploaded XML File
+      $xmlSource = $request->file('xmlfile');
+      // Store XML File in Storage Folder
+      $xmlPath = $request->file('xmlfile')->store('xml', 'public');
 
-      $xml = new \DOMDocument('1.0', 'utf-8');
-      $xml->load(storage_path('app/public/').$path);
-      $xpath = new \DOMXPath($xml);
+      // Parsing XML File
+      $xmlDocument = new \DOMDocument('1.0', 'utf-8');
+      $xmlDocument->load(storage_path('app/public/').$xmlPath);
+      $xPath = new \DOMXPath($xmlDocument);
 
-      $template_m1 = <<<EOT
-      
-  <div id="{{placeholder_unit_id}}" audio-1="{{placeholder_pre-audio}}" audio-2="{{placeholder_audio}}" *ngIf="question_id == {{placeholder_unit_id}}" >
-    <div [attr.overlay]="isNextButton"></div>
+      if ($xPath->query('/elements')->length > 0) {
+        $rootElement = '/elements/unit';
+      }else {
+        $rootElement = '/unit';
+      }
 
-    <ion-card sticky-center m [ngStyle]="{'background': 'url('{{placeholder_audio_image}}')'}"></ion-card>
+      // Generating HTML Template with XML file
+      $htmlTemplate = self::getTemplate($xPath);
 
-    <ion-grid [attr.is-next]="isNextButton" *ngIf="isNextButton">
-      <ion-row [attr.wrap]="isWrap" >
-        <ion-col width-100>
-          <button ion-button block color="secondary" isNextButton (click)="question_next({{placeholder_next}})">
-            <ion-icon name="arrow-forward"></ion-icon>
-          </button>
-        </ion-col>
-      </ion-row>
-    <ion-grid>
+      // dd($htmlTemplate);
 
-    <ion-grid sticky-bottom choice-correct-answer="{{placeholder_correct_answer}}" choice-wrong-answer="{{placeholder_wrong_answer}}">
-      <ion-row [attr.wrap]="isWrap" M12>
-          <ion-col [attr.width-50]="isWidth50" [attr.width-100]="isWidth100" *ngIf="isChoice1">
-            <button ion-button block color-1 choice-1-audio="{{placeholder_choice_1_audio}}" (click)="answer({{placeholder_correct}}, 1)">{{placeholder_choice_1_text}}</button>
-          </ion-col>
-          <ion-col [attr.width-50]="isWidth50" [attr.width-100]="isWidth100" *ngIf="isChoice2">
-            <button ion-button block color-2 choice-2-audio="placeholder_choice_2_audio" (click)="answer({{placeholder_correct}}, 2)">{{placeholder_choice_2_text}}</button>
-          </ion-col>
-          <ion-col [attr.width-50]="isWidth50" [attr.width-100]="isWidth100" *ngIf="isChoice3">
-            <button ion-button block color-3 choice-3-audio="placeholder_choice_3_audio" (click)="answer({{placeholder_correct}}, 3)">{{placeholder_choice_3_text}}</button>
-          </ion-col>
-          <ion-col [attr.width-50]="isWidth50" [attr.width-100]="isWidth100" *ngIf="isChoice4">
-            <button ion-button block color-4 choice-4-audio="placeholder_choice_4_audio" (click)="answer({{placeholder_correct}}, 4)">{{placehoder_choice_4_text}}</button>
-          </ion-col>
-        </ion-row>
-    </ion-grid>
-  </div>
-
-EOT;
-
-      return view('xml', compact('xpath', 'template_m1'));
-
+      return view('xml', compact('rootElement', 'xPath', 'htmlTemplate'));
     }
 
-      public function viewXML() {
-      return view('xml');
+    public function getTemplate($xPath) {
+
+      if ($xPath->query('/elements')->length > 0) {
+        $rootElement = '/elements/unit';
+      }else {
+        $rootElement = '/unit';
+      }
+
+      // Reading Template From File
+      // ob_start();
+      //   include(storage_path('app/ionic/m1.html'));
+      // $htmlTemplateSource = ob_get_clean();
+
+      // Replacing Placeholder with XML Data
+      $htmlOut = '';
+      for ($i=1; $i <= $xPath->query($rootElement)->length; $i++) {
+
+        $selectedStyle = $xPath->evaluate('string('.$rootElement.'['.$i.']/@style)');
+        // if ($selectedStyle == 'M1' || $selectedStyle == 'M1') {
+        //   # code...
+        // }
+        ob_start();
+          include(storage_path('app/ionic/'.$selectedStyle.'.html'));
+        $t = ob_get_clean();
+        // $t = $htmlTemplateSource;
+
+        // Question
+        $t = str_replace([
+            '{{placeholder_unit_id}}',
+            '{{placeholder_pre-audio}}',
+            '{{placeholder_audio}}',
+            '{{placeholder_audio_image}}',
+            '{{ placeholder_audio_text }}',
+            '{{placeholder_correct_answer}}',
+            '{{placeholder_wrong_answer}}',
+            '{{placeholder_correct}}',
+            '{{placeholder_next}}'
+          ],[
+            $xPath->evaluate('string('.$rootElement.'['.$i.']/@id)'),
+            $xPath->evaluate('string('.$rootElement.'['.$i.']/pre-audio)'),
+            $xPath->evaluate('string('.$rootElement.'['.$i.']/audio)'),
+            $xPath->evaluate('string('.$rootElement.'['.$i.']/image)'),
+            $xPath->evaluate('string('.$rootElement.'['.$i.']/text)'),
+            $xPath->evaluate('string('.$rootElement.'['.$i.']/correct_answer)'),
+            $xPath->evaluate('string('.$rootElement.'['.$i.']/wrong_answer)'),
+            $xPath->evaluate('string('.$rootElement.'['.$i.']/correct)'),
+            $xPath->evaluate('string('.$rootElement.'['.$i.']/next)')
+          ],
+          $t);
+
+        // Choices
+        for ($c=1; $c <= $xPath->query($rootElement.'['.$i.']/choice')->length; $c++) {
+          $t = str_replace([
+            '{{placeholder_choice_'.$c.'_text}}',
+            '{{placeholder_choice_'.$c.'_image}}',
+            '{{placeholder_choice_'.$c.'_audio}}'
+          ],[
+            $xPath->evaluate('string('.$rootElement.'['.$i.']/choice['.$c.']/text)'),
+            $xPath->evaluate('string('.$rootElement.'['.$i.']/choice['.$c.']/image)'),
+            $xPath->evaluate('string('.$rootElement.'['.$i.']/choice['.$c.']/audio)')
+          ], $t);
+        }
+        $htmlOut = $htmlOut.$t;
+      }
+
+      // dd($xPath->query($rootElement)->length);
+
+      return $htmlOut;
     }
+
 }

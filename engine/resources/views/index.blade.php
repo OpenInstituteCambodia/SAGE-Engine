@@ -83,7 +83,7 @@
                 </div>
 
                 <div class="links">
-                  <a href="https://github.com/socheatsok78/SAGE-Engine/blob/master/readme.md">Getting Started</a>
+                  <a href="https://github.com/socheatsok78/SAGE-Engine/blob/master/readme.md#sage-engine">Getting Started</a>
                     <a href="https://github.com/socheatsok78/SAGE-Engine/tree/master/docs">Documentation</a>
                     <a href="https://github.com/socheatsok78/SAGE-Engine">GitHub</a>
                 </div>
