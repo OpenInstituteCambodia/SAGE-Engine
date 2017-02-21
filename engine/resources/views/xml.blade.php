@@ -3,15 +3,15 @@
 @section('content')
   <div class="container-fluid">
       <div class="row">
-        @if( !empty($xpath) )
+        @if( !empty($xPath) )
           <div class="col-md-12">
               <div class="panel panel-default">
                   <div class="panel-heading">XML Contents</div>
 
                   <div class="panel-body">
                     <!-- Table -->
-                      @for($i = 1; $i <= $xpath->query($rootElement)->length; $i++ )
-                        <h3>Element ID: <code>{{ $xpath->evaluate('string('.$rootElement.'['.$i.']/@id)') }}</code></h3>
+                      @for($i = 1; $i <= $xPath->query($rootElement)->length; $i++ )
+                        <h3>Element ID: <code>{{ $xPath->evaluate('string('.$rootElement.'['.$i.']/@id)') }}</code> Style: <code>{{ $xPath->evaluate('string('.$rootElement.'['.$i.']/@style)') }}</code></h3>
                         <table class="table">
                           <thead>
                             <tr>
@@ -24,60 +24,60 @@
                             <tr>
                               <td><code>{{ html_entity_decode('<unit id="">') }}</code></td>
                               <td><code>@{{placeholder_unit_id}}</code></td>
-                              <td><code>{{ $xpath->evaluate('string('.$rootElement.'['.$i.']/@id)') }}</code></td>
+                              <td><code>{{ $xPath->evaluate('string('.$rootElement.'['.$i.']/@id)') }}</code></td>
                             </tr>
                             <tr>
                               <td><code>{{ html_entity_decode('<pre-audio></pre-audio>') }}</code></td>
                               <td><code>@{{placeholder_pre-audio}}</code></td>
-                              <td><code>{{ $xpath->evaluate('string('.$rootElement.'['.$i.']/pre-audio)') }}</code></td>
+                              <td><code>{{ $xPath->evaluate('string('.$rootElement.'['.$i.']/pre-audio)') }}</code></td>
                             </tr>
-                            @if( !empty($xpath->evaluate('string('.$rootElement.'['.$i.']/audio)')) )
+                            @if( !empty($xPath->evaluate('string('.$rootElement.'['.$i.']/audio)')) )
                               <tr>
                                 <td><code>{{ html_entity_decode('<audio></audio>') }}</code></td>
                                 <td><code>@{{placeholder_audio}}</code></td>
-                                <td><code>{{ $xpath->evaluate('string('.$rootElement.'['.$i.']/audio)') }}</code></td>
+                                <td><code>{{ $xPath->evaluate('string('.$rootElement.'['.$i.']/audio)') }}</code></td>
                               </tr>
                             @endif
-                            @for($c = 1; $c <= $xpath->query($rootElement.'['.$i.']/choice')->length; $c++ )
-                              @if( !empty($xpath->evaluate('string('.$rootElement.'['.$i.']/choice['.$c.']/text)')) )
+                            @for($c = 1; $c <= $xPath->query($rootElement.'['.$i.']/choice')->length; $c++ )
+                              @if( !empty($xPath->evaluate('string('.$rootElement.'['.$i.']/choice['.$c.']/text)')) )
                                 <tr>
                                   <td><code>{{ html_entity_decode('<choice id='.$c.'><text></text>') }}</code></td>
                                   <td><code>placeholder_choice_{{$c}}_text</code></td>
-                                  <td><code>{{ $xpath->evaluate('string('.$rootElement.'['.$i.']/choice['.$c.']/text)') }}</code></td>
+                                  <td><code>{{ $xPath->evaluate('string('.$rootElement.'['.$i.']/choice['.$c.']/text)') }}</code></td>
                                 </tr>
                               @endif
-                              @if( !empty($xpath->evaluate('string('.$rootElement.'['.$i.']/choice['.$c.']/image)')) )
+                              @if( !empty($xPath->evaluate('string('.$rootElement.'['.$i.']/choice['.$c.']/image)')) )
                                 <tr>
                                   <td><code>{{ html_entity_decode('<choice id='.$c.'><image></image>') }}</code></td>
                                   <td><code>placeholder_choice_{{$c}}_image</code></td>
-                                  <td><code>{{ $xpath->evaluate('string('.$rootElement.'['.$i.']/choice['.$c.']/image)') }}</code></td>
+                                  <td><code>{{ $xPath->evaluate('string('.$rootElement.'['.$i.']/choice['.$c.']/image)') }}</code></td>
                                 </tr>
                               @endif
                               <tr>
                                 <td><code>{{ html_entity_decode('<choice id='.$c.'><audio></audio>') }}</code></td>
                                 <td><code>placeholder_choice_{{$c}}_audio</code></td>
-                                <td><code>{{ $xpath->evaluate('string('.$rootElement.'['.$i.']/choice['.$c.']/audio)') }}</code></td>
+                                <td><code>{{ $xPath->evaluate('string('.$rootElement.'['.$i.']/choice['.$c.']/audio)') }}</code></td>
                               </tr>
                             @endfor
                             <tr>
                               <td><code>{{ html_entity_decode('<correct></correct>') }}</code></td>
                               <td><code>@{{placeholder_correct}}</code></td>
-                              <td><code>{{ $xpath->evaluate('string('.$rootElement.'['.$i.']/correct)') }}</code></td>
+                              <td><code>{{ $xPath->evaluate('string('.$rootElement.'['.$i.']/correct)') }}</code></td>
                             </tr>
                             <tr>
                               <td><code>{{ html_entity_decode('<correct_answer></correct_answer>') }}</code></td>
                               <td><code>@{{placeholder_correct_answer}}</code></td>
-                              <td><code>{{ $xpath->evaluate('string('.$rootElement.'['.$i.']/correct_answer)') }}</code></td>
+                              <td><code>{{ $xPath->evaluate('string('.$rootElement.'['.$i.']/correct_answer)') }}</code></td>
                             </tr>
                             <tr>
                               <td><code>{{ html_entity_decode('<wrong_answer></wrong_answer>') }}</code></td>
                               <td><code>@{{placeholder_wrong_answer}}</code></td>
-                              <td><code>{{ $xpath->evaluate('string('.$rootElement.'['.$i.']/wrong_answer)') }}</code></td>
+                              <td><code>{{ $xPath->evaluate('string('.$rootElement.'['.$i.']/wrong_answer)') }}</code></td>
                             </tr>
                             <tr>
                               <td><code>{{ html_entity_decode('<next></next>') }}</code></td>
                               <td><code>@{{placeholder_next}}</code></td>
-                              <td><code>{{ $xpath->evaluate('string('.$rootElement.'['.$i.']/next)') }}</code></td>
+                              <td><code>{{ $xPath->evaluate('string('.$rootElement.'['.$i.']/next)') }}</code></td>
                             </tr>
                           </tbody>
                         </table>
@@ -93,8 +93,8 @@
 
                   <div class="panel-body">
                     <pre>
-                      @if( !empty($template_m1) )
-                        {{ html_entity_decode($template_m1) }}
+                      @if( !empty($htmlTemplate) )
+                        {{ html_entity_decode($htmlTemplate) }}
                       @endif
                     </pre>
 
