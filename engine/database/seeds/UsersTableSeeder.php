@@ -15,6 +15,7 @@ class UsersTableSeeder extends Seeder
           'name' => 'Einstein',
           'email' => 'einstein@self-ivr.org',
           'password' => bcrypt('self'),
+          'role' => 'developer',
       ]);
     }
 }
