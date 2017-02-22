@@ -46,24 +46,34 @@
                               </tr>
                             @endif
                             @for($c = 1; $c <= $xPath->query($rootElement.'['.$i.']/choice')->length; $c++ )
+                              <tr>
+                                <td><code>{{ html_entity_decode('<choice id='.$c.'>') }}</code></td>
+                                <td></td>
+                                <td></td>
+                              </tr>
                               @if( !empty($xPath->evaluate('string('.$rootElement.'['.$i.']/choice['.$c.']/text)')) )
                                 <tr>
-                                  <td><code>{{ html_entity_decode('<choice id='.$c.'><text></text>') }}</code></td>
+                                  <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>{{ html_entity_decode('<text></text>') }}</code></td>
                                   <td><code>placeholder_choice_{{$c}}_text</code></td>
                                   <td><code>{{ $xPath->evaluate('string('.$rootElement.'['.$i.']/choice['.$c.']/text)') }}</code></td>
                                 </tr>
                               @endif
                               @if( !empty($xPath->evaluate('string('.$rootElement.'['.$i.']/choice['.$c.']/image)')) )
                                 <tr>
-                                  <td><code>{{ html_entity_decode('<choice id='.$c.'><image></image>') }}</code></td>
+                                  <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>{{ html_entity_decode('<image></image>') }}</code></td>
                                   <td><code>placeholder_choice_{{$c}}_image</code></td>
                                   <td><code>{{ $xPath->evaluate('string('.$rootElement.'['.$i.']/choice['.$c.']/image)') }}</code></td>
                                 </tr>
                               @endif
                               <tr>
-                                <td><code>{{ html_entity_decode('<choice id='.$c.'><audio></audio>') }}</code></td>
+                                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>{{ html_entity_decode('<audio></audio>') }}</code></td>
                                 <td><code>placeholder_choice_{{$c}}_audio</code></td>
                                 <td><code>{{ $xPath->evaluate('string('.$rootElement.'['.$i.']/choice['.$c.']/audio)') }}</code></td>
+                              </tr>
+                              <tr>
+                                <td><code>{{ html_entity_decode('<choice>') }}</code></td>
+                                <td></td>
+                                <td></td>
                               </tr>
                             @endfor
                             <tr>
