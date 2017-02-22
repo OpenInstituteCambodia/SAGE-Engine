@@ -1,5 +1,5 @@
 <div class="panel-body">
-    <form class="form" action="{{ url('developer/xml/parser') }}" method="post" enctype="multipart/form-data">
+    <form class="form" action="{{ url('developer/xml/validator') }}" method="post" enctype="multipart/form-data">
       {{ csrf_field() }}
       <div class="form-group">
         <label for="">XML template</label>
