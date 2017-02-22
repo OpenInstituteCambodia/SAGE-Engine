@@ -77,6 +77,7 @@ class DashboardController extends Controller
         // Question
         $t = str_replace([
             '{{placeholder_unit_id}}',
+            '{{placeholder_text}}',
             '{{placeholder_pre_audio}}',
             '{{placeholder_audio}}',
             '{{placeholder_audio_image}}',
@@ -87,6 +88,7 @@ class DashboardController extends Controller
             '{{placeholder_next}}'
           ],[
             $xPath->evaluate('string('.$rootElement.'['.$i.']/@id)'),
+            $xPath->evaluate('string('.$rootElement.'['.$i.']/text)'),
             $xPath->evaluate('string('.$rootElement.'['.$i.']/pre-audio)'),
             $xPath->evaluate('string('.$rootElement.'['.$i.']/audio)'),
             $xPath->evaluate('string('.$rootElement.'['.$i.']/image)'),

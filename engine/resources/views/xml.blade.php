@@ -26,6 +26,13 @@
                               <td><code>@{{placeholder_unit_id}}</code></td>
                               <td><code>{{ $xPath->evaluate('string('.$rootElement.'['.$i.']/@id)') }}</code></td>
                             </tr>
+                            @if( !empty($xPath->evaluate('string('.$rootElement.'['.$i.']/text)')) )
+                              <tr>
+                                <td><code>{{ html_entity_decode('<text></text>') }}</code></td>
+                                <td><code>@{{placeholder_text}}</code></td>
+                                <td><code>{{ $xPath->evaluate('string('.$rootElement.'['.$i.']/text)') }}</code></td>
+                              </tr>
+                            @endif
                             <tr>
                               <td><code>{{ html_entity_decode('<pre-audio></pre-audio>') }}</code></td>
                               <td><code>@{{placeholder_pre_audio}}</code></td>
