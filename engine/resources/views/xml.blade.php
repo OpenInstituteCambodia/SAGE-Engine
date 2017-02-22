@@ -11,7 +11,7 @@
                   <div class="panel-body">
                     <!-- Table -->
                       @for($i = 1; $i <= $xPath->query($rootElement)->length; $i++ )
-                        <h3>Element ID: <code>{{ $xPath->evaluate('string('.$rootElement.'['.$i.']/@id)') }}</code> Style: <code>{{ $xPath->evaluate('string('.$rootElement.'['.$i.']/@style)') }}</code></h3>
+                        <h3>Element: <code>{{$i}}</code> - Unit ID: <code>{{ $xPath->evaluate('string('.$rootElement.'['.$i.']/@id)') }}</code> Style: <code>{{ $xPath->evaluate('string('.$rootElement.'['.$i.']/@style)') }}</code></h3>
                         <table class="table">
                           <thead>
                             <tr>

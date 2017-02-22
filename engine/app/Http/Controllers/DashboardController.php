@@ -70,13 +70,9 @@ class DashboardController extends Controller
       for ($i=1; $i <= $xPath->query($rootElement)->length; $i++) {
 
         $selectedStyle = $xPath->evaluate('string('.$rootElement.'['.$i.']/@style)');
-        // if ($selectedStyle == 'M1' || $selectedStyle == 'M1') {
-        //   # code...
-        // }
         ob_start();
           include(storage_path('app/ionic/'.$selectedStyle.'.html'));
         $t = ob_get_clean();
-        // $t = $htmlTemplateSource;
 
         // Question
         $t = str_replace([
@@ -116,8 +112,6 @@ class DashboardController extends Controller
         }
         $htmlOut = $htmlOut.$t;
       }
-
-      // dd($xPath->query($rootElement)->length);
 
       return $htmlOut;
     }
