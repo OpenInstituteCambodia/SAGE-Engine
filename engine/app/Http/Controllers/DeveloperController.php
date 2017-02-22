@@ -81,7 +81,7 @@ class DeveloperController extends Controller
             '{{placeholder_pre_audio}}',
             '{{placeholder_audio}}',
             '{{placeholder_audio_image}}',
-            '{{ placeholder_audio_text }}',
+            '{{placeholder_audio_text}}',
             '{{placeholder_correct_answer}}',
             '{{placeholder_wrong_answer}}',
             '{{placeholder_correct}}',

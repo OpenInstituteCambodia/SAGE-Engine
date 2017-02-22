@@ -18,7 +18,7 @@
                 <div class="panel-heading">XML Parser</div>
 
                 <div class="panel-body">
-                    @include('import.demo')
+                    @include('developer.xml.import.upload')
                 </div>
             </div>
         </div>
