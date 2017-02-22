@@ -17,7 +17,12 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/dashboard', 'DashboardController@index');
+Route::group(['prefix' => 'dashboard'], function() {
+  Route::get('/', 'DashboardController@index');
+
+  // Dashboard Route
+  Route::get('users', 'DashboardController@users');
+});
 
 // Developer Route
 Route::group(['prefix' => 'developer', 'middleware' => 'auth'], function(){
