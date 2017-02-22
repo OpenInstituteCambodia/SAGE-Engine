@@ -28,7 +28,7 @@
                             </tr>
                             <tr>
                               <td><code>{{ html_entity_decode('<pre-audio></pre-audio>') }}</code></td>
-                              <td><code>@{{placeholder_pre-audio}}</code></td>
+                              <td><code>@{{placeholder_pre_audio}}</code></td>
                               <td><code>{{ $xPath->evaluate('string('.$rootElement.'['.$i.']/pre-audio)') }}</code></td>
                             </tr>
                             @if( !empty($xPath->evaluate('string('.$rootElement.'['.$i.']/audio)')) )

@@ -81,7 +81,7 @@ class DashboardController extends Controller
         // Question
         $t = str_replace([
             '{{placeholder_unit_id}}',
-            '{{placeholder_pre-audio}}',
+            '{{placeholder_pre_audio}}',
             '{{placeholder_audio}}',
             '{{placeholder_audio_image}}',
             '{{ placeholder_audio_text }}',
