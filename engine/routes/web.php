@@ -21,7 +21,8 @@ Route::get('/dashboard', 'DashboardController@index');
 
 // Developer Route
 Route::group(['prefix' => 'developer'], function(){
-
+  Route::get('/', 'DeveloperController@index');
+  
   // XML Route
   Route::group(['prefix' => 'xml'], function(){
     Route::post('validator', 'DeveloperController@parseXML');

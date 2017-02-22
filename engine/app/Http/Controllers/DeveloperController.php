@@ -23,7 +23,7 @@ class DeveloperController extends Controller
      */
     public function index()
     {
-        return view('dashboard');
+        return view('developer.index');
     }
 
     public function parseXML(Request $request) {
