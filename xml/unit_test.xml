@@ -80,4 +80,84 @@
   <next>L3P36Q4</next>
 </unit>
 
+<unit id="L3P36Q4" style="M1">
+     <audio-text>ចូរជ្រើសរើសពាក្យឱ្យត្រូវនឹងរូបភាព</audio-text>
+     <pre-audio>M1.mp3</pre-audio>
+     <audio></audio>
+     <image>L3.2P36.jpg</image>
+     <choice id="1">
+       <text>បបរគ្រឿង</text>
+       <audio>L3P36_12.mp3</audio>
+     </choice>
+     <choice id="2">
+       <text>សរសើរ</text>
+       <audio>L3P36_13.mp3</audio>
+     </choice>
+     <choice id="3">
+       <text>បី</text>
+       <audio>L3P36_14.mp3</audio>
+     </choice>
+     <choice id="4">
+       <text>ដំបៅ</text>
+       <audio>L3P36_6.mp3</audio>
+     </choice>
+<correct>1</correct>
+<correct_answer>correct.mp3</correct_answer>
+<wrong_answer>wrong.mp3</wrong_answer>
+<next>L3P36Q5</next>
+</unit>
+
+<unit id="L3P36Q5" style="M2">
+     <audio-text>ចូរចុចពាក្យដែលអ្នកបានឮ</audio-text>
+     <pre-audio>M2.mp3</pre-audio>
+     <audio>L3P36_13.mp3</audio>
+     <image>question.jpg</image>
+     <choice id="1">
+       <text>ថែ</text>
+       <audio>L3P36_4.mp3</audio>
+     </choice>
+     <choice id="2">
+       <text>សរសើរ</text>
+       <audio>L3P36_13.mp3</audio>
+     </choice>
+     <choice id="3">
+       <text>ថៅកែ</text>
+       <audio>L3P36_5.mp3</audio>
+     </choice>
+     <choice id="4">
+       <text>សសរ</text>
+       <audio>L3P36_8.mp3</audio>
+     </choice>
+<correct>2</correct>
+<correct_answer>correct.mp3</correct_answer>
+<wrong_answer>wrong.mp3</wrong_answer>
+<next>L3P36Q6</next>
+</unit>
+
+<unit id="L3P36Q6" style="M3">
+     <audio-text>ចូរជ្រើសរើសរូបភាពឱ្យត្រូវនឹងពាក្យ</audio-text>
+     <pre-audio>M3.mp3</pre-audio>
+     <text>ថូ</text>
+     <choice id="1">
+       <image>L3.1P36.jpg</image>
+       <audio>L3P36_9.mp3</audio>
+     </choice>
+     <choice id="2">
+       <image>L3.2P36.jpg</image>
+       <audio>L3P36_12.mp3</audio>
+     </choice>
+     <choice id="3">
+       <image>L3.3P36.jpg</image>
+       <audio>L3P36_3.mp3</audio>
+     </choice>
+     <choice id="4">
+       <image>L3.4P36.jpg</image>
+       <audio>L3P36_8.mp3</audio>
+     </choice>
+<correct>3</correct>
+<correct_answer>correct.mp3</correct_answer>
+<wrong_answer>wrong.mp3</wrong_answer>
+<next>L3P37Q1</next>
+</unit>
+
 </elements>
