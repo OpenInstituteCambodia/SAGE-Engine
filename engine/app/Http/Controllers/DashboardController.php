@@ -49,7 +49,7 @@ class DashboardController extends Controller
 
       // dd($htmlTemplate);
 
-      return view('xml', compact('rootElement', 'xPath', 'htmlTemplate'));
+      return view('developer.xml.validator', compact('rootElement', 'xPath', 'htmlTemplate'));
     }
 
     public function getTemplate($xPath) {

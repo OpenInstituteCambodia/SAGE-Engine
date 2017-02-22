@@ -19,5 +19,5 @@ Auth::routes();
 
 Route::get('/dashboard', 'DashboardController@index');
 
-Route::get('/xml', 'DashboardController@viewXML');
-Route::post('/xmlparser', 'DashboardController@parseXML');
+// Route::get('/developer/xml/validator', 'DashboardController@viewXML');
+Route::post('/developer/xml/parser', 'DashboardController@parseXML');
