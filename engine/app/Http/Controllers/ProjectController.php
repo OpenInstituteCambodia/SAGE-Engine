@@ -26,4 +26,26 @@ class ProjectController extends Controller
         return view('project.index');
     }
 
+    public function create(Request $request)
+    {
+      $projectName = $request->input('projectName');
+      dd($projectName);
+    }
+
+    public function prepareBaseApp()
+    {
+      if (is_file(storage_path('app/public/demo/package.json'))) {
+         dd("File exists");
+      }
+      Storage::deleteDirectory('public/demo/');
+      $appSourceFiles = Storage::allFiles('ionic/'.$this->templateVersion);
+      Storage::makeDirectory('public/demo/');
+      foreach ($appSourceFiles as $file) {
+        $fileName = explode('/', $file);
+        $fileName = array_diff($fileName, ['ionic', $this->templateVersion]);
+        $fileName = implode('/', $fileName);
+        Storage::copy($file, 'public/demo/'.$fileName);
+      }
+    }
+
 }

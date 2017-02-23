@@ -28,6 +28,9 @@ Route::group(['prefix' => 'dashboard'], function() {
 // Project Routes
 Route::group(['prefix' => 'project'], function(){
   Route::get('/', 'ProjectController@index');
+
+  // Function
+  Route::post('create', 'ProjectController@create');
 });
 
 // Developer Routes
@@ -36,6 +39,8 @@ Route::group(['prefix' => 'developer', 'middleware' => 'auth'], function(){
 
   // XML Route
   Route::group(['prefix' => 'xml'], function(){
+
+    // Function
     Route::post('validator', 'DeveloperController@parseXML');
   });
 });
