@@ -109,7 +109,7 @@
                   <div class="panel-heading">HTML Rendered</div>
 
                   <div class="panel-body">
-                    <textarea class="form-control" rows="20">
+                    <textarea class="form-control" rows="20" style="resize: none;">
                       @if( !empty($htmlTemplate) )
                         {{ html_entity_decode($htmlTemplate) }}
                       @endif
