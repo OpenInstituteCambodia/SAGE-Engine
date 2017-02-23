@@ -77,9 +77,7 @@ class DeveloperController extends Controller
       for ($i=1; $i <= $xPath->query($rootElement)->length; $i++) {
 
         $selectedStyle = $xPath->evaluate('string('.$rootElement.'['.$i.']/@style)');
-        ob_start();
-          include(storage_path('app/templates/'.$this->templateVersion.'/'.$selectedStyle.'.html'));
-        $t = ob_get_clean();
+        $t = Storage::get('templates/'.$this->templateVersion.'/'.$selectedStyle.'.html');
 
         // Question
         $t = str_replace([
@@ -129,9 +127,7 @@ class DeveloperController extends Controller
 
       self::prepareBaseApp();
 
-      ob_start();
-        include(storage_path('app/ionic/'.$this->templateVersion.'/src/pages/question/question.html'));
-      $html = ob_get_clean();
+      $html = Storage::get('ionic/'.$this->templateVersion.'/src/pages/question/question.html');
 
       $html = str_replace(
         [
@@ -148,16 +144,15 @@ class DeveloperController extends Controller
 
     public function prepareBaseApp()
     {
+      Storage::deleteDirectory('public/demo/');
       $appSourceFiles = Storage::allFiles('ionic/'.$this->templateVersion);
       Storage::makeDirectory('public/demo/');
-
       foreach ($appSourceFiles as $file) {
         $fileName = explode('/', $file);
         $fileName = array_diff($fileName, ['ionic', $this->templateVersion]);
         $fileName = implode('/', $fileName);
         Storage::copy($file, 'public/demo/'.$fileName);
       }
-
     }
 
 
