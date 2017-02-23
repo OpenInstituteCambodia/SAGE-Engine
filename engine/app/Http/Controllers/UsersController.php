@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use DB;
 
 class UsersController extends Controller
 {
@@ -23,9 +24,11 @@ class UsersController extends Controller
      */
     public function index()
     {
-        return view('dashboard.users.index');
+      $users = DB::table('users')->select('*')->get();
+      
+      return view('dashboard.users.index', compact('users'));
     }
 
-    
+
 
 }
