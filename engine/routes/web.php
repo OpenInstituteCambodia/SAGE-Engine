@@ -17,6 +17,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
+// Dashboard Routes
 Route::group(['prefix' => 'dashboard'], function() {
   Route::get('/', 'DashboardController@index');
 
@@ -24,7 +25,12 @@ Route::group(['prefix' => 'dashboard'], function() {
   Route::get('users', 'UsersController@index');
 });
 
-// Developer Route
+// Project Routes
+Route::group(['prefix' => 'project'], function(){
+  Route::get('/', 'ProjectController@index');
+});
+
+// Developer Routes
 Route::group(['prefix' => 'developer', 'middleware' => 'auth'], function(){
   Route::get('/', 'DeveloperController@index');
 
