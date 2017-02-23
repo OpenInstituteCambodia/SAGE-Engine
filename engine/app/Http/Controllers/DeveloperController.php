@@ -122,4 +122,8 @@ class DeveloperController extends Controller
       return $htmlOut;
     }
 
+    public generateIonicPreview() {
+
+    }
+
 }
