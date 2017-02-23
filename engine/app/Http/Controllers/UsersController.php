@@ -24,8 +24,10 @@ class UsersController extends Controller
      */
     public function index()
     {
-      $users = DB::table('users')->select('*')->get();
-      
+      $users = DB::table('users')
+               ->select('*')
+               ->get();
+
       return view('dashboard.users.index', compact('users'));
     }
 
