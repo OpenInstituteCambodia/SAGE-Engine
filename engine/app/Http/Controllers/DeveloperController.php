@@ -8,6 +8,9 @@ use Illuminate\Http\File;
 
 class DeveloperController extends Controller
 {
+    // Specify Version of Template
+    private $templateVersion = 'v0.1';
+
     /**
      * Create a new controller instance.
      *
@@ -27,6 +30,7 @@ class DeveloperController extends Controller
     {
         return view('developer.index');
     }
+
 
     public function parseXML(Request $request) {
 
@@ -74,7 +78,7 @@ class DeveloperController extends Controller
 
         $selectedStyle = $xPath->evaluate('string('.$rootElement.'['.$i.']/@style)');
         ob_start();
-          include(storage_path('app/templates/'.$selectedStyle.'.html'));
+          include(storage_path('app/templates/'.$this->templateVersion.'/'.$selectedStyle.'.html'));
         $t = ob_get_clean();
 
         // Question
