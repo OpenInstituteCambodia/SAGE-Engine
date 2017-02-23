@@ -1,5 +1,5 @@
 
-<unit id="{{placeholder_unit_id}}" audio-1="{{placeholder_pre_audio}}" audio-2="{{placeholder_audio}}" *ngIf="question_id == '{{placeholder_unit_id}}'" >
+<unit audio-1="{{placeholder_pre_audio}}" audio-2="{{placeholder_audio}}" *ngIf="question_id == '{{placeholder_unit_id}}'">
   <div [attr.overlay]="isNextButton"></div>
 
   <ion-card sticky-center m1>
@@ -20,22 +20,22 @@
     <ion-row [attr.wrap]="isWrap">
         <ion-col color-1 [attr.width-50]="isWidth50" [attr.width-100]="isWidth100" *ngIf="isChoice1">
           <ion-card sticky-center m3 choice-1-audio="{{placeholder_choice_1_audio}}" (click)="answer({{placeholder_correct}}, 1)">
-            <img [src]="{{placeholder_choice_1_image}}"/>
+            <!-- <img [src]="{{placeholder_choice_1_image}}"/> -->
           </ion-card>
         </ion-col>
         <ion-col color-2 [attr.width-50]="isWidth50" [attr.width-100]="isWidth100" *ngIf="isChoice2">
           <ion-card sticky-center m3 choice-2-audio="{{placeholder_choice_2_audio}}" (click)="answer({{placeholder_correct}}, 2)">
-            <img [src]="{{placeholder_choice_2_image}}"/>
+            <!-- <img [src]="{{placeholder_choice_2_image}}"/> -->
           </ion-card>
         </ion-col>
         <ion-col color-3 [attr.width-50]="isWidth50" [attr.width-100]="isWidth100" *ngIf="isChoice3">
           <ion-card sticky-center m3 choice-3-audio="{{placeholder_choice_3_audio}}" (click)="answer({{placeholder_correct}}, 3)">
-            <img [src]="{{placeholder_choice_3_image}}"/>
+            <!-- <img [src]="{{placeholder_choice_3_image}}"/> -->
           </ion-card>
         </ion-col>
         <ion-col color-4 [attr.width-50]="isWidth50" [attr.width-100]="isWidth100" *ngIf="isChoice4">
           <ion-card sticky-center m3 choice-4-audio="{{placeholder_choice_4_audio}}" (click)="answer({{placeholder_correct}}, 4)">
-            <img [src]="{{placeholder_choice_4_image}}"/>
+            <!-- <img [src]="{{placeholder_choice_4_image}}"/> -->
           </ion-card>
         </ion-col>
     </ion-row>
