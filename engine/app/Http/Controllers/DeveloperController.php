@@ -56,6 +56,9 @@ class DeveloperController extends Controller
       // Saving HTML file for testing
       Storage::put('public/html/test.html', $htmlTemplate, 'public');
 
+      // Deleting XML File after Parsing Completed
+      Storage::delete('public/'.$xmlPath);
+
       return view('developer.xml.validator', compact('rootElement', 'xPath', 'htmlTemplate'));
     }
 
