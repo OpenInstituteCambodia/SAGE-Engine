@@ -59,6 +59,9 @@ class DeveloperController extends Controller
       // Deleting XML File after Parsing Completed
       Storage::delete('public/'.$xmlPath);
 
+      // Testing
+      self::generateIonicPreview($htmlTemplate);
+
       return view('developer.xml.validator', compact('rootElement', 'xPath', 'htmlTemplate'));
     }
 
@@ -122,8 +125,40 @@ class DeveloperController extends Controller
       return $htmlOut;
     }
 
-    public generateIonicPreview() {
+    public function generateIonicPreview($fileContent) {
+
+      self::prepareBaseApp();
+
+      ob_start();
+        include(storage_path('app/ionic/'.$this->templateVersion.'/src/pages/question/question.html'));
+      $html = ob_get_clean();
+
+      $html = str_replace(
+        [
+          '{{myappcontent}}'
+        ],
+        [
+          $fileContent
+        ],
+        $html
+      );
+      // Saving HTML file for testing
+      Storage::put('public/demo/src/pages/question/question.html', $html, 'public');
+    }
+
+    public function prepareBaseApp()
+    {
+      $appSourceFiles = Storage::allFiles('ionic/'.$this->templateVersion);
+      Storage::makeDirectory('public/demo/');
+
+      foreach ($appSourceFiles as $file) {
+        $fileName = explode('/', $file);
+        $fileName = array_diff($fileName, ['ionic', $this->templateVersion]);
+        $fileName = implode('/', $fileName);
+        Storage::copy($file, 'public/demo/'.$fileName);
+      }
 
     }
+
 
 }
