@@ -2,4 +2,5 @@
 !public/
 !ionic/
 !templates/
+!projects/
 !.gitignore
