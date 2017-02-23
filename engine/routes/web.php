@@ -21,7 +21,7 @@ Route::group(['prefix' => 'dashboard'], function() {
   Route::get('/', 'DashboardController@index');
 
   // Dashboard Route
-  Route::get('users', 'DashboardController@users');
+  Route::get('users', 'UsersController@index');
 });
 
 // Developer Route
