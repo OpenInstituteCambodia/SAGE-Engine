@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Http\File;
 
 class DeveloperController extends Controller
 {
@@ -47,7 +49,8 @@ class DeveloperController extends Controller
       // Generating HTML Template with XML file
       $htmlTemplate = self::getTemplate($xPath);
 
-      // dd($htmlTemplate);
+      // Saving HTML file for testing
+      Storage::put('public/html/test.html', $htmlTemplate, 'public');
 
       return view('developer.xml.validator', compact('rootElement', 'xPath', 'htmlTemplate'));
     }
@@ -71,7 +74,7 @@ class DeveloperController extends Controller
 
         $selectedStyle = $xPath->evaluate('string('.$rootElement.'['.$i.']/@style)');
         ob_start();
-          include(storage_path('app/ionic/'.$selectedStyle.'.html'));
+          include(storage_path('app/templates/'.$selectedStyle.'.html'));
         $t = ob_get_clean();
 
         // Question
