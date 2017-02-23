@@ -28,8 +28,13 @@ class ProjectController extends Controller
 
     public function create(Request $request)
     {
-      $projectName = $request->input('projectName');
-      dd($projectName);
+      $project = array(
+        'projectName' => $request->input('projectName'),
+        'projectVersion' => $request->input('projectVersion'),
+        'projectPackageName' => $request->input('projectPackageName'),
+        'projectDescription' => $request->input('projectDescription'),
+      );
+      dd($project);
     }
 
     public function prepareBaseApp()
