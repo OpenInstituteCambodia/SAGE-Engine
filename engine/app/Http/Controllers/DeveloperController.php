@@ -63,17 +63,11 @@ class DeveloperController extends Controller
     }
 
     public function getTemplate($xPath) {
-
       if ($xPath->query('/elements')->length > 0) {
         $rootElement = '/elements/unit';
       }else {
         $rootElement = '/unit';
       }
-
-      // Reading Template From File
-      // ob_start();
-      //   include(storage_path('app/ionic/m1.html'));
-      // $htmlTemplateSource = ob_get_clean();
 
       // Replacing Placeholder with XML Data
       $htmlOut = '';
