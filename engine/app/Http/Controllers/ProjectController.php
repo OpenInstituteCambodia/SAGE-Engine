@@ -29,7 +29,12 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        return view('project.index');
+        $projects = self::lists();
+        $currentUser = $this->currentUser;
+        return view(
+          'project.index',
+          compact('projects', 'currentUser')
+        );
     }
 
     public function create(Request $request)
@@ -42,7 +47,8 @@ class ProjectController extends Controller
       );
 
       self::copyBaseApp($project);
-      self::lists();
+      return redirect()->route('projects');
+
     }
 
     public function delete($p)
@@ -54,7 +60,7 @@ class ProjectController extends Controller
     public function lists()
     {
       $listProject = Storage::directories('projects/'.$this->currentUser.'/');
-      dd($listProject);
+      return $listProject;
     }
 
     public function copyBaseApp($p)

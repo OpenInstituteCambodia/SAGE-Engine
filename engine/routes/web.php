@@ -27,7 +27,7 @@ Route::group(['prefix' => 'dashboard'], function() {
 
 // Project Routes
 Route::group(['prefix' => 'project'], function(){
-  Route::get('/', 'ProjectController@index');
+  Route::get('/', 'ProjectController@index')->name('projects');
 
   // Function
   Route::post('create', 'ProjectController@create');
