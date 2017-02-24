@@ -12,6 +12,7 @@
                     <img src="{{ asset('images/icon.png') }}" alt="{{$projectName}} Icon" class="img-responsive">
                   </div>
                   <h3>{{$projectName}}</h3>
+                  <h4>{{$appID}}</h4>
                 </div>
             </div>
         </div>

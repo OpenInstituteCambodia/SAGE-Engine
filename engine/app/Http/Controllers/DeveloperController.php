@@ -144,9 +144,9 @@ class DeveloperController extends Controller
 
     public function prepareBaseApp()
     {
-      if (is_file(storage_path('app/public/demo/package.json'))) {
-         dd("File exists");
-      }
+      // if (is_file(storage_path('app/public/demo/package.json'))) {
+      //    dd("File exists");
+      // }
       Storage::deleteDirectory('public/demo/');
       $appSourceFiles = Storage::allFiles('ionic/'.$this->templateVersion);
       Storage::makeDirectory('public/demo/');

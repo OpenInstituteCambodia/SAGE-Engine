@@ -54,16 +54,24 @@ class ProjectController extends Controller
 
     public function edit($projectName)
     {
+      $currentUser = Auth::user()->email;
+      // Parsing XML File
+      $xmlDocument = new \DOMDocument('1.0', 'utf-8');
+      $xmlDocument->load(storage_path('app/projects/'.$currentUser.'/'.$projectName.'/config.xml'));
+      $xPath = new \DOMXPath($xmlDocument);
+
+      $appID = $xPath->evaluate('string(/widget/@id)');
+
       return view(
         'project/edit/index',
-        compact('projectName')
+        compact('projectName', 'appID' )
       );
     }
 
     public function delete($projectName)
     {
-      // Deleting Resources
       $currentUser = Auth::user()->email;
+      // Deleting Resources
       Storage::deleteDirectory('projects/'.$currentUser.'/'.$projectName);
       return redirect()->route('projects');
     }
