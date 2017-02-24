@@ -60,7 +60,7 @@ class ProjectCreate extends Command
           'projectDescription' => '',
         );
 
-        echo "Creating project -> ".$projectName."\n";
+        echo "Creating project -> ".$i." -> ".$projectName."\n";
 
         if (!is_file(storage_path('app/projects/'.$currentUser.'/'.$p['projectName'].'/package.json'))) {
 
