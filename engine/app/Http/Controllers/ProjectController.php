@@ -62,9 +62,16 @@ class ProjectController extends Controller
 
       $appID = $xPath->evaluate('string(/widget/@id)');
 
+      $project = array(
+        'projectName' => $xPath->evaluate('string(/widget/name)'),
+        'projectVersion' => $xPath->evaluate('string(/widget/@version)'),
+        'projectPackageName' => $xPath->evaluate('string(/widget/@id)'),
+        'projectDescription' => $xPath->evaluate('string(/widget/description)'),
+      );
+
       return view(
         'project/edit/index',
-        compact('projectName', 'appID' )
+        compact('project' )
       );
     }
 
