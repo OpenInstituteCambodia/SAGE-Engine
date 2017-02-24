@@ -136,6 +136,9 @@ class NameGeneratorController extends Controller
           // Archimedes was a physicist, engineer and mathematician who invented too many things to list them here. https://en.wikipedia.org/wiki/Archimedes
           "archimedes",
 
+          // Bunhann
+          "hann",
+
           // Maria Ardinghelli - Italian translator, mathematician and physicist - https://en.wikipedia.org/wiki/Maria_Ardinghelli
           "ardinghelli",
 
