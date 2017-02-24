@@ -75,6 +75,11 @@ class ProjectController extends Controller
       return $listProject;
     }
 
+    public function upload(Request $request)
+    {
+      # code...
+    }
+
     public function copyBaseApp($p)
     {
       $currentUser = Auth::user()->email;
