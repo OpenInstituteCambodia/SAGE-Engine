@@ -24,7 +24,7 @@ $line-height-base: 1.6;
 $text-color: #636b6f;
 
 // Navbar
-$navbar-default-bg: #24292e;
+$navbar-default-bg: #424242;
 $navbar-default-brand-color: #fff;
 $navbar-default-link-color: #fff;
 $navbar-default-link-active-color: #fff;
@@ -32,6 +32,11 @@ $navbar-default-link-hover-color: #fff;
 
 // Buttons
 $btn-default-color: $text-color;
+$btn-primary-bg: #2196f3;
+$btn-success-bg: #2ab27b;
+$btn-info-bg: #90A4AE;
+$btn-warning-bg: #ffb74d;
+$btn-danger-bg: #b71c1c;
 
 // Inputs
 $input-border: lighten($text-color, 40%);
