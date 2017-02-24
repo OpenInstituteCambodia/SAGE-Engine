@@ -20,7 +20,7 @@
                 <div class="panel-heading">Configuration</div>
 
                 <div class="panel-body">
-
+                  @include('project/import/upload')
                 </div>
             </div>
         </div>
