@@ -14,7 +14,7 @@ class Kernel extends ConsoleKernel
      */
     protected $commands = [
         // Custom commands
-        Commands\createProjects::class
+        Commands\ProjectCreate::class
     ];
 
     /**
