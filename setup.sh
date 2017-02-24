@@ -11,6 +11,8 @@ cd .. && \
 cd engine && \
 composer install && \
 composer update && \
+npm install && \
+npm update && \
 cp .env.example .env && \
 php artisan key:generate && \
 php artisan serve
