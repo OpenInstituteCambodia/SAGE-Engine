@@ -10,6 +10,7 @@ class ProjectController extends Controller
 {
     // Specify Version of Template
     private $templateVersion = 'v0.1';
+    private $currentUser = 'socheat';
 
     /**
      * Create a new controller instance.
@@ -40,29 +41,39 @@ class ProjectController extends Controller
         'projectDescription' => $request->input('projectDescription'),
       );
 
-      self::prepareBaseApp($project);
-      // dd($project);
+      self::copyBaseApp($project);
+      self::lists();
     }
 
-    public function prepareBaseApp($p)
+    public function delete($p)
     {
-      // dd($p);
-      $currentUser = 'socheat';
-      if (!is_file(storage_path('app/projects/'.$currentUser.'/'.$p['projectName'].'/package.json'))) {
+      // Deleting Resources
+      Storage::deleteDirectory('public/demo/');
+    }
 
-        Storage::makeDirectory('projects/'.$currentUser.'/'.$p['projectName']);
+    public function lists()
+    {
+      $listProject = Storage::directories('projects/'.$this->currentUser.'/');
+      dd($listProject);
+    }
+
+    public function copyBaseApp($p)
+    {
+
+      if (!is_file(storage_path('app/projects/'.$this->currentUser.'/'.$p['projectName'].'/package.json'))) {
+
+        Storage::makeDirectory('projects/'.$this->currentUser.'/'.$p['projectName']);
 
         $appSourceFiles = Storage::allFiles('ionic/'.$this->templateVersion);
         foreach ($appSourceFiles as $file) {
           $fileName = explode('/', $file);
           $fileName = array_diff($fileName, ['ionic', $this->templateVersion]);
           $fileName = implode('/', $fileName);
-          Storage::copy($file, 'projects/'.$currentUser.'/'.$p['projectName'].'/'.$fileName);
+          Storage::copy($file, 'projects/'.$this->currentUser.'/'.$p['projectName'].'/'.$fileName);
         }
       }
+      return 'File Already Exists';
 
-      // Deleting Resources
-      // Storage::deleteDirectory('public/demo/');
     }
 
 }
