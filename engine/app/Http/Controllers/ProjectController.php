@@ -3,9 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Http\File;
 
 class ProjectController extends Controller
 {
+    // Specify Version of Template
+    private $templateVersion = 'v0.1';
+
     /**
      * Create a new controller instance.
      *
@@ -34,23 +39,30 @@ class ProjectController extends Controller
         'projectPackageName' => $request->input('projectPackageName'),
         'projectDescription' => $request->input('projectDescription'),
       );
-      dd($project);
+
+      self::prepareBaseApp($project);
+      // dd($project);
     }
 
-    public function prepareBaseApp()
+    public function prepareBaseApp($p)
     {
-      if (is_file(storage_path('app/public/demo/package.json'))) {
-         dd("File exists");
+      // dd($p);
+      $currentUser = 'socheat';
+      if (!is_file(storage_path('app/projects/'.$currentUser.'/'.$p['projectName'].'/package.json'))) {
+
+        Storage::makeDirectory('projects/'.$currentUser.'/'.$p['projectName']);
+
+        $appSourceFiles = Storage::allFiles('ionic/'.$this->templateVersion);
+        foreach ($appSourceFiles as $file) {
+          $fileName = explode('/', $file);
+          $fileName = array_diff($fileName, ['ionic', $this->templateVersion]);
+          $fileName = implode('/', $fileName);
+          Storage::copy($file, 'projects/'.$currentUser.'/'.$p['projectName'].'/'.$fileName);
+        }
       }
-      Storage::deleteDirectory('public/demo/');
-      $appSourceFiles = Storage::allFiles('ionic/'.$this->templateVersion);
-      Storage::makeDirectory('public/demo/');
-      foreach ($appSourceFiles as $file) {
-        $fileName = explode('/', $file);
-        $fileName = array_diff($fileName, ['ionic', $this->templateVersion]);
-        $fileName = implode('/', $fileName);
-        Storage::copy($file, 'public/demo/'.$fileName);
-      }
+
+      // Deleting Resources
+      // Storage::deleteDirectory('public/demo/');
     }
 
 }
