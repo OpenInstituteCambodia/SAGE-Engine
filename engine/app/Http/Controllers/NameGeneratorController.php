@@ -36,6 +36,7 @@ class NameGeneratorController extends Controller
       		"brave",
       		"clever",
       		"cocky",
+          "andrew",
       		"compassionate",
       		"competent",
       		"condescending",
@@ -479,6 +480,9 @@ class NameGeneratorController extends Controller
           // Rob Pike was a key contributor to Unix, Plan 9, the X graphic system, utf-8, and the Go programming language. https://en.wikipedia.org/wiki/Rob_Pike
           "pike",
 
+          // Sorya
+          "sorya",
+
           // Henri Poincaré made fundamental contributions in several fields of mathematics. https://en.wikipedia.org/wiki/Henri_Poincar%C3%A9
           "poincare",
 
@@ -508,6 +512,9 @@ class NameGeneratorController extends Controller
 
           // Rosalind Franklin - British biophysicist and X-ray crystallographer whose research was critical to the understanding of DNA - https://en.wikipedia.org/wiki/Rosalind_Franklin
           "rosalind",
+
+          // Sinat
+          "sinat",
 
           // Meghnad Saha - Indian astrophysicist best known for his development of the Saha equation, used to describe chemical and physical conditions in stars - https://en.wikipedia.org/wiki/Meghnad_Saha
           "saha",
@@ -541,6 +548,9 @@ class NameGeneratorController extends Controller
 
           // Janese Swanson (with others) developed the first of the Carmen Sandiego games. She went on to found Girl Tech. https://en.wikipedia.org/wiki/Janese_Swanson
           "swanson",
+
+          // Socheat
+          "socheat",
 
           // Aaron Swartz was influential in creating RSS, Markdown, Creative Commons, Reddit, and much of the internet as we know it today. He was devoted to freedom of information on the web. https://en.wikiquote.org/wiki/Aaron_Swartz
           "swartz",
