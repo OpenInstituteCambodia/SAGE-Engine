@@ -22,6 +22,7 @@
                       @foreach($projects as $project)
                           <li class="list-group-item">
                             {{ str_replace('projects/'.$currentUser.'/', '', $project) }}
+                            <button class="btn btn-sm btn-default" type="button" name="edit">Edit</button>
                           </li>
                       @endforeach
                     </ul>
