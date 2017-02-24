@@ -17,3 +17,5 @@ mix.js('resources/assets/js/app.js', 'public/js')
 mix.copy([
   'resources/assets/js/pace.js'
 ], 'public/js');
+
+mix.browserSync('127.0.0.1:8000');
