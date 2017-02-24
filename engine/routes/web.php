@@ -31,6 +31,7 @@ Route::group(['prefix' => 'project'], function(){
 
   // Function
   Route::post('create', 'ProjectController@create');
+  Route::get('edit/{projectName}', 'ProjectController@edit')->name('edit');
 });
 
 // Developer Routes

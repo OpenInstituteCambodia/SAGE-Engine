@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\File;
+use Illuminate\Support\Facades\Log;
 
 class ProjectController extends Controller
 {
@@ -49,6 +50,15 @@ class ProjectController extends Controller
       self::copyBaseApp($project);
       return redirect()->route('projects');
 
+    }
+
+    public function edit($projectName)
+    {
+
+      return view(
+        'project/edit/index',
+        compact('projectName')
+      );
     }
 
     public function delete($p)
