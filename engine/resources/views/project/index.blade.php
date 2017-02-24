@@ -15,7 +15,10 @@
         @if(!empty($projects))
           <div class="col-md-8">
               <div class="panel panel-default">
-                  <div class="panel-heading">Project List</div>
+                  <div class="panel-heading">
+                    My Projects
+                    <span class="badge">{{ count($projects) }}</span>
+                  </div>
 
                   <div class="panel-body">
                     <ul class="list-group">
