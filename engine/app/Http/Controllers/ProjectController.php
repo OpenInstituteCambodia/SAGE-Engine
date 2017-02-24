@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\File;
 use Illuminate\Support\Facades\Log;
 
@@ -11,7 +12,6 @@ class ProjectController extends Controller
 {
     // Specify Version of Template
     private $templateVersion = 'v0.1';
-    private $currentUser = 'socheat';
 
     /**
      * Create a new controller instance.
@@ -30,8 +30,8 @@ class ProjectController extends Controller
      */
     public function index()
     {
+        $currentUser = Auth::user()->email;
         $projects = self::lists();
-        $currentUser = $this->currentUser;
         return view(
           'project.index',
           compact('projects', 'currentUser')
@@ -69,23 +69,24 @@ class ProjectController extends Controller
 
     public function lists()
     {
-      $listProject = Storage::directories('projects/'.$this->currentUser.'/');
+      $currentUser = Auth::user()->email;
+      $listProject = Storage::directories('projects/'.$currentUser.'/');
       return $listProject;
     }
 
     public function copyBaseApp($p)
     {
+      $currentUser = Auth::user()->email;
+      if (!is_file(storage_path('app/projects/'.$currentUser.'/'.$p['projectName'].'/package.json'))) {
 
-      if (!is_file(storage_path('app/projects/'.$this->currentUser.'/'.$p['projectName'].'/package.json'))) {
-
-        Storage::makeDirectory('projects/'.$this->currentUser.'/'.$p['projectName']);
+        Storage::makeDirectory('projects/'.$currentUser.'/'.$p['projectName']);
 
         $appSourceFiles = Storage::allFiles('ionic/'.$this->templateVersion);
         foreach ($appSourceFiles as $file) {
           $fileName = explode('/', $file);
           $fileName = array_diff($fileName, ['ionic', $this->templateVersion]);
           $fileName = implode('/', $fileName);
-          Storage::copy($file, 'projects/'.$this->currentUser.'/'.$p['projectName'].'/'.$fileName);
+          Storage::copy($file, 'projects/'.$currentUser.'/'.$p['projectName'].'/'.$fileName);
         }
       }
       return 'File Already Exists';
