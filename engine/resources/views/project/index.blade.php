@@ -23,7 +23,7 @@
                           <li class="list-group-item">
                             {{ $projectName = str_replace('projects/'.$currentUser.'/', '', $project) }}
                             <div class="pull-right">
-                              <a class="btn btn-xs btn-default" href="{{ url('project/edit/'.$projectName) }}">Edit</a>
+                              <a class="btn btn-xs btn-info" href="{{ url('project/edit/'.$projectName) }}">Edit</a>
                               <a class="btn btn-xs btn-danger" href="{{ url('project/delete/'.$projectName) }}">Delete</a>
                             </div>
                           </li>
