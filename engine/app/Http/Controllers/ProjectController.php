@@ -54,17 +54,18 @@ class ProjectController extends Controller
 
     public function edit($projectName)
     {
-
       return view(
         'project/edit/index',
         compact('projectName')
       );
     }
 
-    public function delete($p)
+    public function delete($projectName)
     {
       // Deleting Resources
-      Storage::deleteDirectory('public/demo/');
+      $currentUser = Auth::user()->email;
+      Storage::deleteDirectory('projects/'.$currentUser.'/'.$projectName);
+      return redirect()->route('projects');
     }
 
     public function lists()
