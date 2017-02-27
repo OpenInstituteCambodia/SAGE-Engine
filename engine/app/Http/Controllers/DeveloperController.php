@@ -56,19 +56,16 @@ class DeveloperController extends Controller
       $content = $res->getBody();
 
       $json = json_decode($content);
-      $zipball = $client->request(
-        'GET',
-        $json[0]->zipball_url
-      );
-      $zipContent = $zipball->getBody();
-
-      // dd($zipball);
-      Storage::put('github/'.$json[0]->name.'.zip', $zipContent);
-      // foreach ($json as $tag) {
-      //   if (is_file()) {
-      //     # code...
-      //   }
-      // }
+      foreach ($json as $tag) {
+        if (!is_file(storage_path('app/github/'.$tag->name.'.zip'))) {
+          $zipball = $client->request(
+            'GET',
+            $tag->zipball_url
+          );
+          $zipContent = $zipball->getBody();
+          Storage::put('github/'.$tag->name.'.zip', $zipContent);
+        }
+      }
 
       return $content;
     }
