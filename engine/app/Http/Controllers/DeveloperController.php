@@ -63,7 +63,7 @@ class DeveloperController extends Controller
       $zipContent = $zipball->getBody();
 
       // dd($zipball);
-      Storage::put('github/latest.zip', $zipContent);
+      Storage::put('github/'.$json[0]->name.'.zip', $zipContent);
       // foreach ($json as $tag) {
       //   if (is_file()) {
       //     # code...
