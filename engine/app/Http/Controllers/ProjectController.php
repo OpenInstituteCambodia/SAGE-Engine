@@ -55,12 +55,20 @@ class ProjectController extends Controller
     public function edit($projectName)
     {
       $currentUser = Auth::user()->email;
+
+      // Getting XML content to remove Namespace
+      $content = Storage::get('projects/'.$currentUser.'/'.$projectName.'/config.xml');
+      $content = str_replace([
+        'xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0"'
+      ], [
+        'placeholder_xml_namespace="true"'
+      ], $content);
+
       // Parsing XML File
       $xmlDocument = new \DOMDocument('1.0', 'utf-8');
-      $xmlDocument->load(storage_path('app/projects/'.$currentUser.'/'.$projectName.'/config.xml'));
+      $xmlDocument->loadXML($content);
+      // $xmlDocument->load(storage_path('app/projects/'.$currentUser.'/'.$projectName.'/config.xml'));
       $xPath = new \DOMXPath($xmlDocument);
-
-      $appID = $xPath->evaluate('string(/widget/@id)');
 
       $project = array(
         'projectName' => $xPath->evaluate('string(/widget/name)'),
@@ -110,7 +118,7 @@ class ProjectController extends Controller
           Storage::copy($file, 'projects/'.$currentUser.'/'.$p['projectName'].'/'.$fileName);
         }
       }
-      return 'File Already Exists';
+      // return 'File Already Exists';
 
     }
 
