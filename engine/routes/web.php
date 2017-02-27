@@ -43,7 +43,7 @@ Route::group(['prefix' => 'developer', 'middleware' => 'auth'], function(){
 
   Route::group(['prefix' => 'template'], function(){
     Route::get('info', 'DeveloperController@getActiveTemplateInfo');
-    Route::post('update', 'DeveloperController@updateIonicTemplate');
+    Route::get('update', 'DeveloperController@updateIonicTemplate');
   });
 
   // XML Route
