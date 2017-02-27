@@ -32,7 +32,11 @@
                 <div class="panel-heading">Contents</div>
 
                 <div class="panel-body">
-
+                  <textarea class="form-control" rows="20" style="resize: none;">
+                    @if( !empty($unit) )
+                      {{ html_entity_decode($unit) }}
+                    @endif
+                  </textarea>
                 </div>
             </div>
         </div>

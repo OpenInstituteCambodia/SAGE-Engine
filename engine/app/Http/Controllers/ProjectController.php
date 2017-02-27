@@ -102,9 +102,11 @@ class ProjectController extends Controller
         'projectDescription' => $xPath->evaluate('string(/widget/description)'),
       );
 
+      $unit = Storage::get('projects/'.$userEmail.'/'.$projectName.'/unit.xml');
+
       return view(
         'project/edit/index',
-        compact('project' )
+        compact( 'project', 'unit' )
       );
     }
 
@@ -125,7 +127,18 @@ class ProjectController extends Controller
 
     public function upload(Request $request)
     {
+      $userEmail = Auth::user()->email;
+      $projectName = $request->input('projectName');
 
+      // Reading Uploaded XML File
+      $xmlSource = $request->file('xmlfile');
+      $xmlPath = $request->file('xmlfile')->store('xml', 'public');
+      $xmlSource = Storage::get('public/'.$xmlPath);
+
+      // Store XML File in Storage Folder
+      $xmlPath = Storage::put('projects/'.$userEmail.'/'.$projectName.'/unit.xml', $xmlSource);
+
+      return redirect()->route('project.edit', [$projectName]);
     }
 
     public function copyBaseApp($p)
