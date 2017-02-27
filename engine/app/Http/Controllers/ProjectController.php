@@ -40,6 +40,8 @@ class ProjectController extends Controller
 
     public function create(Request $request)
     {
+      $currentUser = Auth::user()->email;
+
       $project = array(
         'projectName' => $request->input('projectName'),
         'projectVersion' => $request->input('projectVersion'),
@@ -47,7 +49,31 @@ class ProjectController extends Controller
         'projectDescription' => $request->input('projectDescription'),
       );
 
+      // 1. Copying Base Application to Project Folder
       self::copyBaseApp($project);
+
+      // 2. Editing Config.xml and package.json data for project
+      $xmlContent = Storage::get('projects/'.$currentUser.'/'.$project['projectName'].'/config.xml');
+      $xmlContent = str_replace([
+        'xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0"',
+        '{{projectPackageName}}',
+        '{{projectName}}',
+        '{{projectDescription}}',
+        '{{projectVersion}}',
+        '{{userEmail}}',
+      ], [
+        'placeholder_xml_namespace="true"',
+        $project['projectPackageName'],
+        $project['projectName'],
+        $project['projectDescription'],
+        $project['projectVersion'],
+        $currentUser
+
+      ], $xmlContent);
+
+      // 3. Saving Data back into Config.xml and package.json in Project Folder
+      Storage::put('projects/'.$currentUser.'/'.$project['projectName'].'/config.xml', $xmlContent, 'public');
+
       return redirect()->route('projects');
 
     }
@@ -120,6 +146,11 @@ class ProjectController extends Controller
       }
       // return 'File Already Exists';
 
+    }
+
+    public function prepareXML()
+    {
+      # code...
     }
 
 }
