@@ -31,6 +31,21 @@ class DeveloperController extends Controller
         return view('developer.index');
     }
 
+    public function updateIonicTemplate()
+    {
+      // Storage::get('https://github.com/socheatsok78/SAGE-Template/archive/latest.zip');
+      // $github = Request::create(
+      //   'https://api.github.com/repos/socheatsok78/SAGE-Template',
+      //   'POST',
+      //   [
+      //     'login' => env('GITHUB_APP_OWNER'),
+      //     'token' => env('GITHUB_APP_SECRET')
+      //   ]
+      // );
+      // dd($github->all());
+      return 'Update';
+    }
+
 
     public function parseXML(Request $request) {
 

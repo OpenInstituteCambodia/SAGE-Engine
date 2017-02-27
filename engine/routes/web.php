@@ -40,6 +40,12 @@ Route::group(['prefix' => 'project'], function(){
 Route::group(['prefix' => 'developer', 'middleware' => 'auth'], function(){
   Route::get('/', 'DeveloperController@index');
 
+
+  Route::group(['prefix' => 'template'], function(){
+
+    Route::post('update', 'DeveloperController@updateIonicTemplate');
+  });
+
   // XML Route
   Route::group(['prefix' => 'xml'], function(){
 
