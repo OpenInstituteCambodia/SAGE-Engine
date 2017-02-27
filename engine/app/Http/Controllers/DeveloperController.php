@@ -52,10 +52,23 @@ class DeveloperController extends Controller
         'GET',
         'https://api.github.com/repos/'.$template['GITHUB_APP_OWNER'].'/'.$template['GITHUB_APP_REPO'].'/tags?client_id='.$template['GITHUB_APP_ID'].'&client_secret='.$template['GITHUB_APP_SECRET']
       );
-
+      $headerType = $res->getHeaderLine('content-type');
       $content = $res->getBody();
 
+      $json = json_decode($content);
+      $zipball = $client->request(
+        'GET',
+        $json[0]->zipball_url
+      );
+      $zipContent = $zipball->getBody();
 
+      // dd($zipball);
+      Storage::put('github/latest.zip', $zipContent);
+      // foreach ($json as $tag) {
+      //   if (is_file()) {
+      //     # code...
+      //   }
+      // }
 
       return $content;
     }
