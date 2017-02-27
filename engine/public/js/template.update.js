@@ -3,31 +3,43 @@ $(document).ready(function(){
 
   // Function
   function github() {
+
+    // Get Active Template
     $.ajax({
-      url: "https://api.github.com/repos/socheatsok78/SAGE-Template/tags",
-      method: 'GET',
-      data: {
-        login: 'socheatsok78',
-        token: 'bb0c2c59ff0a01cafbdb8bd358a89248479f3b48',
+      url: "/developer/template/info"
+    }).done(
+      (info) => {
+        info = JSON.parse(info);
+        $.ajax({
+          url: "https://api.github.com/repos/"+info["GITHUB_APP_OWNER"]+"/"+info["GITHUB_APP_REPO"]+"/tags",
+          method: 'GET',
+          data: {
+            client_id: info['GITHUB_APP_ID'],
+            client_secret: info['GITHUB_APP_SECRET'],
+          }
+        }).done(
+          (git) => {
+            var list = $('[templateList]');
+            for (var i = 0; i < git.length; i++) {
+              var content =
+                '<a templateID='+git[i].name+' href="'+git[i].zipball_url+'" class="list-group-item">' +
+                  '<h4 class="list-group-item-heading">' +
+                    git[i].name +
+                  '</h4>' +
+                  '<p class="list-group-item-text">' +
+                    'Commit: ' + git[i].commit.sha +
+                  '</p>' +
+                '</a>';
+              if (git[i].name == 'latest') {
+                $(list).prepend(content);
+              }else {
+                $(list).append(content);
+              }
+              $('a[templateID="'+info['active']+'"]').addClass('active');
+            }
+        });
       }
-    }).done((suc) => {
-      var list = $('[templateList]');
-      for (var i = 0; i < suc.length; i++) {
-        var content =
-          '<a href="'+suc[i].zipball_url+'" class="list-group-item">' +
-            '<h4 class="list-group-item-heading">' +
-              suc[i].name +
-            '</h4>' +
-            '<p class="list-group-item-text">' +
-              'Commit: ' + suc[i].commit.sha +
-            '</p>' +
-          '</a>';
-        if (suc[i].name == 'latest') {
-          $(list).prepend(content);
-        }else {
-          $(list).append(content);
-        }
-      }
-    });
-  }
+    );
+
+  } // github()
 });
