@@ -46,6 +46,11 @@ class DeveloperController extends Controller
       return 'Update';
     }
 
+    public function validateTemplate()
+    {
+      # code...
+    }
+
 
     public function parseXML(Request $request) {
 
