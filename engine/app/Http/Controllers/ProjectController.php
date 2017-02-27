@@ -32,6 +32,7 @@ class ProjectController extends Controller
     {
         $userEmail = Auth::user()->email;
         $projects = self::lists();
+
         return view(
           'project.index',
           compact('projects', 'userEmail')

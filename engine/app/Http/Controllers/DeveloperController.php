@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\File;
+use Illuminate\Support\Facades\Auth;
 
 class DeveloperController extends Controller
 {
@@ -29,6 +30,9 @@ class DeveloperController extends Controller
     public function index()
     {
         return view('developer.index');
+        if (Auth::user()->role != 1) {
+          return redirect()->route('frontpage');
+        }
     }
 
     public function updateIonicTemplate()
