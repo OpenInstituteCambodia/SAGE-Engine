@@ -1,4 +1,4 @@
-import { NgModule, ErrorHandler } from '@angular/core';
+import { NgModule, ErrorHandler, NO_ERRORS_SCHEMA } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 
 import { xelaController } from './xelaController';
@@ -27,6 +27,7 @@ import { QuestionPage } from '../pages/question/question';
     MenuPage,
     QuestionPage
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, xelaController]
+  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, xelaController],
+  schemas: [ NO_ERRORS_SCHEMA ]
 })
 export class AppModule {}
