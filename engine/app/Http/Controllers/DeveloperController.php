@@ -48,11 +48,14 @@ class DeveloperController extends Controller
       );
 
       $client = new \GuzzleHttp\Client();
-      $res = $client->request('GET', 'https://api.github.com/repos/'.$template['GITHUB_APP_OWNER'].'/'.$template['GITHUB_APP_REPO'].'/tags?client_id='.$template['GITHUB_APP_ID'].'&client_secret='.$template['GITHUB_APP_SECRET']);
+      $res = $client->request(
+        'GET',
+        'https://api.github.com/repos/'.$template['GITHUB_APP_OWNER'].'/'.$template['GITHUB_APP_REPO'].'/tags?client_id='.$template['GITHUB_APP_ID'].'&client_secret='.$template['GITHUB_APP_SECRET']
+      );
 
       $content = $res->getBody();
 
-      echo $content;
+      return $content;
     }
 
     public function getActiveTemplateInfo()

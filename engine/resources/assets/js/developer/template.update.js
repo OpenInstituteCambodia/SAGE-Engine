@@ -11,14 +11,11 @@ $(document).ready(function(){
       (info) => {
         info = JSON.parse(info);
         $.ajax({
-          url: "https://api.github.com/repos/"+info["GITHUB_APP_OWNER"]+"/"+info["GITHUB_APP_REPO"]+"/tags",
-          method: 'GET',
-          data: {
-            client_id: info['GITHUB_APP_ID'],
-            client_secret: info['GITHUB_APP_SECRET'],
-          }
+          url: "/developer/template/update",
+          method: 'GET'
         }).done(
           (git) => {
+            git = JSON.parse(git);
             var list = $('[templateList]');
             for (var i = 0; i < git.length; i++) {
               var content =
