@@ -29,10 +29,10 @@ class DeveloperController extends Controller
      */
     public function index()
     {
-        return view('developer.index');
         if (Auth::user()->role != 1) {
           return redirect()->route('frontpage');
         }
+        return view('developer.index');
     }
 
     public function updateIonicTemplate()
@@ -54,6 +54,8 @@ class DeveloperController extends Controller
       );
 
       $content = $res->getBody();
+
+
 
       return $content;
     }
