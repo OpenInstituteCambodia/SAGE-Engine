@@ -8,3 +8,4 @@ Homestead.json
 Homestead.yaml
 .env
 /phpmyadmin
+npm-debug.log

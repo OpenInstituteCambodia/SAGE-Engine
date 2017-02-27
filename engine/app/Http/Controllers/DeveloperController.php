@@ -8,6 +8,9 @@ use Illuminate\Http\File;
 
 class DeveloperController extends Controller
 {
+    // Specify Version of Template
+    private $templateVersion = 'v0.1';
+
     /**
      * Create a new controller instance.
      *
@@ -27,6 +30,7 @@ class DeveloperController extends Controller
     {
         return view('developer.index');
     }
+
 
     public function parseXML(Request $request) {
 
@@ -52,30 +56,28 @@ class DeveloperController extends Controller
       // Saving HTML file for testing
       Storage::put('public/html/test.html', $htmlTemplate, 'public');
 
+      // Deleting XML File after Parsing Completed
+      Storage::delete('public/'.$xmlPath);
+
+      // Testing
+      self::generateIonicPreview($htmlTemplate);
+
       return view('developer.xml.validator', compact('rootElement', 'xPath', 'htmlTemplate'));
     }
 
     public function getTemplate($xPath) {
-
       if ($xPath->query('/elements')->length > 0) {
         $rootElement = '/elements/unit';
       }else {
         $rootElement = '/unit';
       }
 
-      // Reading Template From File
-      // ob_start();
-      //   include(storage_path('app/ionic/m1.html'));
-      // $htmlTemplateSource = ob_get_clean();
-
       // Replacing Placeholder with XML Data
       $htmlOut = '';
       for ($i=1; $i <= $xPath->query($rootElement)->length; $i++) {
 
         $selectedStyle = $xPath->evaluate('string('.$rootElement.'['.$i.']/@style)');
-        ob_start();
-          include(storage_path('app/templates/'.$selectedStyle.'.html'));
-        $t = ob_get_clean();
+        $t = Storage::get('templates/'.$this->templateVersion.'/'.$selectedStyle.'.html');
 
         // Question
         $t = str_replace([
@@ -120,5 +122,41 @@ class DeveloperController extends Controller
 
       return $htmlOut;
     }
+
+    public function generateIonicPreview($fileContent) {
+
+      self::prepareBaseApp();
+
+      $html = Storage::get('ionic/'.$this->templateVersion.'/src/pages/question/question.html');
+
+      $html = str_replace(
+        [
+          '{{myappcontent}}'
+        ],
+        [
+          $fileContent
+        ],
+        $html
+      );
+      // Saving HTML file for testing
+      Storage::put('public/demo/src/pages/question/question.html', $html, 'public');
+    }
+
+    public function prepareBaseApp()
+    {
+      // if (is_file(storage_path('app/public/demo/package.json'))) {
+      //    dd("File exists");
+      // }
+      Storage::deleteDirectory('public/demo/');
+      $appSourceFiles = Storage::allFiles('ionic/'.$this->templateVersion);
+      Storage::makeDirectory('public/demo/');
+      foreach ($appSourceFiles as $file) {
+        $fileName = explode('/', $file);
+        $fileName = array_diff($fileName, ['ionic', $this->templateVersion]);
+        $fileName = implode('/', $fileName);
+        Storage::copy($file, 'public/demo/'.$fileName);
+      }
+    }
+
 
 }
