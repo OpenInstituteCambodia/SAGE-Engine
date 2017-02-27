@@ -30,17 +30,17 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        $currentUser = Auth::user()->email;
+        $userEmail = Auth::user()->email;
         $projects = self::lists();
         return view(
           'project.index',
-          compact('projects', 'currentUser')
+          compact('projects', 'userEmail')
         );
     }
 
     public function create(Request $request)
     {
-      $currentUser = Auth::user()->email;
+      $userEmail = Auth::user()->email;
 
       $project = array(
         'projectName' => $request->input('projectName'),
@@ -53,26 +53,24 @@ class ProjectController extends Controller
       self::copyBaseApp($project);
 
       // 2. Editing Config.xml and package.json data for project
-      $xmlContent = Storage::get('projects/'.$currentUser.'/'.$project['projectName'].'/config.xml');
+      $xmlContent = Storage::get('projects/'.$userEmail.'/'.$project['projectName'].'/config.xml');
       $xmlContent = str_replace([
-        'xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0"',
         '{{projectPackageName}}',
         '{{projectName}}',
         '{{projectDescription}}',
         '{{projectVersion}}',
         '{{userEmail}}',
       ], [
-        'placeholder_xml_namespace="true"',
         $project['projectPackageName'],
         $project['projectName'],
         $project['projectDescription'],
         $project['projectVersion'],
-        $currentUser
+        $userEmail
 
       ], $xmlContent);
 
       // 3. Saving Data back into Config.xml and package.json in Project Folder
-      Storage::put('projects/'.$currentUser.'/'.$project['projectName'].'/config.xml', $xmlContent, 'public');
+      Storage::put('projects/'.$userEmail.'/'.$project['projectName'].'/config.xml', $xmlContent, 'public');
 
       return redirect()->route('projects');
 
@@ -80,10 +78,10 @@ class ProjectController extends Controller
 
     public function edit($projectName)
     {
-      $currentUser = Auth::user()->email;
+      $userEmail = Auth::user()->email;
 
       // Getting XML content to remove Namespace
-      $content = Storage::get('projects/'.$currentUser.'/'.$projectName.'/config.xml');
+      $content = Storage::get('projects/'.$userEmail.'/'.$projectName.'/config.xml');
       $content = str_replace([
         'xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0"'
       ], [
@@ -93,7 +91,7 @@ class ProjectController extends Controller
       // Parsing XML File
       $xmlDocument = new \DOMDocument('1.0', 'utf-8');
       $xmlDocument->loadXML($content);
-      // $xmlDocument->load(storage_path('app/projects/'.$currentUser.'/'.$projectName.'/config.xml'));
+      // $xmlDocument->load(storage_path('app/projects/'.$userEmail.'/'.$projectName.'/config.xml'));
       $xPath = new \DOMXPath($xmlDocument);
 
       $project = array(
@@ -111,16 +109,16 @@ class ProjectController extends Controller
 
     public function delete($projectName)
     {
-      $currentUser = Auth::user()->email;
+      $userEmail = Auth::user()->email;
       // Deleting Resources
-      Storage::deleteDirectory('projects/'.$currentUser.'/'.$projectName);
+      Storage::deleteDirectory('projects/'.$userEmail.'/'.$projectName);
       return redirect()->route('projects');
     }
 
     public function lists()
     {
-      $currentUser = Auth::user()->email;
-      $listProject = Storage::directories('projects/'.$currentUser.'/');
+      $userEmail = Auth::user()->email;
+      $listProject = Storage::directories('projects/'.$userEmail.'/');
       return $listProject;
     }
 
@@ -131,17 +129,17 @@ class ProjectController extends Controller
 
     public function copyBaseApp($p)
     {
-      $currentUser = Auth::user()->email;
-      if (!is_file(storage_path('app/projects/'.$currentUser.'/'.$p['projectName'].'/package.json'))) {
+      $userEmail = Auth::user()->email;
+      if (!is_file(storage_path('app/projects/'.$userEmail.'/'.$p['projectName'].'/package.json'))) {
 
-        Storage::makeDirectory('projects/'.$currentUser.'/'.$p['projectName']);
+        Storage::makeDirectory('projects/'.$userEmail.'/'.$p['projectName']);
 
         $appSourceFiles = Storage::allFiles('ionic/'.$this->templateVersion);
         foreach ($appSourceFiles as $file) {
           $fileName = explode('/', $file);
           $fileName = array_diff($fileName, ['ionic', $this->templateVersion]);
           $fileName = implode('/', $fileName);
-          Storage::copy($file, 'projects/'.$currentUser.'/'.$p['projectName'].'/'.$fileName);
+          Storage::copy($file, 'projects/'.$userEmail.'/'.$p['projectName'].'/'.$fileName);
         }
       }
       // return 'File Already Exists';

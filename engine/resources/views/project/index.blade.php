@@ -24,7 +24,7 @@
                     <ul class="list-group">
                       @foreach($projects as $project)
                           <li class="list-group-item">
-                            {{ $projectName = str_replace('projects/'.$currentUser.'/', '', $project) }}
+                            {{ $projectName = str_replace('projects/'.$userEmail.'/', '', $project) }}
                             <div class="pull-right">
                               <a class="btn btn-xs btn-info" href="{{ url('project/edit/'.$projectName) }}">Edit</a>
                               <a class="btn btn-xs btn-danger" href="{{ url('project/delete/'.$projectName) }}">Delete</a>
