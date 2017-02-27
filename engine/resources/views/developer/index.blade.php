@@ -13,3 +13,7 @@
     </div>
 </div>
 @endsection
+
+@section('js')
+  <script src="{{ asset('js/template.update.js') }}"></script>
+@endsection
