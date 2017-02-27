@@ -45,7 +45,7 @@ class ProjectCreate extends Command
       $generator = new NameGeneratorController();
       $projectManager = new ProjectController();
 
-      $currentUser = $this->ask('Please provide User Email address:');
+      $userEmail = $this->ask('Please provide User Email address:');
       $templateVersion = $this->ask('Please provide Template Version:');
       $numberOfProject = $this->ask('Number of Project to be generate:');
 
@@ -55,24 +55,44 @@ class ProjectCreate extends Command
 
         $p = array(
           'projectName' => $projectName,
-          'projectVersion' => '',
-          'projectPackageName' => '',
-          'projectDescription' => '',
+          'projectVersion' => '0.0.1',
+          'projectPackageName' => 'debug.'.$projectName,
+          'projectDescription' => $projectName.$projectName.$projectName.$projectName.$projectName.$projectName,
         );
 
         echo "Creating project -> ".$i." -> ".$projectName."\n";
 
-        if (!is_file(storage_path('app/projects/'.$currentUser.'/'.$p['projectName'].'/package.json'))) {
+        if (!is_file(storage_path('app/projects/'.$userEmail.'/'.$p['projectName'].'/package.json'))) {
 
-          Storage::makeDirectory('projects/'.$currentUser.'/'.$p['projectName']);
+          Storage::makeDirectory('projects/'.$userEmail.'/'.$p['projectName']);
 
           $appSourceFiles = Storage::allFiles('ionic/'.$templateVersion);
           foreach ($appSourceFiles as $file) {
             $fileName = explode('/', $file);
             $fileName = array_diff($fileName, ['ionic', $templateVersion]);
             $fileName = implode('/', $fileName);
-            Storage::copy($file, 'projects/'.$currentUser.'/'.$p['projectName'].'/'.$fileName);
+            Storage::copy($file, 'projects/'.$userEmail.'/'.$p['projectName'].'/'.$fileName);
+
           }
+
+          $xmlContent = Storage::get('projects/'.$userEmail.'/'.$p['projectName'].'/config.xml');
+          $xmlContent = str_replace([
+            '{{projectPackageName}}',
+            '{{projectName}}',
+            '{{projectDescription}}',
+            '{{projectVersion}}',
+            '{{userEmail}}',
+          ], [
+            $p['projectPackageName'],
+            $p['projectName'],
+            $p['projectDescription'],
+            $p['projectVersion'],
+            $userEmail
+
+          ], $xmlContent);
+
+          // 3. Saving Data back into Config.xml and package.json in Project Folder
+          Storage::put('projects/'.$userEmail.'/'.$p['projectName'].'/config.xml', $xmlContent, 'public');
         }
       }
 
