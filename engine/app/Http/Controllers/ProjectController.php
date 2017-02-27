@@ -102,7 +102,12 @@ class ProjectController extends Controller
         'projectDescription' => $xPath->evaluate('string(/widget/description)'),
       );
 
-      $unit = Storage::get('projects/'.$userEmail.'/'.$projectName.'/unit.xml');
+      if (is_file(storage_path('app/projects/'.$userEmail.'/'.$projectName.'/unit.xml'))) {
+        $unit = Storage::get('projects/'.$userEmail.'/'.$projectName.'/unit.xml');
+      }else {
+        $unit = '';
+      }
+
 
       return view(
         'project/edit/index',
