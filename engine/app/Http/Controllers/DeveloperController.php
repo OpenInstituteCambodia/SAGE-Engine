@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use Comodojo\Zip\Zip;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Storage;
-use Illuminate\Http\File;
 use Illuminate\Support\Facades\Auth;
 
 class DeveloperController extends Controller
@@ -64,6 +65,15 @@ class DeveloperController extends Controller
           );
           $zipContent = $zipball->getBody();
           Storage::put('github/'.$tag->name.'.zip', $zipContent);
+          $ionicPath =  storage_path('app/ionic/');
+          $githubPath =  storage_path('app/github/');
+          $zip = Zip::open($githubPath.$tag->name.'.zip');
+          $zip->extract($ionicPath);
+          $fileContents = $zip->listFiles(); //Get list of file in the zip contents.
+          if (File::exists($ionicPath.$fileContents[0])){
+            File::moveDirectory($ionicPath.$fileContents[0], $ionicPath.$tag->name);
+          }
+          $zip->close();
         }
       }
 
