@@ -2,7 +2,7 @@
 <unit audio-1="{{placeholder_pre_audio}}" audio-2="{{placeholder_audio}}" *ngIf="question_id == '{{placeholder_unit_id}}'">
   <div [attr.overlay]="isNextButton"></div>
 
-  <!-- <ion-card sticky-center m [ngStyle]="{'background': 'url('{{placeholder_audio_image}}')'}"></ion-card> -->
+  <ion-card sticky-center m [ngStyle]="{'background': 'url('+assets[0].image+'{{placeholder_audio_image}})'}"></ion-card>
 
   <ion-grid [attr.is-next]="isNextButton" *ngIf="isNextButton">
     <ion-row [attr.wrap]="isWrap" >
