@@ -34,7 +34,7 @@ $(document).ready(function(){
               }
             }
             $('a[templateID="'+info['active']+'"]').addClass('active');
-            $('a[templateID="'+info['active']+'"] > .list-group-item-heading').append('&nbsp;<span class="badge" style="background-color: #fff; color: #000;">Active</span>');
+            $('a[templateID="'+info['active']+'"] > .list-group-item-heading').append('&nbsp;<span class="badge" style="background-color: #fff; color: #000;">In Use</span>');
         });
       }
     );
