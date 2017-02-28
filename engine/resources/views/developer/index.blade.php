@@ -3,15 +3,17 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">XML Validator</div>
-
-                <div class="panel-body">
-                    @include('developer.xml.import.upload')
-                </div>
-            </div>
+        <div class="col-md-12">
+          <h2>Developer Console</h2><br>
         </div>
+
+        @include('developer.xml.import.upload')
+        @include('developer.templates.import.update')
+
     </div>
 </div>
+@endsection
+
+@section('js')
+  <script src="{{ asset('js/template.update.js') }}"></script>
 @endsection

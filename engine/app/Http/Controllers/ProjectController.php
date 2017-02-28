@@ -32,6 +32,7 @@ class ProjectController extends Controller
     {
         $userEmail = Auth::user()->email;
         $projects = self::lists();
+
         return view(
           'project.index',
           compact('projects', 'userEmail')
@@ -101,9 +102,16 @@ class ProjectController extends Controller
         'projectDescription' => $xPath->evaluate('string(/widget/description)'),
       );
 
+      if (is_file(storage_path('app/projects/'.$userEmail.'/'.$projectName.'/unit.xml'))) {
+        $unit = Storage::get('projects/'.$userEmail.'/'.$projectName.'/unit.xml');
+      }else {
+        $unit = '';
+      }
+
+
       return view(
         'project/edit/index',
-        compact('project' )
+        compact( 'project', 'unit' )
       );
     }
 
@@ -124,7 +132,18 @@ class ProjectController extends Controller
 
     public function upload(Request $request)
     {
-      # code...
+      $userEmail = Auth::user()->email;
+      $projectName = $request->input('projectName');
+
+      // Reading Uploaded XML File
+      $xmlSource = $request->file('xmlfile');
+      $xmlPath = $request->file('xmlfile')->store('xml', 'public');
+      $xmlSource = Storage::get('public/'.$xmlPath);
+
+      // Store XML File in Storage Folder
+      $xmlPath = Storage::put('projects/'.$userEmail.'/'.$projectName.'/unit.xml', $xmlSource);
+
+      return redirect()->route('project.edit', [$projectName]);
     }
 
     public function copyBaseApp($p)
@@ -149,6 +168,65 @@ class ProjectController extends Controller
     public function prepareXML()
     {
       # code...
+    }
+
+    public function prepareHTML($xPath)
+    {
+      if ($xPath->query('/elements')->length > 0) {
+        $rootElement = '/elements/unit';
+      }else {
+        $rootElement = '/unit';
+      }
+
+      // Replacing Placeholder with XML Data
+      $htmlOut = '';
+      for ($i=1; $i <= $xPath->query($rootElement)->length; $i++) {
+
+        $selectedStyle = $xPath->evaluate('string('.$rootElement.'['.$i.']/@style)');
+        $t = Storage::get('templates/'.$this->templateVersion.'/'.$selectedStyle.'.html');
+
+        // Question
+        $t = str_replace([
+            '{{placeholder_unit_id}}',
+            '{{placeholder_text}}',
+            '{{placeholder_pre_audio}}',
+            '{{placeholder_audio}}',
+            '{{placeholder_audio_image}}',
+            '{{placeholder_text}}',
+            '{{placeholder_correct_answer}}',
+            '{{placeholder_wrong_answer}}',
+            '{{placeholder_correct}}',
+            '{{placeholder_next}}'
+          ],[
+            $xPath->evaluate('string('.$rootElement.'['.$i.']/@id)'),
+            $xPath->evaluate('string('.$rootElement.'['.$i.']/text)'),
+            $xPath->evaluate('string('.$rootElement.'['.$i.']/pre-audio)'),
+            $xPath->evaluate('string('.$rootElement.'['.$i.']/audio)'),
+            $xPath->evaluate('string('.$rootElement.'['.$i.']/image)'),
+            $xPath->evaluate('string('.$rootElement.'['.$i.']/text)'),
+            $xPath->evaluate('string('.$rootElement.'['.$i.']/correct_answer)'),
+            $xPath->evaluate('string('.$rootElement.'['.$i.']/wrong_answer)'),
+            $xPath->evaluate('string('.$rootElement.'['.$i.']/correct)'),
+            $xPath->evaluate('string('.$rootElement.'['.$i.']/next)')
+          ],
+          $t);
+
+        // Choices
+        for ($c=1; $c <= $xPath->query($rootElement.'['.$i.']/choice')->length; $c++) {
+          $t = str_replace([
+            '{{placeholder_choice_'.$c.'_text}}',
+            '{{placeholder_choice_'.$c.'_image}}',
+            '{{placeholder_choice_'.$c.'_audio}}'
+          ],[
+            $xPath->evaluate('string('.$rootElement.'['.$i.']/choice['.$c.']/text)'),
+            $xPath->evaluate('string('.$rootElement.'['.$i.']/choice['.$c.']/image)'),
+            $xPath->evaluate('string('.$rootElement.'['.$i.']/choice['.$c.']/audio)')
+          ], $t);
+        }
+        $htmlOut = $htmlOut.$t;
+      }
+
+      return $htmlOut;
     }
 
 }

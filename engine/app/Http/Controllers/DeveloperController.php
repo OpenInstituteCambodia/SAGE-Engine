@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\File;
+use Illuminate\Support\Facades\Auth;
 
 class DeveloperController extends Controller
 {
@@ -28,7 +29,59 @@ class DeveloperController extends Controller
      */
     public function index()
     {
+        if (Auth::user()->role != 1) {
+          return redirect()->route('frontpage');
+        }
         return view('developer.index');
+    }
+
+    public function updateIonicTemplate()
+    {
+      $template = array(
+        'active' => $this->templateVersion,
+        'GITHUB_APP_ID' => env('GITHUB_APP_ID'),
+        'GITHUB_APP_SECRET' => env('GITHUB_APP_SECRET'),
+        'GITHUB_APP_OWNER' => env('GITHUB_APP_OWNER'),
+        'GITHUB_APP_REPO' => env('GITHUB_APP_REPO'),
+        'GITHUB_APP_ARCHIVE_FORMAT' => env('GITHUB_APP_ARCHIVE_FORMAT'),
+        'GITHUB_APP_TAG' => env('GITHUB_APP_TAG'),
+      );
+
+      $client = new \GuzzleHttp\Client();
+      $res = $client->request(
+        'GET',
+        'https://api.github.com/repos/'.$template['GITHUB_APP_OWNER'].'/'.$template['GITHUB_APP_REPO'].'/tags?client_id='.$template['GITHUB_APP_ID'].'&client_secret='.$template['GITHUB_APP_SECRET']
+      );
+      $headerType = $res->getHeaderLine('content-type');
+      $content = $res->getBody();
+
+      $json = json_decode($content);
+      foreach ($json as $tag) {
+        if (!is_file(storage_path('app/github/'.$tag->name.'.zip'))) {
+          $zipball = $client->request(
+            'GET',
+            $tag->zipball_url
+          );
+          $zipContent = $zipball->getBody();
+          Storage::put('github/'.$tag->name.'.zip', $zipContent);
+        }
+      }
+
+      return $content;
+    }
+
+    public function getActiveTemplateInfo()
+    {
+      $template = array(
+        'active' => $this->templateVersion,
+        'GITHUB_APP_ID' => env('GITHUB_APP_ID'),
+        'GITHUB_APP_SECRET' => env('GITHUB_APP_SECRET'),
+        'GITHUB_APP_OWNER' => env('GITHUB_APP_OWNER'),
+        'GITHUB_APP_REPO' => env('GITHUB_APP_REPO'),
+        'GITHUB_APP_ARCHIVE_FORMAT' => env('GITHUB_APP_ARCHIVE_FORMAT'),
+        'GITHUB_APP_TAG' => env('GITHUB_APP_TAG'),
+      );
+      return json_encode($template, JSON_FORCE_OBJECT);
     }
 
 

@@ -13,7 +13,7 @@
 
 Route::get('/', function () {
     return view('index');
-});
+})->name('frontpage');
 
 Auth::routes();
 
@@ -32,13 +32,19 @@ Route::group(['prefix' => 'project'], function(){
   // Function
   Route::post('create', 'ProjectController@create');
   Route::post('upload', 'ProjectController@upload');
-  Route::get('edit/{projectName}', 'ProjectController@edit');
+  Route::get('edit/{projectName}', 'ProjectController@edit')->name('project.edit');
   Route::get('delete/{projectName}', 'ProjectController@delete');
 });
 
 // Developer Routes
 Route::group(['prefix' => 'developer', 'middleware' => 'auth'], function(){
   Route::get('/', 'DeveloperController@index');
+
+
+  Route::group(['prefix' => 'template'], function(){
+    Route::get('info', 'DeveloperController@getActiveTemplateInfo');
+    Route::get('update', 'DeveloperController@updateIonicTemplate');
+  });
 
   // XML Route
   Route::group(['prefix' => 'xml'], function(){
