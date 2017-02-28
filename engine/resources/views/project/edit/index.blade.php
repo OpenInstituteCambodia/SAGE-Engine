@@ -20,13 +20,24 @@
         </div>
         <div class="col-md-8">
             <div class="panel panel-default">
-                <div class="panel-heading">Configuration</div>
+                <div class="panel-heading">Edit</div>
 
                 <div class="panel-body">
                   @include('project/import/upload')
+
+                  <div class="">
+                    <br>
+                    <button class="btn btn-default btn-lg" >Compile Debug Packages</button>
+                    <button class="btn btn-default btn-lg" >Download Packages</button>
+                  </div>
                 </div>
             </div>
         </div>
+
+        <div class="col-md-12">
+          <h2>Application Content</h2>
+        </div>
+
         <div class="col-md-12">
             <div class="panel panel-default">
                 <div class="panel-heading">XML Contents</div>
