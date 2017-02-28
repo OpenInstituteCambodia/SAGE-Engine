@@ -143,6 +143,9 @@ class ProjectController extends Controller
       // Store XML File in Storage Folder
       $xmlPath = Storage::put('projects/'.$userEmail.'/'.$projectName.'/unit.xml', $xmlSource);
 
+      // Parsing XML file to Generate HTML output
+      self::parseXML($request);
+
       return redirect()->route('project.edit', [$projectName]);
     }
 
@@ -165,9 +168,41 @@ class ProjectController extends Controller
 
     }
 
-    public function prepareXML()
-    {
-      # code...
+    public function parseXML(Request $request) {
+      // Saving HTML file for testing
+      $userEmail = Auth::user()->email;
+      $projectName = $request->input('projectName');
+
+      // Reading Uploaded XML File
+      $xmlSource = $request->file('xmlfile');
+      // Store XML File in Storage Folder
+      $xmlPath = 'projects/'.$userEmail.'/'.$projectName.'/unit.xml';
+
+      // Parsing XML File
+      $xmlDocument = new \DOMDocument('1.0', 'utf-8');
+      $xmlDocument->load(storage_path('app/').$xmlPath);
+      $xPath = new \DOMXPath($xmlDocument);
+
+      if ($xPath->query('/elements')->length > 0) {
+        $rootElement = '/elements/unit';
+      }else {
+        $rootElement = '/unit';
+      }
+
+      // Generating HTML Template with XML file
+      $htmlTemplate = self::prepareHTML($xPath);
+
+      // Reading HTML base Template HTML file for replacing content
+      $htmlSource = Storage::get('ionic/'.$this->templateVersion.'/src/pages/question/question.html');
+
+      $htmlFinalized = str_replace([
+        '{{myappcontent}}'
+      ], [
+        $htmlTemplate
+      ], $htmlSource);
+
+      Storage::put('projects/'.$userEmail.'/'.$projectName.'/src/pages/question/question.html', $htmlFinalized);
+      return redirect()->route('project.edit', [$projectName]);
     }
 
     public function prepareHTML($xPath)
