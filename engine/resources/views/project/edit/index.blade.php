@@ -29,12 +29,25 @@
         </div>
         <div class="col-md-12">
             <div class="panel panel-default">
-                <div class="panel-heading">Contents</div>
+                <div class="panel-heading">XML Contents</div>
 
                 <div class="panel-body">
                   <textarea class="form-control" rows="20" style="resize: none;">
                     @if( !empty($unit) )
                       {{ html_entity_decode($unit) }}
+                    @endif
+                  </textarea>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">Question Contents</div>
+
+                <div class="panel-body">
+                  <textarea class="form-control" rows="20" style="resize: none;">
+                    @if( !empty($htmlQuestion) )
+                      {{ html_entity_decode($htmlQuestion) }}
                     @endif
                   </textarea>
                 </div>

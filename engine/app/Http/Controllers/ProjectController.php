@@ -104,14 +104,16 @@ class ProjectController extends Controller
 
       if (is_file(storage_path('app/projects/'.$userEmail.'/'.$projectName.'/unit.xml'))) {
         $unit = Storage::get('projects/'.$userEmail.'/'.$projectName.'/unit.xml');
+        $htmlQuestion = Storage::get('projects/'.$userEmail.'/'.$projectName.'/src/pages/question/question.html');
       }else {
         $unit = '';
       }
+      $htmlMenu = '';
 
 
       return view(
         'project/edit/index',
-        compact( 'project', 'unit' )
+        compact( 'project', 'unit', 'htmlMenu', 'htmlQuestion' )
       );
     }
 
