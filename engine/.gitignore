@@ -9,3 +9,4 @@ Homestead.yaml
 .env
 /phpmyadmin
 npm-debug.log
+composer.lock
