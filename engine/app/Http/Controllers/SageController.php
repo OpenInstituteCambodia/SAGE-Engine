@@ -28,6 +28,18 @@ class SageController extends Controller
     $CONFIG = array(
       'template' => $xPath->evaluate('string(/sage/preference[@name="templateVersion"])'),
     );
+
     return $CONFIG;
+  }
+
+  public function setTemplate($value)
+  {
+    $SAGE = new \DOMDocument('1.0', 'utf-8');
+    $SAGE_CONFIG_XML = Storage::get('/sage.xml');
+    $SAGE->loadXML($SAGE_CONFIG_XML);
+
+    $SAGE->getElementsByTagName("preference")->item(0)->nodeValue = $value;
+    Storage::put('/sage.xml', $SAGE->saveXML());
+    return redirect()->route('developer');
   }
 }
