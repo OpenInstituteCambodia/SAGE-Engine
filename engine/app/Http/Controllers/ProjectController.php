@@ -225,7 +225,7 @@ class ProjectController extends Controller
       for ($i=1; $i <= $xPath->query($rootElement)->length; $i++) {
 
         $selectedStyle = $xPath->evaluate('string('.$rootElement.'['.$i.']/@style)');
-        $t = Storage::get('templates/'.$this->templateVersion.'/'.$selectedStyle.'.html');
+        $t = Storage::get('ionic/'.$this->templateVersion.'/template/'.$selectedStyle.'.html');
 
         // Question
         $t = str_replace([
