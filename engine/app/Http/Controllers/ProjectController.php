@@ -126,7 +126,7 @@ class ProjectController extends Controller
     {
       $userEmail = Auth::user()->email;
       // Deleting Resources
-      Storage::deleteDirectory('projects/'.$userEmail.'/'.$projectName);
+      Storage::deleteDirectory('projects/'.$userEmail.'/'.$projectName.'/', true);
       return redirect()->route('projects');
     }
 
