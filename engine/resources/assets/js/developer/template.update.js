@@ -19,7 +19,7 @@ $(document).ready(function(){
             var list = $('[templateList]');
             for (var i = 0; i < git.length; i++) {
               var content =
-                '<a templateID='+git[i].name+' href="'+git[i].zipball_url+'" class="list-group-item">' +
+                '<a templateID='+git[i].name+' href="/developer/template/set/'+git[i].name+'" class="list-group-item">' +
                   '<h4 class="list-group-item-heading">' +
                     git[i].name +
                   '</h4>' +

@@ -38,12 +38,12 @@ Route::group(['prefix' => 'project'], function(){
 
 // Developer Routes
 Route::group(['prefix' => 'developer', 'middleware' => 'auth'], function(){
-  Route::get('/', 'DeveloperController@index');
+  Route::get('/', 'DeveloperController@index')->name('developer');
 
 
   Route::group(['prefix' => 'template'], function(){
     Route::get('info', 'DeveloperController@getActiveTemplateInfo');
-    Route::get('set/{version}', 'DeveloperController@setActiveTemplate');
+    Route::get('set/{version}', 'SageController@setTemplate');
     Route::get('update', 'DeveloperController@updateIonicTemplate');
   });
 
