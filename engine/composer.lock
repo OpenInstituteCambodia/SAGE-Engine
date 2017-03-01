@@ -4,8 +4,105 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "911c2a1d7686512c88aba6d6da667259",
+    "content-hash": "92bdba1212feb212c565d849a64fad61",
     "packages": [
+        {
+            "name": "comodojo/exceptions",
+            "version": "1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/comodojo/exceptions.git",
+                "reference": "5eb2c462b04a08e109865429fbdb4e36cce358cf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/comodojo/exceptions/zipball/5eb2c462b04a08e109865429fbdb4e36cce358cf",
+                "reference": "5eb2c462b04a08e109865429fbdb4e36cce358cf",
+                "shasum": ""
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.0|^5.0",
+                "scrutinizer/ocular": "^1.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Comodojo\\Exception\\": "src/Exception"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marco Giovinazzi",
+                    "email": "marco.giovinazzi@comodojo.org",
+                    "homepage": "http://jme.altervista.org"
+                },
+                {
+                    "name": "Marco Castiello",
+                    "email": "marco.castiello@gmail.com"
+                }
+            ],
+            "description": "Common exceptions for comodojo libs and frameworks",
+            "homepage": "https://comodojo.org",
+            "keywords": [
+                "comodojo",
+                "exception"
+            ],
+            "time": "2016-07-27T23:42:58+00:00"
+        },
+        {
+            "name": "comodojo/zip",
+            "version": "2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/comodojo/zip.git",
+                "reference": "a31cd07ebd2cd009eba365c8e8108485c2366eb5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/comodojo/zip/zipball/a31cd07ebd2cd009eba365c8e8108485c2366eb5",
+                "reference": "a31cd07ebd2cd009eba365c8e8108485c2366eb5",
+                "shasum": ""
+            },
+            "require": {
+                "comodojo/exceptions": "@stable",
+                "php": ">=5.6.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.0|^5.0",
+                "scrutinizer/ocular": "^1.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Comodojo\\Zip\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marco Giovinazzi",
+                    "email": "marco.giovinazzi@comodojo.org",
+                    "homepage": "http://jme.altervista.org"
+                }
+            ],
+            "description": "ZipArchive toolbox",
+            "homepage": "https://comodojo.org",
+            "keywords": [
+                "merge",
+                "multiple",
+                "unzip",
+                "zip",
+                "ziparchive"
+            ],
+            "time": "2015-12-21T23:50:31+00:00"
+        },
         {
             "name": "dnoegel/php-xdg-base-dir",
             "version": "0.1",
@@ -263,16 +360,16 @@
         },
         {
             "name": "guzzlehttp/psr7",
-            "version": "1.4.0",
+            "version": "1.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
-                "reference": "04a6d1a00ea5da0727ee94309a9f0d3dbaecb569"
+                "reference": "0d6c7ca039329247e4f0f8f8f6506810e8248855"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/04a6d1a00ea5da0727ee94309a9f0d3dbaecb569",
-                "reference": "04a6d1a00ea5da0727ee94309a9f0d3dbaecb569",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/0d6c7ca039329247e4f0f8f8f6506810e8248855",
+                "reference": "0d6c7ca039329247e4f0f8f8f6506810e8248855",
                 "shasum": ""
             },
             "require": {
@@ -324,7 +421,7 @@
                 "uri",
                 "url"
             ],
-            "time": "2017-02-21T01:20:32+00:00"
+            "time": "2017-02-27T10:51:17+00:00"
         },
         {
             "name": "jakub-onderka/php-console-color",
@@ -415,16 +512,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v5.4.12",
+            "version": "v5.4.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "707f32d32dce58232f7a860e0a1d62caf6f9dbfc"
+                "reference": "3eebfaa759156e06144892b00bb95304aa5a71c1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/707f32d32dce58232f7a860e0a1d62caf6f9dbfc",
-                "reference": "707f32d32dce58232f7a860e0a1d62caf6f9dbfc",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/3eebfaa759156e06144892b00bb95304aa5a71c1",
+                "reference": "3eebfaa759156e06144892b00bb95304aa5a71c1",
                 "shasum": ""
             },
             "require": {
@@ -540,7 +637,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2017-02-15T14:31:32+00:00"
+            "time": "2017-02-22T16:07:04+00:00"
         },
         {
             "name": "laravel/tinker",
@@ -911,16 +1008,16 @@
         },
         {
             "name": "paragonie/random_compat",
-            "version": "v2.0.4",
+            "version": "v2.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/paragonie/random_compat.git",
-                "reference": "a9b97968bcde1c4de2a5ec6cbd06a0f6c919b46e"
+                "reference": "b5ea1ef3d8ff10c307ba8c5945c2f134e503278f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/a9b97968bcde1c4de2a5ec6cbd06a0f6c919b46e",
-                "reference": "a9b97968bcde1c4de2a5ec6cbd06a0f6c919b46e",
+                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/b5ea1ef3d8ff10c307ba8c5945c2f134e503278f",
+                "reference": "b5ea1ef3d8ff10c307ba8c5945c2f134e503278f",
                 "shasum": ""
             },
             "require": {
@@ -955,7 +1052,7 @@
                 "pseudorandom",
                 "random"
             ],
-            "time": "2016-11-07T23:38:38+00:00"
+            "time": "2017-02-27T17:11:23+00:00"
         },
         {
             "name": "psr/http-message",
@@ -2554,23 +2651,23 @@
         },
         {
             "name": "phpunit/php-code-coverage",
-            "version": "4.0.5",
+            "version": "4.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "c19cfc7cbb0e9338d8c469c7eedecc2a428b0971"
+                "reference": "ca060f645beeddebedb1885c97bf163e93264c35"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/c19cfc7cbb0e9338d8c469c7eedecc2a428b0971",
-                "reference": "c19cfc7cbb0e9338d8c469c7eedecc2a428b0971",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/ca060f645beeddebedb1885c97bf163e93264c35",
+                "reference": "ca060f645beeddebedb1885c97bf163e93264c35",
                 "shasum": ""
             },
             "require": {
                 "php": "^5.6 || ^7.0",
                 "phpunit/php-file-iterator": "~1.3",
                 "phpunit/php-text-template": "~1.2",
-                "phpunit/php-token-stream": "^1.4.2",
+                "phpunit/php-token-stream": "^1.4.2 || ^2.0",
                 "sebastian/code-unit-reverse-lookup": "~1.0",
                 "sebastian/environment": "^1.3.2 || ^2.0",
                 "sebastian/version": "~1.0|~2.0"
@@ -2613,7 +2710,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2017-01-20T15:06:43+00:00"
+            "time": "2017-02-23T07:38:02+00:00"
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -2705,25 +2802,30 @@
         },
         {
             "name": "phpunit/php-timer",
-            "version": "1.0.8",
+            "version": "1.0.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-timer.git",
-                "reference": "38e9124049cf1a164f1e4537caf19c99bf1eb260"
+                "reference": "3dcf38ca72b158baf0bc245e9184d3fdffa9c46f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-timer/zipball/38e9124049cf1a164f1e4537caf19c99bf1eb260",
-                "reference": "38e9124049cf1a164f1e4537caf19c99bf1eb260",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-timer/zipball/3dcf38ca72b158baf0bc245e9184d3fdffa9c46f",
+                "reference": "3dcf38ca72b158baf0bc245e9184d3fdffa9c46f",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.3"
+                "php": "^5.3.3 || ^7.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "~4|~5"
+                "phpunit/phpunit": "^4.8.35 || ^5.7 || ^6.0"
             },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
             "autoload": {
                 "classmap": [
                     "src/"
@@ -2745,20 +2847,20 @@
             "keywords": [
                 "timer"
             ],
-            "time": "2016-05-12T18:03:57+00:00"
+            "time": "2017-02-26T11:10:40+00:00"
         },
         {
             "name": "phpunit/php-token-stream",
-            "version": "1.4.9",
+            "version": "1.4.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-token-stream.git",
-                "reference": "3b402f65a4cc90abf6e1104e388b896ce209631b"
+                "reference": "e03f8f67534427a787e21a385a67ec3ca6978ea7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-token-stream/zipball/3b402f65a4cc90abf6e1104e388b896ce209631b",
-                "reference": "3b402f65a4cc90abf6e1104e388b896ce209631b",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-token-stream/zipball/e03f8f67534427a787e21a385a67ec3ca6978ea7",
+                "reference": "e03f8f67534427a787e21a385a67ec3ca6978ea7",
                 "shasum": ""
             },
             "require": {
@@ -2794,7 +2896,7 @@
             "keywords": [
                 "tokenizer"
             ],
-            "time": "2016-11-15T14:06:22+00:00"
+            "time": "2017-02-27T10:12:30+00:00"
         },
         {
             "name": "phpunit/phpunit",
