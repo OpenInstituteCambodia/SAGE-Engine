@@ -58,38 +58,43 @@ class DeveloperController extends Controller
         'GITHUB_APP_OWNER' => env('GITHUB_APP_OWNER'),
         'GITHUB_APP_REPO' => env('GITHUB_APP_REPO'),
         'GITHUB_APP_ARCHIVE_FORMAT' => env('GITHUB_APP_ARCHIVE_FORMAT'),
-        'GITHUB_APP_TAG' => env('GITHUB_APP_TAG'),
+        'GITHUB_APP_TAG' => 'releases',
+        // 'GITHUB_APP_TAG' => env('GITHUB_APP_TAG'),
       );
 
       $client = new \GuzzleHttp\Client();
       $res = $client->request(
         'GET',
-        'https://api.github.com/repos/'.$template['GITHUB_APP_OWNER'].'/'.$template['GITHUB_APP_REPO'].'/tags?client_id='.$template['GITHUB_APP_ID'].'&client_secret='.$template['GITHUB_APP_SECRET']
+        'https://api.github.com/repos/'.$template['GITHUB_APP_OWNER'].'/'.$template['GITHUB_APP_REPO'].'/'.$template['GITHUB_APP_TAG'].'?client_id='.$template['GITHUB_APP_ID'].'&client_secret='.$template['GITHUB_APP_SECRET']
       );
       $headerType = $res->getHeaderLine('content-type');
       $content = $res->getBody();
 
       $json = json_decode($content);
       foreach ($json as $tag) {
-        if (!is_file(storage_path('app/github/'.$tag->name.'.zip'))) {
+        if (!is_file(storage_path('app/github/'.$tag->tag_name.'.zip'))) {
           $zipball = $client->request(
             'GET',
             $tag->zipball_url
           );
+
           $zipContent = $zipball->getBody();
-          Storage::put('github/'.$tag->name.'.zip', $zipContent);
+          Storage::put('github/'.$tag->tag_name.'.zip', $zipContent);
+
           $ionicPath =  storage_path('app/ionic/');
           $githubPath =  storage_path('app/github/');
-          $zip = Zip::open($githubPath.$tag->name.'.zip');
+
+          $zip = Zip::open($githubPath.$tag->tag_name.'.zip');
           $zip->extract($ionicPath);
           $fileContents = $zip->listFiles(); //Get list of file in the zip contents.
+
           if (File::exists($ionicPath.$fileContents[0])){
-            File::moveDirectory($ionicPath.$fileContents[0], $ionicPath.$tag->name);
+            File::moveDirectory($ionicPath.$fileContents[0], $ionicPath.$tag->tag_name);
           }
           $zip->close();
         }
       }
-
+      // dd($json);
       return $content;
     }
 

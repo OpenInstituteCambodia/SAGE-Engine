@@ -18,13 +18,15 @@ $(document).ready(function(){
             git = JSON.parse(git);
             var list = $('[templateList]');
             for (var i = 0; i < git.length; i++) {
+              var commit = git[i].body.replace(/(\r\n|\n|\r)/gm, "<br />");
               var content =
-                '<a templateID='+git[i].name+' href="/developer/template/set/'+git[i].name+'" class="list-group-item">' +
+                '<a templateID='+git[i].tag_name+' href="/developer/template/set/'+git[i].tag_name+'" class="list-group-item">' +
                   '<h4 class="list-group-item-heading">' +
                     git[i].name +
                   '</h4>' +
                   '<p class="list-group-item-text">' +
-                    'Commit: ' + git[i].commit.sha +
+                    'Commit: ' + commit +
+                    '<br>' +
                   '</p>' +
                 '</a>';
               if (git[i].name == 'latest') {
