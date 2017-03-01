@@ -11,7 +11,8 @@ use Illuminate\Support\Facades\Log;
 class ProjectController extends Controller
 {
     // Specify Version of Template
-    private $templateVersion = 'v0.4';
+    private $templateVersion;
+    private $sage;
 
     /**
      * Create a new controller instance.
@@ -21,6 +22,10 @@ class ProjectController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+
+        $SAGE = new SageController();
+        $this->sage = $SAGE->sageConfig();
+        $this->templateVersion = $this->sage['template'];
     }
 
     /**

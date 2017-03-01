@@ -8,11 +8,13 @@ use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Auth;
 
+use App\Http\Controllers\SageController;
+
 class DeveloperController extends Controller
 {
     // Specify Version of Template
-    private $templateVersion = 'v0.1';
-
+    private $templateVersion;
+    private $sage;
     /**
      * Create a new controller instance.
      *
@@ -21,6 +23,10 @@ class DeveloperController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+
+        $SAGE = new SageController();
+        $this->sage = $SAGE->sageConfig();
+        $this->templateVersion = $this->sage['template'];
     }
 
     /**
@@ -33,7 +39,14 @@ class DeveloperController extends Controller
         if (Auth::user()->role != 1) {
           return redirect()->route('frontpage');
         }
+
         return view('developer.index');
+    }
+
+    public function setActiveTemplate($value)
+    {
+      # code...
+      return $value;
     }
 
     public function updateIonicTemplate()
