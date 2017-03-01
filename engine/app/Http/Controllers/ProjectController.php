@@ -11,7 +11,8 @@ use Illuminate\Support\Facades\Log;
 class ProjectController extends Controller
 {
     // Specify Version of Template
-    private $templateVersion = 'v0.1';
+    private $templateVersion;
+    private $sage;
 
     /**
      * Create a new controller instance.
@@ -21,6 +22,10 @@ class ProjectController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+
+        $SAGE = new SageController();
+        $this->sage = $SAGE->sageConfig();
+        $this->templateVersion = $this->sage['template'];
     }
 
     /**
@@ -54,7 +59,7 @@ class ProjectController extends Controller
       self::copyBaseApp($project);
 
       // 2. Editing Config.xml and package.json data for project
-      $xmlContent = Storage::get('projects/'.$userEmail.'/'.$project['projectName'].'/config.xml');
+      $xmlContent = Storage::get('projects/'.$userEmail.'/'.$project['projectName'].'/config.xml.example');
       $xmlContent = str_replace([
         '{{projectPackageName}}',
         '{{projectName}}',
