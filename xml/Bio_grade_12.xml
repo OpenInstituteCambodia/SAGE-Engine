@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <elements>
-  <unit id="C1L1Q1" style="M1">
+  <unit id="C1L1Q1" style="M2">
      <audio-text>រុក្ខជាតិ​ស៊ីមណូស្ពែម គឺជា​​ក្រុម​រង​នៃ​រុក្ខជាតិ​ដែល​​​​បន្តពូជ​តាមរយៈ​​គ្រាប់​ ។ តើ​លក្ខណៈ​​មួយ​ណា​ដែល​សម្គាល់​ថា​ជា​រុក្ខជាតិ​ស៊ីមណូស្ពែម?</audio-text>
      <pre-audio>Msg Question 1.mp3</pre-audio>
      <audio></audio>
@@ -26,7 +26,7 @@
     <wrong_answer>Training Message Q1.mp3</wrong_answer>
     <next>C1L1Q2</next>
   </unit>
-  <unit id="C1L1Q2" style="M1">
+  <unit id="C1L1Q2" style="M2">
      <audio-text>ស៊ីមណូស្ពែម​ ជា​រុក្ខជាតិ​មាន​គ្រាប់​ដែល​​​គ្មាន​សំបក​ការពារ​ពី​ខាង​ក្រៅ​ទេ ។  រុក្ខជាតិ​ស៊ីមណូស្ពែម​មាន​បួន​ប្រភេទ​​៖ ប្រង់, កូនីភែ, គីងកូ និង​ស៊ីណេតូភីត ។​ រុក្ខជាតិ​ស្រល់​ជា​រុក្ខជាតិ​មួយ​ប្រភេទ​ដែល​មាន​ស្លឹក​រាង​ដូច​ម្ជុល​។ តើ​ស្រល់​នៅ​ក្រុម​ណា​មួយ​នៃ​រុក្ខជាតិ​ស៊ីមណូស្ពែម?</audio-text>
      <pre-audio>Msg Question 2.mp3</pre-audio>
      <audio></audio>
@@ -52,7 +52,7 @@
     <wrong_answer>Training Message Q2.mp3</wrong_answer>
     <next>C1L1Q3</next>
   </unit>
-  <unit id="C1L1Q3" style="M1">
+  <unit id="C1L1Q3" style="M2">
      <audio-text>ស៊ីមណូស្ពែម​ ជា​រុក្ខជាតិ​ដែល​​​​បន្តពូជ​តាមរយៈ​​គ្រាប់​ និង​​គ្រាប់​​គ្មាន​សំបក​ការពារ​ពី​ខាង​ក្រៅ​ទេ។  រុក្ខជាតិ​ស៊ីមណូស្ពែម​មាន​បួន​ប្រភេទ​​៖ ប្រង់, កូនីភែ, គីងកូ និង​ស៊ីណេតូភីត។​  តើ​ស៊ីមណូស្ពែម​ក្រុម​ណា​ ដែល​មាន​មាន​លក្ខណៈ​ធន់​នឹង​កង្វល់​បរិយាកាស​បាន?</audio-text>
      <pre-audio>Msg Question 3.mp3</pre-audio>
      <audio></audio>
@@ -78,7 +78,7 @@
     <wrong_answer>Training Message Q3.mp3</wrong_answer>
     <next>C1L1Q4</next>
   </unit>
-  <unit id="C1L1Q4" style="M1">
+  <unit id="C1L1Q4" style="M2">
      <audio-text>ស៊ីមណូស្ពែម​ ជា​រុក្ខជាតិ​ដែល​​​​បន្តពូជ​តាមរយៈ​​គ្រាប់​ និង​​គ្រាប់​​គ្មាន​សំបក ការពារ​ពី​ខាង​ក្រៅ​ទេ។​ តើ​ ​សរីរាង្គ​បន្ត​ពូជ​របស់​រុក្ខជាតិ​ស៊ីមណូស្ពែម​ ហៅថា​អ្វី ?</audio-text>
      <pre-audio>Msg Question 4.mp3</pre-audio>
      <audio></audio>
@@ -104,7 +104,7 @@
     <wrong_answer>Training Message Q4.mp3</wrong_answer>
     <next>C1L1Q5</next>
   </unit>
-  <unit id="C1L1Q5" style="M1">
+  <unit id="C1L1Q5" style="M2">
      <audio-text>ស៊ីមណូស្ពែម​ ជា​រុក្ខជាតិ​ដែល​​​​បន្តពូជ​តាមរយៈ​​គ្រាប់​ និង​​គ្រាប់​​គ្មាន​សំបក​ការពារ​ពី​ខាង​ក្រៅ​ទេ។​  តើ​ដំណើរ​លំអង​របស់​រុក្ខជាតិ​ស៊ីមណូស្ពែម​ ច្រើន​ប្រព្រឹត្ត​ទៅ​ដោយ​សារ​កត្តា​អ្វី?</audio-text>
      <pre-audio>Msg Question 5.mp3</pre-audio>
      <audio></audio>
@@ -130,7 +130,7 @@
     <wrong_answer>Training Message Q5.mp3</wrong_answer>
     <next>C1L1Q6</next>
   </unit>
-  <unit id="C1L1Q6" style="M1">
+  <unit id="C1L1Q6" style="M2">
      <audio-text>ស៊ីមណូស្ពែម​ ជា​រុក្ខជាតិ​ដែល​​​​បន្តពូជ​តាមរយៈ​​គ្រាប់​ និង​​គ្រាប់​​គ្មាន​សំបក​ការពារ​ពី​ខាង​ក្រៅ​ទេ​។​​ សរីរាង្គ​បន្ត​ពូជ​របស់​រុក្ខជាតិ​ស៊ីមណូស្ពែម​ ហៅថា​កោន និង​ដំណើរ​លំអង​ច្រើន​ប្រព្រឹត្ត​ដោយ​សារ​ខ្យល់។ តើ​កោសិកា​បន្ត​ពូជ​ញី​ដែល​លូត​លាស់​ក្នុង​អូវុល​មាន​ឈ្មោះ​អ្វី? </audio-text>
      <pre-audio>Msg Question 6.mp3</pre-audio>
      <audio></audio>
@@ -156,7 +156,7 @@
     <wrong_answer>Training Message Q6.mp3</wrong_answer>
     <next>C1L1Q7</next>
   </unit>
-  <unit id="C1L1Q7" style="M1">
+  <unit id="C1L1Q7" style="M2">
      <audio-text>ស៊ីមណូស្ពែម​ ជា​រុក្ខជាតិ​ដែល​​​​បន្តពូជ​តាមរយៈ​​គ្រាប់​ និង​​គ្រាប់​​គ្មាន​សំបក​ការពារ​ពី​ខាង​ក្រៅ​ទេ។ សរីរាង្គ​បន្ត​ពូជ​របស់​រុក្ខជាតិ​ស៊ីមណូស្ពែម​ ហៅថា​កោន និង​ដំណើរ​លំអង​ច្រើន​ប្រព្រឹត្ត​ដោយ​សារ​ខ្យល់។ តើ​គ្រាប់​លំអង​មាន​ផ្ទុក​កោសិកា​ ដែល​ក្រោយ​មក​ក្លាយ​ជា​អ្វី?</audio-text>
      <pre-audio>Msg Question 7.mp3</pre-audio>
      <audio></audio>
