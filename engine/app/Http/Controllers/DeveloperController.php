@@ -49,30 +49,6 @@ class DeveloperController extends Controller
       return $value;
     }
 
-    public function updateIonicTemplate()
-    {
-      $template = array(
-        'active' => $this->templateVersion,
-        'GITHUB_APP_ID' => env('GITHUB_APP_ID'),
-        'GITHUB_APP_SECRET' => env('GITHUB_APP_SECRET'),
-        'GITHUB_APP_OWNER' => env('GITHUB_APP_OWNER'),
-        'GITHUB_APP_REPO' => env('GITHUB_APP_REPO'),
-        'GITHUB_APP_ARCHIVE_FORMAT' => env('GITHUB_APP_ARCHIVE_FORMAT'),
-        'GITHUB_APP_TAG' => 'releases',
-        // 'GITHUB_APP_TAG' => env('GITHUB_APP_TAG'),
-      );
-
-      $client = new \GuzzleHttp\Client();
-      $res = $client->request(
-        'GET',
-        'https://api.github.com/repos/'.$template['GITHUB_APP_OWNER'].'/'.$template['GITHUB_APP_REPO'].'/'.$template['GITHUB_APP_TAG'].'?client_id='.$template['GITHUB_APP_ID'].'&client_secret='.$template['GITHUB_APP_SECRET']
-      );
-      $headerType = $res->getHeaderLine('content-type');
-      $content = $res->getBody();
-
-      return $content;
-    }
-
     public function getActiveTemplateInfo()
     {
       $template = array(
