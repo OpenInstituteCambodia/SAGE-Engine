@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Auth;
  */
 class SageController extends Controller
 {
+  private $templateVersion;
 
   public function __construct()
   {
@@ -29,6 +30,7 @@ class SageController extends Controller
       'template' => $xPath->evaluate('string(/sage/preference[@name="templateVersion"])'),
     );
 
+    $this->templateVersion = $CONFIG['template'];
     return $CONFIG;
   }
 
