@@ -17,7 +17,7 @@
               <div class="panel panel-default">
                   <div class="panel-heading">
                     My Projects
-                    <span class="badge">{{ count($projects) }}</span>
+                    <span class="pull-right badge">{{ count($projects) }}</span>
                   </div>
 
                   <div class="panel-body">
