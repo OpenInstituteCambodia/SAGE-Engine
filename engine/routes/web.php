@@ -44,7 +44,7 @@ Route::group(['prefix' => 'developer', 'middleware' => 'auth'], function(){
   Route::group(['prefix' => 'template'], function(){
     Route::get('info', 'DeveloperController@getActiveTemplateInfo');
     Route::get('set/{version}', 'SageController@setTemplate');
-    Route::get('update', 'DeveloperController@updateIonicTemplate');
+    Route::get('releases', 'SageController@templateReleases');
   });
 
   // XML Route

@@ -70,31 +70,6 @@ class DeveloperController extends Controller
       $headerType = $res->getHeaderLine('content-type');
       $content = $res->getBody();
 
-      $json = json_decode($content);
-      foreach ($json as $tag) {
-        if (!is_file(storage_path('app/github/'.$tag->tag_name.'.zip'))) {
-          $zipball = $client->request(
-            'GET',
-            $tag->zipball_url
-          );
-
-          $zipContent = $zipball->getBody();
-          Storage::put('github/'.$tag->tag_name.'.zip', $zipContent);
-
-          $ionicPath =  storage_path('app/ionic/');
-          $githubPath =  storage_path('app/github/');
-
-          $zip = Zip::open($githubPath.$tag->tag_name.'.zip');
-          $zip->extract($ionicPath);
-          $fileContents = $zip->listFiles(); //Get list of file in the zip contents.
-
-          if (File::exists($ionicPath.$fileContents[0])){
-            File::moveDirectory($ionicPath.$fileContents[0], $ionicPath.$tag->tag_name);
-          }
-          $zip->close();
-        }
-      }
-      // dd($json);
       return $content;
     }
 

@@ -11,7 +11,7 @@ $(document).ready(function(){
       (info) => {
         info = JSON.parse(info);
         $.ajax({
-          url: "/developer/template/update",
+          url: "/developer/template/releases",
           method: 'GET'
         }).done(
           (git) => {
