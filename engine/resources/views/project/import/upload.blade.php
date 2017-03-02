@@ -3,10 +3,10 @@
     <label for="">XML Template</label>
     <input class="form-control" type="file" name="xmlfile">
   </div>
-  <div class="form-group">
+  <!-- <div class="form-group">
     <label for="">Resources</label>
     <input class="form-control" type="file" name="xmlresources" webkitdirectory mozdirectory msdirectory odirectory directory multiple>
-  </div>
+  </div> -->
 
   {{ csrf_field() }}
   <input class="form-control" type="hidden" name="projectName" value="{{ $project['projectName'] }}">
