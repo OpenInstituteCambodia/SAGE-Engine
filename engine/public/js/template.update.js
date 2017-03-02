@@ -1,9 +1,13 @@
 $(document).ready(function(){
   github();
 
+  $('#templateUpdate').on('click', (event) => {
+    $('[templateList]').empty();
+    github();
+  });
+
   // Function
   function github() {
-
     // Get Active Template
     $.ajax({
       url: "/developer/template/info"
