@@ -254,7 +254,7 @@ class ProjectController extends Controller
           $t);
 
         // Choices
-        for ($c=1; $c <= $xPath->query($rootElement.'['.$i.']/choice')->length; $c++) {
+        for ($c=1; $c <= $xPath->query($rootElement.'['.$i.']/choice')->length+1; $c++) {
           $t = str_replace([
             '{{placeholder_choice_'.$c.'_text}}',
             '{{placeholder_choice_'.$c.'_image}}',
