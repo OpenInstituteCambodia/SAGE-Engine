@@ -25,7 +25,7 @@ $(document).ready(function(){
                     git[i].name +
                   '</h4>' +
                   '<p class="list-group-item-text">' +
-                    'Commit: ' + commit +
+                    commit +
                     '<br>' +
                   '</p>' +
                 '</a>';
