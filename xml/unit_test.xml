@@ -154,10 +154,1785 @@
        <image>L3.4P36.jpg</image>
        <audio>L3P36_8.mp3</audio>
      </choice>
-<correct>3</correct>
+<correct>1</correct>
 <correct_answer>correct.mp3</correct_answer>
 <wrong_answer>wrong.mp3</wrong_answer>
 <next>L3P37Q1</next>
 </unit>
+
+<!-- Page 37 -->
+<unit id="L3P37Q1" style="M1">
+     <audio-text>ចូរជ្រើសរើសពាក្យឱ្យត្រូវនឹងរូបភាព</audio-text>
+     <pre-audio>M1.mp3</pre-audio>
+     <audio></audio>
+     <image>L3.3P37.jpg</image>
+     <choice id="1">
+       <text>ភេ</text>
+       <audio>L3P37_1.mp3</audio>
+     </choice>
+     <choice id="2">
+       <text>សំពះ</text>
+       <audio>L3P37_2.mp3</audio>
+     </choice>
+     <choice id="3">
+       <text>ពពោះ</text>
+       <audio>L3P37_3.mp3</audio>
+     </choice>
+     <choice id="4">
+       <text>ពុំងា</text>
+       <audio>L3P37_4.mp3</audio>
+     </choice>
+<correct>2</correct>
+<correct_answer>correct.mp3</correct_answer>
+<wrong_answer>wrong.mp3</wrong_answer>
+<next>L3P37Q2</next>
+</unit>
+
+<unit id="L3P37Q2" style="M2">
+     <audio-text>ចូរចុចពាក្យដែលអ្នកបានឮ</audio-text>
+     <pre-audio>M2.mp3</pre-audio>
+     <audio>L3P37_6.mp3</audio>
+     <image>question.jpg</image>
+     <choice id="1">
+       <text>ធនាគារ</text>
+       <audio>L3P37_5.mp3</audio>
+     </choice>
+     <choice id="2">
+       <text>ធូរធារ</text>
+       <audio>L3P37_6.mp3</audio>
+     </choice>
+     <choice id="3">
+       <text>ទើរ</text>
+       <audio>L3P37_7.mp3</audio>
+     </choice>
+     <choice id="4">
+       <text>ភើ</text>
+       <audio>L3P37_8.mp3</audio>
+     </choice>
+<correct>2</correct>
+<correct_answer>correct.mp3</correct_answer>
+<wrong_answer>wrong.mp3</wrong_answer>
+<next>L3P37Q3</next>
+</unit>
+
+<unit id="L3P37Q3" style="M3">
+     <audio-text>ចូរជ្រើសរើសរូបភាពឱ្យត្រូវនឹងពាក្យ</audio-text>
+     <pre-audio>M3.mp3</pre-audio>
+     <text>មី</text>
+     <choice id="1">
+       <image>L3.4P37.jpg</image>
+       <audio>L3P37_9.mp3</audio>
+     </choice>
+     <choice id="2">
+       <image>L3.1P37.jpg</image>
+       <audio>L3P37_10.mp3</audio>
+     </choice>
+     <choice id="3">
+       <image>L3.3P37.jpg</image>
+       <audio>L3P37_2.mp3</audio>
+     </choice>
+     <choice id="4">
+       <image>L3.2P37.jpg</image>
+       <audio>L3P37_5.mp3</audio>
+     </choice>
+<correct>1</correct>
+<correct_answer>correct.mp3</correct_answer>
+<wrong_answer>wrong.mp3</wrong_answer>
+<next>L3P37Q4</next>
+</unit>
+
+<unit id="L3P37Q4" style="M1">
+     <audio-text>ចូរជ្រើសរើសពាក្យឱ្យត្រូវនឹងរូបភាព</audio-text>
+     <pre-audio>M1.mp3</pre-audio>
+     <audio></audio>
+     <image>L3.1P37.jpg</image>
+     <choice id="1">
+       <text>ទំនេរ</text>
+       <audio>L3P37_11.mp3</audio>
+     </choice>
+     <choice id="2">
+       <text>នំ</text>
+       <audio>L3P37_12.mp3</audio>
+     </choice>
+     <choice id="3">
+       <text>ទើរ</text>
+       <audio>L3P37_7.mp3</audio>
+     </choice>
+     <choice id="4">
+       <text>ទូ</text>
+       <audio>L3P37_10.mp3</audio>
+     </choice>
+<correct>4</correct>
+<correct_answer>correct.mp3</correct_answer>
+<wrong_answer>wrong.mp3</wrong_answer>
+<next>L3P37Q5</next>
+</unit>
+
+<unit id="L3P37Q5" style="M2">
+     <audio-text>ចូរចុចពាក្យដែលអ្នកបានឮ</audio-text>
+     <pre-audio>M2.mp3</pre-audio>
+     <audio>L3P37_8.mp3</audio>
+     <image>question.jpg</image>
+     <choice id="1">
+       <text>ពុំងា</text>
+       <audio>L3P37_4.mp3</audio>
+     </choice>
+     <choice id="2">
+       <text>ភើ</text>
+       <audio>L3P37_8.mp3</audio>
+     </choice>
+     <choice id="3">
+       <text>ទំនេរ</text>
+       <audio>L3P37_11.mp3</audio>
+     </choice>
+     <choice id="4">
+       <text>ពពោះ</text>
+       <audio>L3P37_3.mp3</audio>
+     </choice>
+<correct>2</correct>
+<correct_answer>correct.mp3</correct_answer>
+<wrong_answer>wrong.mp3</wrong_answer>
+<next>L3P37Q6</next>
+</unit>
+
+<unit id="L3P37Q6" style="M3">
+     <audio-text>ចូរជ្រើសរើសរូបភាពឱ្យត្រូវនឹងពាក្យ</audio-text>
+     <pre-audio>M3.mp3</pre-audio>
+     <text>ធនាគារ</text>
+     <choice id="1">
+       <image>L3.3P37.jpg</image>
+       <audio>L3P37_2.mp3</audio>
+     </choice>
+     <choice id="2">
+       <image>L3.2P37.jpg</image>
+       <audio>L3P37_5.mp3</audio>
+     </choice>
+     <choice id="3">
+       <image>L3.4P37.jpg</image>
+       <audio>L3P37_9.mp3</audio>
+     </choice>
+     <choice id="4">
+       <image>L3.1P37.jpg</image>
+       <audio>L3P37_10.mp3</audio>
+     </choice>
+<correct>2</correct>
+<correct_answer>correct.mp3</correct_answer>
+<wrong_answer>wrong.mp3</wrong_answer>
+<next>L3P38Q1</next>
+</unit>
+
+<!-- Page 38 -->
+<unit id="L3P38Q1" style="M1">
+     <audio-text>ចូរជ្រើសរើសពាក្យឱ្យត្រូវនឹងរូបភាព</audio-text>
+     <pre-audio>M1.mp3</pre-audio>
+     <audio></audio>
+     <image>L3.3P38.jpg</image>
+     <choice id="1">
+       <text>អាយ៉ៃ</text>
+       <audio>L3P38_1.mp3</audio>
+     </choice>
+     <choice id="2">
+       <text>ឆៃយ៉ាំ</text>
+       <audio>L3P38_2.mp3</audio>
+     </choice>
+     <choice id="3">
+       <text>រយ៉ៃ</text>
+       <audio>L3P38_3.mp3</audio>
+     </choice>
+     <choice id="4">
+       <text>រ៉ាំរ៉ៃ</text>
+       <audio>L3P38_4.mp3</audio>
+     </choice>
+<correct>2</correct>
+<correct_answer>correct.mp3</correct_answer>
+<wrong_answer>wrong.mp3</wrong_answer>
+<next>L3P38Q2</next>
+</unit>
+
+<unit id="L3P38Q2" style="M2">
+     <audio-text>ចូរចុចពាក្យដែលអ្នកបានឮ</audio-text>
+     <pre-audio>M2.mp3</pre-audio>
+     <audio>L3P38_1.mp3</audio>
+     <image>question.jpg</image>
+     <choice id="1">
+       <text>អាយ៉ៃ</text>
+       <audio>L3P38_1.mp3</audio>
+     </choice>
+     <choice id="2">
+       <text>យ៉ាប់យ៉ឺន</text>
+       <audio>L3P38_5.mp3</audio>
+     </choice>
+     <choice id="3">
+       <text>រ៉ាំរ៉ៃ</text>
+       <audio>L3P38_4.mp3</audio>
+     </choice>
+     <choice id="4">
+       <text>រ៉ែ</text>
+       <audio>L3P38_6.mp3</audio>
+     </choice>
+<correct>1</correct>
+<correct_answer>correct.mp3</correct_answer>
+<wrong_answer>wrong.mp3</wrong_answer>
+<next>L3P38Q3</next>
+</unit>
+
+<unit id="L3P38Q3" style="M1">
+     <audio-text>ចូរជ្រើសរើសពាក្យឱ្យត្រូវនឹងរូបភាព</audio-text>
+     <pre-audio>M1.mp3</pre-audio>
+     <audio></audio>
+     <image>L3.2P38.jpg</image>
+     <choice id="1">
+       <text>រ៉ៃ</text>
+       <audio>L3P38_7.mp3</audio>
+     </choice>
+     <choice id="2">
+       <text>រ៉េ</text>
+       <audio>L3P38_8.mp3</audio>
+     </choice>
+     <choice id="3">
+       <text>រ៉ូប</text>
+       <audio>L3P38_9.mp3</audio>
+     </choice>
+     <choice id="4">
+       <text>រ៉ែ</text>
+       <audio>L3P38_6.mp3</audio>
+     </choice>
+<correct>3</correct>
+<correct_answer>correct.mp3</correct_answer>
+<wrong_answer>wrong.mp3</wrong_answer>
+<next>L3P38Q4</next>
+</unit>
+
+<unit id="L3P38Q4" style="M2">
+     <audio-text>ចូរចុចពាក្យដែលអ្នកបានឮ</audio-text>
+     <pre-audio>M2.mp3</pre-audio>
+     <audio>L3P38_11.mp3</audio>
+     <image>question.jpg</image>
+     <choice id="1">
+       <text>រ៉ាំរ៉ៃ</text>
+       <audio>L3P38_4.mp3</audio>
+     </choice>
+     <choice id="2">
+       <text>រយ៉ៃ</text>
+       <audio>L3P38_3.mp3</audio>
+     </choice>
+     <choice id="3">
+       <text>យ៉ាក</text>
+       <audio>L3P38_10.mp3</audio>
+     </choice>
+     <choice id="4">
+       <text>រ៉ាប់រង</text>
+       <audio>L3P38_11.mp3</audio>
+     </choice>
+<correct>4</correct>
+<correct_answer>correct.mp3</correct_answer>
+<wrong_answer>wrong.mp3</wrong_answer>
+<next>L3P38Q5</next>
+</unit>
+
+<unit id="L3P38Q5" style="M1">
+     <audio-text>ចូរជ្រើសរើសពាក្យឱ្យត្រូវនឹងរូបភាព</audio-text>
+     <pre-audio>M1.mp3</pre-audio>
+     <audio></audio>
+     <image>L3.1P38.jpg</image>
+     <choice id="1">
+       <text>រយ៉ា</text>
+       <audio>L3P38_12.mp3</audio>
+     </choice>
+     <choice id="2">
+       <text>រ៉ូប</text>
+       <audio>L3P38_9.mp3</audio>
+     </choice>
+     <choice id="3">
+       <text>រ៉េ</text>
+       <audio>L3P38_8.mp3</audio>
+     </choice>
+     <choice id="4">
+       <text>រយ៉ៃ</text>
+       <audio>L3P38_3.mp3</audio>
+     </choice>
+<correct>1</correct>
+<correct_answer>correct.mp3</correct_answer>
+<wrong_answer>wrong.mp3</wrong_answer>
+<next>L3P38Q6</next>
+</unit>
+
+<unit id="L3P38Q6" style="M2">
+     <audio-text>ចូរចុចពាក្យដែលអ្នកបានឮ</audio-text>
+     <pre-audio>M2.mp3</pre-audio>
+     <audio>L3P38_5.mp3</audio>
+     <image>question.jpg</image>
+     <choice id="1">
+       <text>ឆៃយ៉ាំ</text>
+       <audio>L3P38_2.mp3</audio>
+     </choice>
+     <choice id="2">
+       <text>យ៉ាប់យ៉ឺន</text>
+       <audio>L3P38_5.mp3</audio>
+     </choice>
+     <choice id="3">
+       <text>អាយ៉ៃ</text>
+       <audio>L3P38_1.mp3</audio>
+     </choice>
+     <choice id="4">
+       <text>រ៉ាប់រង</text>
+       <audio>L3P38_11.mp3</audio>
+     </choice>
+<correct>2</correct>
+<correct_answer>correct.mp3</correct_answer>
+<wrong_answer>wrong.mp3</wrong_answer>
+<next>L3P39Q1</next>
+</unit>
+
+<!-- Page 39 -->
+<unit id="L3P39Q1" style="M1">
+     <audio-text>ចូរជ្រើសរើសពាក្យឱ្យត្រូវនឹងរូបភាព</audio-text>
+     <pre-audio>M1.mp3</pre-audio>
+     <audio></audio>
+     <image>L3.1P39.jpg</image>
+     <choice id="1">
+       <text>ហ៊ា</text>
+       <audio>L3P39_1.mp3</audio>
+     </choice>
+     <choice id="2">
+       <text>ហ៊ិ</text>
+       <audio>L3P39_2.mp3</audio>
+     </choice>
+     <choice id="3">
+       <text>ហ៊ុម</text>
+       <audio>L3P39_3.mp3</audio>
+     </choice>
+     <choice id="4">
+       <text>ហ៊ីង</text>
+       <audio>L3P39_4.mp3</audio>
+     </choice>
+<correct>4</correct>
+<correct_answer>correct.mp3</correct_answer>
+<wrong_answer>wrong.mp3</wrong_answer>
+<next>L3P39Q2</next>
+</unit>
+
+<unit id="L3P39Q2" style="M2">
+     <audio-text>ចូរចុចពាក្យដែលអ្នកបានឮ</audio-text>
+     <pre-audio>M2.mp3</pre-audio>
+     <audio>L3P39_6.mp3</audio>
+     <image>question.jpg</image>
+     <choice id="1">
+       <text>ហ៊ូ</text>
+       <audio>L3P39_5.mp3</audio>
+     </choice>
+     <choice id="2">
+       <text>ហ៊ោ</text>
+       <audio>L3P39_6.mp3</audio>
+     </choice>
+     <choice id="3">
+       <text>ហ៊ាន</text>
+       <audio>L3P39_7.mp3</audio>
+     </choice>
+     <choice id="4">
+       <text>ហ៊ុន</text>
+       <audio>L3P39_8.mp3</audio>
+     </choice>
+<correct>2</correct>
+<correct_answer>correct.mp3</correct_answer>
+<wrong_answer>wrong.mp3</wrong_answer>
+<next>L3P39Q3</next>
+</unit>
+
+<unit id="L3P39Q3" style="M1">
+     <audio-text>ចូរជ្រើសរើសពាក្យឱ្យត្រូវនឹងរូបភាព</audio-text>
+     <pre-audio>M1.mp3</pre-audio>
+     <audio></audio>
+     <image>L3.3P39.jpg</image>
+     <choice id="1">
+       <text>តៅហ៊ូ</text>
+       <audio>L3P39_9.mp3</audio>
+     </choice>
+     <choice id="2">
+       <text>ហ៊ឺហារ</text>
+       <audio>L3P39_10.mp3</audio>
+     </choice>
+     <choice id="3">
+       <text>រាហ៊ូ</text>
+       <audio>L3P39_11.mp3</audio>
+     </choice>
+     <choice id="4">
+       <text>ក្រុមហ៊ុន</text>
+       <audio>L3P39_12.mp3</audio>
+     </choice>
+<correct>1</correct>
+<correct_answer>correct.mp3</correct_answer>
+<wrong_answer>wrong.mp3</wrong_answer>
+<next>L3P39Q4</next>
+</unit>
+
+<unit id="L3P39Q4" style="M2">
+     <audio-text>ចូរចុចពាក្យដែលអ្នកបានឮ</audio-text>
+     <pre-audio>M2.mp3</pre-audio>
+     <audio>L3P39_12.mp3</audio>
+     <image>question.jpg</image>
+     <choice id="1">
+       <text>ហ៊ុន</text>
+       <audio>L3P39_8.mp3</audio>
+     </choice>
+     <choice id="2">
+       <text>តៅហ៊ូ</text>
+       <audio>L3P39_9.mp3</audio>
+     </choice>
+     <choice id="3">
+       <text>ក្រុមហ៊ុន</text>
+       <audio>L3P39_12.mp3</audio>
+     </choice>
+     <choice id="4">
+       <text>ហ៊ឺហារ</text>
+       <audio>L3P39_10.mp3</audio>
+     </choice>
+<correct>3</correct>
+<correct_answer>correct.mp3</correct_answer>
+<wrong_answer>wrong.mp3</wrong_answer>
+<next>L3P39Q5</next>
+</unit>
+
+<unit id="L3P39Q5" style="M1">
+     <audio-text>ចូរជ្រើសរើសពាក្យឱ្យត្រូវនឹងរូបភាព</audio-text>
+     <pre-audio>M1.mp3</pre-audio>
+     <audio></audio>
+     <image>L3.2P39.jpg</image>
+     <choice id="1">
+       <text>ក្រុមហ៊ុន</text>
+       <audio>L3P39_12.mp3</audio>
+     </choice>
+     <choice id="2">
+       <text>រាហ៊ូ</text>
+       <audio>L3P39_11.mp3</audio>
+     </choice>
+     <choice id="3">
+       <text>ហ៊ូ</text>
+       <audio>L3P39_5.mp3</audio>
+     </choice>
+     <choice id="4">
+       <text>ហ៊ាន</text>
+       <audio>L3P39_7.mp3</audio>
+     </choice>
+<correct>2</correct>
+<correct_answer>correct.mp3</correct_answer>
+<wrong_answer>wrong.mp3</wrong_answer>
+<next>L3P39Q6</next>
+</unit>
+
+<unit id="L3P39Q6" style="M2">
+     <audio-text>ចូរចុចពាក្យដែលអ្នកបានឮ</audio-text>
+     <pre-audio>M2.mp3</pre-audio>
+     <audio>L3P39_7.mp3</audio>
+     <image>question.jpg</image>
+     <choice id="1">
+       <text>ហ៊ាន</text>
+       <audio>L3P39_7.mp3</audio>
+     </choice>
+     <choice id="2">
+       <text>ហ៊ុម</text>
+       <audio>L3P39_3.mp3</audio>
+     </choice>
+     <choice id="3">
+       <text>ហ៊ា</text>
+       <audio>L3P39_1.mp3</audio>
+     </choice>
+     <choice id="4">
+       <text>ហ៊ីង</text>
+       <audio>L3P39_4.mp3</audio>
+     </choice>
+<correct>1</correct>
+<correct_answer>correct.mp3</correct_answer>
+<wrong_answer>wrong.mp3</wrong_answer>
+<next>L3P40Q1</next>
+</unit>
+
+<!-- Page 40 -->
+<unit id="L3P40Q1" style="M1">
+     <audio-text>ចូរជ្រើសរើសពាក្យឱ្យត្រូវនឹងរូបភាព</audio-text>
+     <pre-audio>M1.mp3</pre-audio>
+     <audio></audio>
+     <image>L3.3P40.jpg</image>
+     <choice id="1">
+       <text>ពោត</text>
+       <audio>L3P40_1.mp3</audio>
+     </choice>
+     <choice id="2">
+       <text>មៀន</text>
+       <audio>L3P40_2.mp3</audio>
+     </choice>
+     <choice id="3">
+       <text>រៀន</text>
+       <audio>L3P40_3.mp3</audio>
+     </choice>
+     <choice id="4">
+       <text>ចត</text>
+       <audio>L3P40_4.mp3</audio>
+     </choice>
+<correct>2</correct>
+<correct_answer>correct.mp3</correct_answer>
+<wrong_answer>wrong.mp3</wrong_answer>
+<next>L3P40Q2</next>
+</unit>
+
+<unit id="L3P40Q2" style="M2">
+     <audio-text>ចូរចុចពាក្យដែលអ្នកបានឮ</audio-text>
+     <pre-audio>M2.mp3</pre-audio>
+     <audio>L3P40_5.mp3</audio>
+     <image>question.jpg</image>
+     <choice id="1">
+       <text>បិទ</text>
+       <audio>”L3P40_6.mp3</audio>
+     </choice>
+     <choice id="2">
+       <text>រៀន</text>
+       <audio>”L3P40_3.mp3</audio>
+     </choice>
+     <choice id="3">
+       <text>គូថ</text>
+       <audio>”L3P40_8.mp3</audio>
+     </choice>
+     <choice id="4">
+       <text>កូន</text>
+       <audio>”L3P40_5.mp3</audio>
+     </choice>
+<correct>4</correct>
+<correct_answer>correct.mp3</correct_answer>
+<wrong_answer>wrong.mp3</wrong_answer>
+<next>L3P40Q3</next>
+</unit>
+
+<unit id="L3P40Q3" style="M3">
+     <audio-text>ចូរជ្រើសរើសរូបភាពឱ្យត្រូវនឹងពាក្យ</audio-text>
+     <pre-audio>M3.mp3</pre-audio>
+     <text>ចាន</text>
+     <choice id="1">
+       <image>L3.4P40.jpg</image>
+       <audio>L3P40_9.mp3</audio>
+     </choice>
+     <choice id="2">
+       <image>L3.1P40.jpg</image>
+       <audio>L3P40_7.mp3</audio>
+     </choice>
+     <choice id="3">
+       <image>L3.3P40.jpg</image>
+       <audio>L3P40_2.mp3</audio>
+     </choice>
+     <choice id="4">
+       <image>L3.2P40.jpg</image>
+       <audio>L3P40_1.mp3</audio>
+     </choice>
+<correct>1</correct>
+<correct_answer>correct.mp3</correct_answer>
+<wrong_answer>wrong.mp3</wrong_answer>
+<next>L3P40Q4</next>
+</unit>
+
+<unit id="L3P40Q4" style="M1">
+     <audio-text>ចូរជ្រើសរើសពាក្យឱ្យត្រូវនឹងរូបភាព</audio-text>
+     <pre-audio>M1.mp3</pre-audio>
+     <audio></audio>
+     <image>L3.1P40.jpg</image>
+     <choice id="1">
+       <text>បាទ</text>
+       <audio>L3P40.mp3</audio>
+     </choice>
+     <choice id="2">
+       <text>កូន</text>
+       <audio>L3P40_5.mp3</audio>
+     </choice>
+     <choice id="3">
+       <text>កាត</text>
+       <audio>L3P40_7.mp3</audio>
+     </choice>
+     <choice id="4">
+       <text>ប្រមាថ</text>
+       <audio>L3P40_11.mp3</audio>
+     </choice>
+<correct>3</correct>
+<correct_answer>correct.mp3</correct_answer>
+<wrong_answer>wrong.mp3</wrong_answer>
+<next>L3P40Q5</next>
+</unit>
+
+<unit id="L3P40Q5" style="M2">
+     <audio-text>ចូរចុចពាក្យដែលអ្នកបានឮ</audio-text>
+     <pre-audio>M2.mp3</pre-audio>
+     <audio>.mp3</audio>
+     <image>question.jpg</image>
+     <choice id="1">
+       <text>ប្រមាថ</text>
+       <audio>L3P40_11.mp3</audio>
+     </choice>
+     <choice id="2">
+       <text>បាទ</text>
+       <audio>L3P40_10.mp3</audio>
+     </choice>
+     <choice id="3">
+       <text>មារយាទ</text>
+       <audio>L3P40_12.mp3</audio>
+     </choice>
+     <choice id="4">
+       <text>ចត</text>
+       <audio>L3P40_4.mp3</audio>
+     </choice>
+<correct>1</correct>
+<correct_answer>correct.mp3</correct_answer>
+<wrong_answer>wrong.mp3</wrong_answer>
+<next>L3P40Q6</next>
+</unit>
+
+<unit id="L3P40Q6" style="M3">
+     <audio-text>ចូរជ្រើសរើសរូបភាពឱ្យត្រូវនឹងពាក្យ</audio-text>
+     <pre-audio>M3.mp3</pre-audio>
+     <text>ពោត</text>
+     <choice id="1">
+       <image>L3.3P40.jpg</image>
+       <audio>L3P40_2.mp3</audio>
+     </choice>
+     <choice id="2">
+       <image>L3.2P40.jpg</image>
+       <audio>L3P40_1.mp3</audio>
+     </choice>
+     <choice id="3">
+       <image>L3.4P40.jpg</image>
+       <audio>L3P40_9.mp3</audio>
+     </choice>
+     <choice id="4">
+       <image>L3.1P40.jpg</image>
+       <audio>L3P40_7.mp3</audio>
+     </choice>
+<correct>2</correct>
+<correct_answer>correct.mp3</correct_answer>
+<wrong_answer>wrong.mp3</wrong_answer>
+<next>L3P41Q1</next>
+</unit>
+
+<!-- Page 41 -->
+<unit id="L3P41Q1" style="M1">
+     <audio-text>ចូរជ្រើសរើសពាក្យឱ្យត្រូវនឹងរូបភាព</audio-text>
+     <pre-audio>M1.mp3</pre-audio>
+     <audio></audio>
+     <image>L3.2P41.jpg</image>
+     <choice id="1">
+       <text>ខ្លុយ</text>
+       <audio>L3P41_2.mp3</audio>
+     </choice>
+     <choice id="2">
+       <text>ខ្វិត</text>
+       <audio>L3P41_3.mp3</audio>
+     </choice>
+     <choice id="3">
+       <text>ខ្វិន</text>
+       <audio>L3P41_4.mp3</audio>
+     </choice>
+     <choice id="4">
+       <text>ខ្លា</text>
+       <audio>L3P41_1.mp3</audio>
+     </choice>
+<correct>4</correct>
+<correct_answer>correct.mp3</correct_answer>
+<wrong_answer>wrong.mp3</wrong_answer>
+<next>L3P41Q2</next>
+</unit>
+
+<unit id="L3P41Q2" style="M2">
+     <audio-text>ចូរចុចពាក្យដែលអ្នកបានឮ</audio-text>
+     <pre-audio>M2.mp3</pre-audio>
+     <audio>L3P41_6.mp3</audio>
+     <image>question.jpg</image>
+     <choice id="1">
+       <text>ក្មេងក្មាង</text>
+       <audio>L3P41_5.mp3</audio>
+     </choice>
+     <choice id="2">
+       <text>ក្នុង</text>
+       <audio>L3P41_6.mp3</audio>
+     </choice>
+     <choice id="3">
+       <text>ក្ងក់</text>
+       <audio>L3P41_7.mp3</audio>
+     </choice>
+     <choice id="4">
+       <text>ខ្វិត</text>
+       <audio>L3P41_3.mp3</audio>
+     </choice>
+<correct>2</correct>
+<correct_answer>correct.mp3</correct_answer>
+<wrong_answer>wrong.mp3</wrong_answer>
+<next>L3P41Q3</next>
+</unit>
+
+<unit id="L3P41Q3" style="M3">
+     <audio-text>ចូរជ្រើសរើសរូបភាពឱ្យត្រូវនឹងពាក្យ</audio-text>
+     <pre-audio>M3.mp3</pre-audio>
+     <text>ពោត</text>
+     <choice id="1">
+       <image>L3.3P41.jpg</image>
+       <audio>L3P41_9.mp3</audio>
+     </choice>
+     <choice id="2">
+       <image>L3.4P41.jpg</image>
+       <audio>L3P41_10.mp3</audio>
+     </choice>
+     <choice id="3">
+       <image>L3.1P41.jpg</image>
+       <audio>L3P41_8.mp3</audio>
+     </choice>
+     <choice id="4">
+       <image>L3.2P41.jpg</image>
+       <audio>L3P41_1.mp3</audio>
+     </choice>
+<correct>3</correct>
+<correct_answer>correct.mp3</correct_answer>
+<wrong_answer>wrong.mp3</wrong_answer>
+<next>L3P41Q4</next>
+</unit>
+
+<unit id="L3P41Q4" style="M1">
+     <audio-text>ចូរជ្រើសរើសពាក្យឱ្យត្រូវនឹងរូបភាព</audio-text>
+     <pre-audio>M1.mp3</pre-audio>
+     <audio></audio>
+     <image>L3.4P41.jpg</image>
+     <choice id="1">
+       <text>ទាខ្វៃ</text>
+       <audio>L3P41_10.mp3</audio>
+     </choice>
+     <choice id="2">
+       <text>ខ្លារខិន</text>
+       <audio>L3P41_11.mp3</audio>
+     </choice>
+     <choice id="3">
+       <text>ក្ងិចក្ងក់</text>
+       <audio>L3P41_12.mp3</audio>
+     </choice>
+     <choice id="4">
+       <text>ខ្លុយ</text>
+       <audio>L3P41_2.mp3</audio>
+     </choice>
+<correct>1</correct>
+<correct_answer>correct.mp3</correct_answer>
+<wrong_answer>wrong.mp3</wrong_answer>
+<next>L3P41Q5</next>
+</unit>
+
+<unit id="L3P41Q5" style="M2">
+     <audio-text>ចូរចុចពាក្យដែលអ្នកបានឮ</audio-text>
+     <pre-audio>M2.mp3</pre-audio>
+     <audio>L3P41_7.mp3</audio>
+     <image>question.jpg</image>
+     <choice id="1">
+       <text>ខ្លែង</text>
+       <audio>L3P41_9.mp3</audio>
+     </choice>
+     <choice id="2">
+       <text>ក្ងក់</text>
+       <audio>L3P41_7.mp3</audio>
+     </choice>
+     <choice id="3">
+       <text>ក្មេងក្មាង</text>
+       <audio>L3P41_5.mp3</audio>
+     </choice>
+     <choice id="4">
+       <text>ខ្វិត</text>
+       <audio>L3P41_3.mp3</audio>
+     </choice>
+<correct>2</correct>
+<correct_answer>correct.mp3</correct_answer>
+<wrong_answer>wrong.mp3</wrong_answer>
+<next>L3P41Q6</next>
+</unit>
+
+<unit id="L3P41Q6" style="M3">
+     <audio-text>ចូរជ្រើសរើសរូបភាពឱ្យត្រូវនឹងពាក្យ</audio-text>
+     <pre-audio>M3.mp3</pre-audio>
+     <text>ខ្លែង</text>
+     <choice id="1">
+       <image>L3.1P41.jpg</image>
+       <audio>L3P41_8.mp3</audio>
+     </choice>
+     <choice id="2">
+       <image>L3.2P41.jpg</image>
+       <audio>L3P41_1.mp3</audio>
+     </choice>
+     <choice id="3">
+       <image>L3.3P41.jpg</image>
+       <audio>L3P41_9.mp3</audio>
+     </choice>
+     <choice id="4">
+       <image>L3.4P41.jpg</image>
+       <audio>L3P41_10.mp3</audio>
+     </choice>
+<correct>3</correct>
+<correct_answer>correct.mp3</correct_answer>
+<wrong_answer>wrong.mp3</wrong_answer>
+<next>L3P42Q1</next>
+</unit>
+
+<!-- Page 42 -->
+<unit id="L3P42Q1" style="M1">
+     <audio-text>ចូរជ្រើសរើសពាក្យឱ្យត្រូវនឹងរូបភាព</audio-text>
+     <pre-audio>M1.mp3</pre-audio>
+     <audio></audio>
+     <image>L3.4P42.jpg</image>
+     <choice id="1">
+       <text>ឃ្មុំ</text>
+       <audio>L3P42_1.mp3</audio>
+     </choice>
+     <choice id="2">
+       <text>ឃ្មោះ</text>
+       <audio>L3P42_2.mp3</audio>
+     </choice>
+     <choice id="3">
+       <text>ឃ្លា</text>
+       <audio>L3P42_3.mp3</audio>
+     </choice>
+     <choice id="4">
+       <text>ឃ្វាល</text>
+       <audio>L3P42_4.mp3</audio>
+     </choice>
+<correct>1</correct>
+<correct_answer>correct.mp3</correct_answer>
+<wrong_answer>wrong.mp3</wrong_answer>
+<next>L3P42Q2</next>
+</unit>
+
+<unit id="L3P42Q2" style="M2">
+     <audio-text>ចូរចុចពាក្យដែលអ្នកបានឮ</audio-text>
+     <pre-audio>M2.mp3</pre-audio>
+     <audio>L3P42_7.mp3</audio>
+     <image>question.jpg</image>
+     <choice id="1">
+       <text>គ្រុន</text>
+       <audio>L3P42_5.mp3</audio>
+     </choice>
+     <choice id="2">
+       <text>គ្រុំ</text>
+       <audio>L3P42_6.mp3</audio>
+     </choice>
+     <choice id="3">
+       <text>គ្រូ</text>
+       <audio>L3P42_7.mp3</audio>
+     </choice>
+     <choice id="4">
+       <text>ឃ្លា</text>
+       <audio>L3P42_3.mp3</audio>
+     </choice>
+<correct>3</correct>
+<correct_answer>correct.mp3</correct_answer>
+<wrong_answer>wrong.mp3</wrong_answer>
+<next>L3P42Q3</next>
+</unit>
+
+<unit id="L3P42Q3" style="M3">
+     <audio-text>ចូរជ្រើសរើសរូបភាពឱ្យត្រូវនឹងពាក្យ</audio-text>
+     <pre-audio>M3.mp3</pre-audio>
+     <text>គ្រែ</text>
+     <choice id="1">
+       <image>L3.1P42.jpg</image>
+       <audio>L3P42_8.mp3</audio>
+     </choice>
+     <choice id="2">
+       <image>L3.3P42.jpg</image>
+       <audio>L3P42_9.mp3</audio>
+     </choice>
+     <choice id="3">
+       <image>L3.4P42.jpg</image>
+       <audio>L3P42_1.mp3</audio>
+     </choice>
+     <choice id="4">
+       <image>L3.2P42.jpg</image>
+       <audio>L3P42_10.mp3</audio>
+     </choice>
+<correct>3</correct>
+<correct_answer>correct.mp3</correct_answer>
+<wrong_answer>wrong.mp3</wrong_answer>
+<next>L3P42Q4</next>
+</unit>
+
+<unit id="L3P42Q4" style="M1">
+     <audio-text>ចូរជ្រើសរើសពាក្យឱ្យត្រូវនឹងរូបភាព</audio-text>
+     <pre-audio>M1.mp3</pre-audio>
+     <audio></audio>
+     <image>L3.1P42.jpg</image>
+     <choice id="1">
+       <text>ខ្សឹប</text>
+       <audio>L3P42_11.mp3</audio>
+     </choice>
+     <choice id="2">
+       <text>គ្រូ</text>
+       <audio>L3P42_7.mp3</audio>
+     </choice>
+     <choice id="3">
+       <text>ខ្សាច់</text>
+       <audio>L3P42_8.mp3</audio>
+     </choice>
+     <choice id="4">
+       <text>ឃ្លា</text>
+       <audio>L3P42_3.mp3</audio>
+     </choice>
+<correct>3</correct>
+<correct_answer>correct.mp3</correct_answer>
+<wrong_answer>wrong.mp3</wrong_answer>
+<next>L3P42Q5</next>
+</unit>
+
+<unit id="L3P42Q5" style="M2">
+     <audio-text>ចូរចុចពាក្យដែលអ្នកបានឮ</audio-text>
+     <pre-audio>M2.mp3</pre-audio>
+     <audio>L3P42_2.mp3</audio>
+     <image>question.jpg</image>
+     <choice id="1">
+       <text>ឃ្មោះ</text>
+       <audio>L3P42_2.mp3</audio>
+     </choice>
+     <choice id="2">
+       <text>ឃ្លង់</text>
+       <audio>L3P42_12.mp3</audio>
+     </choice>
+     <choice id="3">
+       <text>ឃ្វាល</text>
+       <audio>L3P42_4.mp3</audio>
+     </choice>
+     <choice id="4">
+       <text>គ្រុំ</text>
+       <audio>L3P42_6.mp3</audio>
+     </choice>
+<correct>1</correct>
+<correct_answer>correct.mp3</correct_answer>
+<wrong_answer>wrong.mp3</wrong_answer>
+<next>L3P42Q6</next>
+</unit>
+
+<unit id="L3P42Q6" style="M3">
+     <audio-text>ចូរជ្រើសរើសរូបភាពឱ្យត្រូវនឹងពាក្យ</audio-text>
+     <pre-audio>M3.mp3</pre-audio>
+     <text>ខ្សែដៃ</text>
+     <choice id="1">
+       <image>L3.3P42.jpg</image>
+       <audio>L3P42_9.mp3</audio>
+     </choice>
+     <choice id="2">
+       <image>L3.2P42.jpg</image>
+       <audio>L3P42_10.mp3</audio>
+     </choice>
+     <choice id="3">
+       <image>L3.1P42.jpg</image>
+       <audio>L3P42_8.mp3</audio>
+     </choice>
+     <choice id="4">
+       <image>L3.4P42.jpg</image>
+       <audio>L3P42_1.mp3</audio>
+     </choice>
+<correct>1</correct>
+<correct_answer>correct.mp3</correct_answer>
+<wrong_answer>wrong.mp3</wrong_answer>
+<next>L3P43Q1</next>
+</unit>
+
+<!-- Page 43 -->
+<unit id="L3P43Q1" style="M1">
+     <audio-text>ចូរជ្រើសរើសពាក្យឱ្យត្រូវនឹងរូបភាព</audio-text>
+     <pre-audio>M1.mp3</pre-audio>
+     <audio></audio>
+     <image>L3.3P43.jpg</image>
+     <choice id="1">
+       <text>ឆ្លូវ</text>
+       <audio>L3P43_1.mp3</audio>
+     </choice>
+     <choice id="2">
+       <text>ឆ្តោ</text>
+       <audio>L3P43_2.mp3</audio>
+     </choice>
+     <choice id="3">
+       <text>ឆ្មា</text>
+       <audio>L3P43_3.mp3</audio>
+     </choice>
+     <choice id="4">
+       <text>ច្រូត</text>
+       <audio>L3P43_4.mp3</audio>
+     </choice>
+<correct>3</correct>
+<correct_answer>correct.mp3</correct_answer>
+<wrong_answer>wrong.mp3</wrong_answer>
+<next>L3P43Q2</next>
+</unit>
+
+<unit id="L3P43Q2" style="M2">
+     <audio-text>ចូរចុចពាក្យដែលអ្នកបានឮ</audio-text>
+     <pre-audio>M2.mp3</pre-audio>
+     <audio>L3P43_4.mp3</audio>
+     <image>question.jpg</image>
+     <choice id="1">
+       <text>ច្រាន</text>
+       <audio>L3P43_5.mp3</audio>
+     </choice>
+     <choice id="2">
+       <text>ច្រូត</text>
+       <audio>L3P43_4.mp3</audio>
+     </choice>
+     <choice id="3">
+       <text>ឆ្នូូត</text>
+       <audio>L3P43_7.mp3</audio>
+     </choice>
+     <choice id="4">
+       <text>ឆ្លង</text>
+       <audio>L3P43_6.mp3</audio>
+     </choice>
+<correct>1</correct>
+<correct_answer>correct.mp3</correct_answer>
+<wrong_answer>wrong.mp3</wrong_answer>
+<next>L3P43Q3</next>
+</unit>
+
+<unit id="L3P43Q3" style="M3">
+     <audio-text>ចូរជ្រើសរើសរូបភាពឱ្យត្រូវនឹងពាក្យ</audio-text>
+     <pre-audio>M3.mp3</pre-audio>
+     <text>ច្រមុះ</text>
+     <choice id="1">
+       <image>L3.4P43.jpg</image>
+       <audio>L3P43_8.mp3</audio>
+     </choice>
+     <choice id="2">
+       <image>L3.2P43.jpg</image>
+       <audio>L3P43_9.mp3</audio>
+     </choice>
+     <choice id="3">
+       <image>L3.1P43.jpg</image>
+       <audio>L3P43_10.mp3</audio>
+     </choice>
+     <choice id="4">
+       <image>L3.3P43.jpg</image>
+       <audio>L3P43_3.mp3</audio>
+     </choice>
+<correct>3</correct>
+<correct_answer>correct.mp3</correct_answer>
+<wrong_answer>wrong.mp3</wrong_answer>
+<next>L3P43Q4</next>
+</unit>
+
+<unit id="L3P43Q4" style="M1">
+     <audio-text>ចូរជ្រើសរើសពាក្យឱ្យត្រូវនឹងរូបភាព</audio-text>
+     <pre-audio>M1.mp3</pre-audio>
+     <audio></audio>
+     <image>L3.4P43.jpg</image>
+     <choice id="1">
+       <text>ឆ្នើម</text>
+       <audio>L3P43_11.mp3</audio>
+     </choice>
+     <choice id="2">
+       <text>ឈ្លើង</text>
+       <audio>L3P43_12.mp3</audio>
+     </choice>
+     <choice id="3">
+       <text>ឆ្នូូត</text>
+       <audio>L3P43_7.mp3</audio>
+     </choice>
+     <choice id="4">
+       <text>ឈ្លូស</text>
+       <audio>L3P43_8.mp3</audio>
+     </choice>
+<correct>4</correct>
+<correct_answer>correct.mp3</correct_answer>
+<wrong_answer>wrong.mp3</wrong_answer>
+<next>L3P43Q5</next>
+</unit>
+
+<unit id="L3P43Q5" style="M2">
+     <audio-text>ចូរចុចពាក្យដែលអ្នកបានឮ</audio-text>
+     <pre-audio>M2.mp3</pre-audio>
+     <audio>L3P43_12.mp3</audio>
+     <image>question.jpg</image>
+     <choice id="1">
+       <text>ច្រាន</text>
+       <audio>L3P43_5.mp3</audio>
+     </choice>
+     <choice id="2">
+       <text>ឈ្លើង</text>
+       <audio>L3P43_12.mp3</audio>
+     </choice>
+     <choice id="3">
+       <text>ឆ្លង</text>
+       <audio>L3P43_6.mp3</audio>
+     </choice>
+     <choice id="4">
+       <text>ឆ្នើម</text>
+       <audio>L3P43_11.mp3</audio>
+     </choice>
+<correct>2</correct>
+<correct_answer>correct.mp3</correct_answer>
+<wrong_answer>wrong.mp3</wrong_answer>
+<next>L3P43Q6</next>
+</unit>
+
+<unit id="L3P43Q6" style="M3">
+     <audio-text>ចូរជ្រើសរើសរូបភាពឱ្យត្រូវនឹងពាក្យ</audio-text>
+     <pre-audio>M3.mp3</pre-audio>
+     <text>ឆ្នាំង</text>
+     <choice id="1">
+       <image>L3.2P43.jpg</image>
+       <audio>L3P43_9.mp3</audio>
+     </choice>
+     <choice id="2">
+       <image>L3.3P43.jpg</image>
+       <audio>L3P43_3.mp3</audio>
+     </choice>
+     <choice id="3">
+       <image>L3.4P43.jpg</image>
+       <audio>L3P43_8.mp3</audio>
+     </choice>
+     <choice id="4">
+       <image>L3.1P43.jpg</image>
+       <audio>L3P43_10.mp3</audio>
+     </choice>
+<correct>3</correct>
+<correct_answer>correct.mp3</correct_answer>
+<wrong_answer>wrong.mp3</wrong_answer>
+<next>L3P44Q1</next>
+</unit>
+
+<!-- Page 44 -->
+<unit id="L3P44Q1" style="M1">
+     <audio-text>ចូរជ្រើសរើសពាក្យឱ្យត្រូវនឹងរូបភាព</audio-text>
+     <pre-audio>M1.mp3</pre-audio>
+     <audio></audio>
+     <image>L3.4P44.jpg</image>
+     <choice id="1">
+       <text>ស្តាំ</text>
+       <audio>L3P44_1.mp3</audio>
+     </choice>
+     <choice id="2">
+       <text>ស្រូវ</text>
+       <audio>L3P44_2.mp3</audio>
+     </choice>
+     <choice id="3">
+       <text>ស្តាយ</text>
+       <audio>L3P44_4=3.mp3</audio>
+     </choice>
+     <choice id="4">
+       <text>ស្ថិត</text>
+       <audio>L3P44_4.mp3</audio>
+     </choice>
+<correct>2</correct>
+<correct_answer>correct.mp3</correct_answer>
+<wrong_answer>wrong.mp3</wrong_answer>
+<next>L3P44Q2</next>
+</unit>
+
+<unit id="L3P44Q2" style="M2">
+     <audio-text>ចូរចុចពាក្យដែលអ្នកបានឮ</audio-text>
+     <pre-audio>M2.mp3</pre-audio>
+     <audio>L3P44_1.mp3</audio>
+     <image>question.jpg</image>
+     <choice id="1">
+       <text>ស្កូវ</text>
+       <audio>L3P44_5.mp3</audio>
+     </choice>
+     <choice id="2">
+       <text>ស្រែ</text>
+       <audio>L3P44_6.mp3</audio>
+     </choice>
+     <choice id="3">
+       <text>ស្តាំ</text>
+       <audio>L3P44_1.mp3</audio>
+     </choice>
+     <choice id="4">
+       <text>ស្ករ</text>
+       <audio>L3P44_8.mp3</audio>
+     </choice>
+<correct>3</correct>
+<correct_answer>correct.mp3</correct_answer>
+<wrong_answer>wrong.mp3</wrong_answer>
+<next>L3P44Q3</next>
+</unit>
+
+<unit id="L3P44Q3" style="M3">
+     <audio-text>ចូរជ្រើសរើសរូបភាពឱ្យត្រូវនឹងពាក្យ</audio-text>
+     <pre-audio>M3.mp3</pre-audio>
+     <text>ស្ករស</text>
+     <choice id="1">
+       <image>L3.3P44.jpg</image>
+       <audio>L3P44_9.mp3</audio>
+     </choice>
+     <choice id="2">
+       <image>L3.4P44.jpg</image>
+       <audio>L3P44_2.mp3</audio>
+     </choice>
+     <choice id="3">
+       <image>L3.2P44.jpg</image>
+       <audio>L3P44_7.mp3</audio>
+     </choice>
+     <choice id="4">
+       <image>L3.1P44.jpg</image>
+       <audio>L3P44_10.mp3</audio>
+     </choice>
+<correct>3</correct>
+<correct_answer>correct.mp3</correct_answer>
+<wrong_answer>wrong.mp3</wrong_answer>
+<next>L3P44Q4</next>
+</unit>
+
+<unit id="L3P44Q4" style="M1">
+     <audio-text>ចូរជ្រើសរើសពាក្យឱ្យត្រូវនឹងរូបភាព</audio-text>
+     <pre-audio>M1.mp3</pre-audio>
+     <audio></audio>
+     <image>L3.3P44.jpg</image>
+     <choice id="1">
+       <text>ស្បៃ</text>
+       <audio>L3P44_9.mp3</audio>
+     </choice>
+     <choice id="2">
+       <text>ស្រែ</text>
+       <audio>L3P44_6.mp3</audio>
+     </choice>
+     <choice id="3">
+       <text>ស្ថិតស្ថេរ</text>
+       <audio>L3P44_11.mp3</audio>
+     </choice>
+     <choice id="4">
+       <text>ស្កូវ</text>
+       <audio>L3P44_5.mp3</audio>
+     </choice>
+<correct>1</correct>
+<correct_answer>correct.mp3</correct_answer>
+<wrong_answer>wrong.mp3</wrong_answer>
+<next>L3P44Q5</next>
+</unit>
+
+<unit id="L3P44Q5" style="M2">
+     <audio-text>ចូរចុចពាក្យដែលអ្នកបានឮ</audio-text>
+     <pre-audio>M2.mp3</pre-audio>
+     <audio>L3P44_13.mp3</audio>
+     <image>question.jpg</image>
+     <choice id="1">
+       <text>ស្កប់ស្កល់</text>
+       <audio>L3P44_12.mp3</audio>
+     </choice>
+     <choice id="2">
+       <text>ស្ថិតស្ថេរ</text>
+       <audio>L3P44_11.mp3</audio>
+     </choice>
+     <choice id="3">
+       <text>ស្បែកជើង</text>
+       <audio>L3P44_13.mp3</audio>
+     </choice>
+     <choice id="4">
+       <text>ស្តាយ</text>
+       <audio>L3P44_3.mp3</audio>
+     </choice>
+<correct>3</correct>
+<correct_answer>correct.mp3</correct_answer>
+<wrong_answer>wrong.mp3</wrong_answer>
+<next>L3P44Q6</next>
+</unit>
+
+<unit id="L3P44Q6" style="M3">
+     <audio-text>ចូរជ្រើសរើសរូបភាពឱ្យត្រូវនឹងពាក្យ</audio-text>
+     <pre-audio>M3.mp3</pre-audio>
+     <text>ត្រួយស្តៅ</text>
+     <choice id="1">
+       <image>L3.1P44.jpg</image>
+       <audio>L3P44_10.mp3</audio>
+     </choice>
+     <choice id="2">
+       <image>L3.2P44.jpg</image>
+       <audio>L3P44_7.mp3</audio>
+     </choice>
+     <choice id="3">
+       <image>L3.3P44.jpg</image>
+       <audio>L3P44_9.mp3</audio>
+     </choice>
+     <choice id="4">
+       <image>L3.4P44.jpg</image>
+       <audio>L3P44_2.mp3</audio>
+     </choice>
+<correct>3</correct>
+<correct_answer>correct.mp3</correct_answer>
+<wrong_answer>wrong.mp3</wrong_answer>
+<next>L3P45Q1</next>
+</unit>
+
+<!-- Page 45 -->
+<unit id="L3P45Q1" style="M1">
+     <audio-text>ចូរជ្រើសរើសពាក្យឱ្យត្រូវនឹងរូបភាព</audio-text>
+     <pre-audio>M1.mp3</pre-audio>
+     <audio></audio>
+     <image>L3.4P45.jpg</image>
+     <choice id="1">
+       <text>ចម្ការ</text>
+       <audio>L3P45_1.mp3</audio>
+     </choice>
+     <choice id="2">
+       <text>សម្ល</text>
+       <audio>L3P45_2.mp3</audio>
+     </choice>
+     <choice id="3">
+       <text>បន្ត</text>
+       <audio>L3P45_3.mp3</audio>
+     </choice>
+     <choice id="4">
+       <text>បន្ទប់</text>
+       <audio>L3P45_4.mp3</audio>
+     </choice>
+<correct>1</correct>
+<correct_answer>correct.mp3</correct_answer>
+<wrong_answer>wrong.mp3</wrong_answer>
+<next>L3P45Q2</next>
+</unit>
+
+<unit id="L3P45Q2" style="M2">
+     <audio-text>ចូរចុចពាក្យដែលអ្នកបានឮ</audio-text>
+     <pre-audio>M2.mp3</pre-audio>
+     <audio>L3P45_4.mp3</audio>
+     <image>question.jpg</image>
+     <choice id="1">
+       <text>ចម្ងាយ</text>
+       <audio>L3P45_5.mp3</audio>
+     </choice>
+     <choice id="2">
+       <text>ចម្ងល់</text>
+       <audio>L3P45_6.mp3</audio>
+     </choice>
+     <choice id="3">
+       <text>កម្ចី</text>
+       <audio>L3P45_7.mp3</audio>
+     </choice>
+     <choice id="4">
+       <text>បន្ទប់</text>
+       <audio>L3P45_4.mp3</audio>
+     </choice>
+<correct>4</correct>
+<correct_answer>correct.mp3</correct_answer>
+<wrong_answer>wrong.mp3</wrong_answer>
+<next>L3P45Q3</next>
+</unit>
+
+<unit id="L3P45Q3" style="M3">
+     <audio-text>ចូរជ្រើសរើសរូបភាពឱ្យត្រូវនឹងពាក្យ</audio-text>
+     <pre-audio>M3.mp3</pre-audio>
+     <text>បន្តោង</text>
+     <choice id="1">
+       <image>L3.3P45.jpg</image>
+       <audio>L3P45_8.mp3</audio>
+     </choice>
+     <choice id="2">
+       <image>L3.1P45.jpg</image>
+       <audio>L3P45_9.mp3</audio>
+     </choice>
+     <choice id="3">
+       <image>L3.2P45.jpg</image>
+       <audio>L3P45_10.mp3</audio>
+     </choice>
+     <choice id="4">
+       <image>L3.4P45.jpg</image>
+       <audio>L3P45_1.mp3</audio>
+     </choice>
+<correct>2</correct>
+<correct_answer>correct.mp3</correct_answer>
+<wrong_answer>wrong.mp3</wrong_answer>
+<next>L3P45Q4</next>
+</unit>
+
+<unit id="L3P45Q4" style="M1">
+     <audio-text>ចូរជ្រើសរើសពាក្យឱ្យត្រូវនឹងរូបភាព</audio-text>
+     <pre-audio>M1.mp3</pre-audio>
+     <audio></audio>
+     <image>L3.2P45.jpg</image>
+     <choice id="1">
+       <text>តម្កល់</text>
+       <audio>L3P45_11.mp3</audio>
+     </choice>
+     <choice id="2">
+       <text>ចម្ងាយ</text>
+       <audio>L3P45_5.mp3</audio>
+     </choice>
+     <choice id="3">
+       <text>បន្ទាត់</text>
+       <audio>L3P45_10.mp3</audio>
+     </choice>
+     <choice id="4">
+       <text>បន្ថយ</text>
+       <audio>L3P45_12.mp3</audio>
+     </choice>
+<correct>3</correct>
+<correct_answer>correct.mp3</correct_answer>
+<wrong_answer>wrong.mp3</wrong_answer>
+<next>L3P45Q5</next>
+</unit>
+
+<unit id="L3P45Q5" style="M2">
+     <audio-text>ចូរចុចពាក្យដែលអ្នកបានឮ</audio-text>
+     <pre-audio>M2.mp3</pre-audio>
+     <audio>L3P45_2.mp3</audio>
+     <image>question.jpg</image>
+     <choice id="1">
+       <text>សម្ល</text>
+       <audio>L3P45_2.mp3</audio>
+     </choice>
+     <choice id="2">
+       <text>បន្ថយ</text>
+       <audio>L3P45_12.mp3</audio>
+     </choice>
+     <choice id="3">
+       <text>កម្ចី</text>
+       <audio>L3P45_7.mp3</audio>
+     </choice>
+     <choice id="4">
+       <text>បន្ត</text>
+       <audio>L3P45_3.mp3</audio>
+     </choice>
+<correct>1</correct>
+<correct_answer>correct.mp3</correct_answer>
+<wrong_answer>wrong.mp3</wrong_answer>
+<next>L3P45Q6</next>
+</unit>
+
+<unit id="L3P45Q6" style="M3">
+     <audio-text>ចូរជ្រើសរើសរូបភាពឱ្យត្រូវនឹងពាក្យ</audio-text>
+     <pre-audio>M3.mp3</pre-audio>
+     <text>អន្ទង់</text>
+     <choice id="1">
+       <image>L3.1P45.jpg</image>
+       <audio>L3P45_9.mp3</audio>
+     </choice>
+     <choice id="2">
+       <image>L3.4P45.jpg</image>
+       <audio>L3P45_1.mp3</audio>
+     </choice>
+     <choice id="3">
+       <image>L3.2P45.jpg</image>
+       <audio>L3P45_10.mp3</audio>
+     </choice>
+     <choice id="4">
+       <image>L3.3P45.jpg</image>
+       <audio>L3P45_8.mp3</audio>
+     </choice>
+<correct>4</correct>
+<correct_answer>correct.mp3</correct_answer>
+<wrong_answer>wrong.mp3</wrong_answer>
+<next>L3P46Q1</next>
+</unit>
+
+<!-- Page 46 -->
+<unit id="L3P46Q1" style="M1">
+     <audio-text>ចូរជ្រើសរើសពាក្យឱ្យត្រូវនឹងរូបភាព</audio-text>
+     <pre-audio>M1.mp3</pre-audio>
+     <audio></audio>
+     <image>L3.3P46.jpg</image>
+     <choice id="1">
+       <text>ល្មម</text>
+       <audio>L3P46_2.mp3</audio>
+     </choice>
+     <choice id="2">
+       <text>ល្អាង</text>
+       <audio>L3P46_3.mp3</audio>
+     </choice>
+     <choice id="3">
+       <text>ល្បឿន</text>
+       <audio>L3P46_4.mp3</audio>
+     </choice>
+     <choice id="4">
+       <text>ល្ហុង</text>
+       <audio>L3P46_1.mp3</audio>
+     </choice>
+<correct>4</correct>
+<correct_answer>correct.mp3</correct_answer>
+<wrong_answer>wrong.mp3</wrong_answer>
+<next>L3P46Q2</next>
+</unit>
+
+<unit id="L3P46Q2" style="M2">
+     <audio-text>ចូរចុចពាក្យដែលអ្នកបានឮ</audio-text>
+     <pre-audio>M2.mp3</pre-audio>
+     <audio>L3P46_7.mp3</audio>
+     <image>question.jpg</image>
+     <choice id="1">
+       <text>ល្ហល្ហេវ</text>
+       <audio>L3P46_5.mp3</audio>
+     </choice>
+     <choice id="2">
+       <text>ល្អាង</text>
+       <audio>L3P46_3.mp3</audio>
+     </choice>
+     <choice id="3">
+       <text>ល្អ</text>
+       <audio>L3P46_7.mp3</audio>
+     </choice>
+     <choice id="4">
+       <text>ល្បិចកល</text>
+       <audio>L3P46_6.mp3</audio>
+     </choice>
+<correct>3</correct>
+<correct_answer>correct.mp3</correct_answer>
+<wrong_answer>wrong.mp3</wrong_answer>
+<next>L3P46Q3</next>
+</unit>
+
+<unit id="L3P46Q3" style="M3">
+     <audio-text>ចូរជ្រើសរើសរូបភាពឱ្យត្រូវនឹងពាក្យ</audio-text>
+     <pre-audio>M3.mp3</pre-audio>
+     <text>ល្មៀត</text>
+     <choice id="1">
+       <image>L3.2P46.jpg</image>
+       <audio>L3P46_8.mp3</audio>
+     </choice>
+     <choice id="2">
+       <image>L3.1P46.jpg</image>
+       <audio>L3P46_9.mp3</audio>
+     </choice>
+     <choice id="3">
+       <image>L3.3P46.jpg</image>
+       <audio>L3P46_1.mp3</audio>
+     </choice>
+     <choice id="4">
+       <image>L3.4P46.jpg</image>
+       <audio>L3P46_10.mp3</audio>
+     </choice>
+<correct>1</correct>
+<correct_answer>correct.mp3</correct_answer>
+<wrong_answer>wrong.mp3</wrong_answer>
+<next>L3P46Q4</next>
+</unit>
+
+<unit id="L3P46Q4" style="M1">
+     <audio-text>ចូរជ្រើសរើសពាក្យឱ្យត្រូវនឹងរូបភាព</audio-text>
+     <pre-audio>M1.mp3</pre-audio>
+     <audio></audio>
+     <image>L3.4P46.jpg</image>
+     <choice id="1">
+       <text>ល្ហិតល្ហៃ</text>
+       <audio>L3P46_11.mp3</audio>
+     </choice>
+     <choice id="2">
+       <text>សត្វល្អិត</text>
+       <audio>L3P46_10.mp3</audio>
+     </choice>
+     <choice id="3">
+       <text>ល្បីល្បាញ</text>
+       <audio>L3P46_12.mp3</audio>
+     </choice>
+     <choice id="4">
+       <text>ល្បិចកល</text>
+       <audio>L3P46_6.mp3</audio>
+     </choice>
+<correct>2</correct>
+<correct_answer>correct.mp3</correct_answer>
+<wrong_answer>wrong.mp3</wrong_answer>
+<next>L3P46Q5</next>
+</unit>
+
+<unit id="L3P46Q5" style="M2">
+     <audio-text>ចូរចុចពាក្យដែលអ្នកបានឮ</audio-text>
+     <pre-audio>M2.mp3</pre-audio>
+     <audio>L3P46_12.mp3</audio>
+     <image>question.jpg</image>
+     <choice id="1">
+       <text>ល្ហល្ហេវ</text>
+       <audio>L3P46_5.mp3</audio>
+     </choice>
+     <choice id="2">
+       <text>ល្អម</text>
+       <audio>L3P46_2.mp3</audio>
+     </choice>
+     <choice id="3">
+       <text>ល្បីល្បាញ</text>
+       <audio>L3P46_12.mp3</audio>
+     </choice>
+     <choice id="4">
+       <text>ល្ហិតល្ហៃ</text>
+       <audio>L3P46_11.mp3</audio>
+     </choice>
+<correct>3</correct>
+<correct_answer>correct.mp3</correct_answer>
+<wrong_answer>wrong.mp3</wrong_answer>
+<next>L3P46Q6</next>
+</unit>
+
+<unit id="L3P46Q6" style="M3">
+     <audio-text>ចូរជ្រើសរើសរូបភាពឱ្យត្រូវនឹងពាក្យ</audio-text>
+     <pre-audio>M3.mp3</pre-audio>
+     <text>ល្ខោនខោល</text>
+     <choice id="1">
+       <image>L3.4P46.jpg</image>
+       <audio>L3P46_10.mp3</audio>
+     </choice>
+     <choice id="2">
+       <image>L3.1P46.jpg</image>
+       <audio>L3P46_9.mp3</audio>
+     </choice>
+     <choice id="3">
+       <image>L3.2P46.jpg</image>
+       <audio>L3P46_8.mp3</audio>
+     </choice>
+     <choice id="4">
+       <image>L3.3P46.jpg</image>
+       <audio>L3P46_1.mp3</audio>
+     </choice>
+<correct>2</correct>
+<correct_answer>correct.mp3</correct_answer>
+<wrong_answer>wrong.mp3</wrong_answer>
+<next>L3P47Q1</next>
+</unit>
+
+<unit id="L3P47Q1" style="M1">
+     <audio-text>ចូរជ្រើសរើសពាក្យឱ្យត្រូវនឹងរូបភាព</audio-text>
+     <pre-audio>M1.mp3</pre-audio>
+     <audio></audio>
+     <image>L3.2P47.jpg</image>
+     <choice id="1">
+       <text>សង្ឃឹម</text>
+       <audio>L3P47_1.mp3</audio>
+     </choice>
+     <choice id="2">
+       <text>ពង្រឹង</text>
+       <audio>L3P47_2.mp3</audio>
+     </choice>
+     <choice id="3">
+       <text>មង្ឃុុត</text>
+       <audio>L3P47_3.mp3</audio>
+     </choice>
+     <choice id="4">
+       <text>បញ្ជី</text>
+       <audio>L3P47_4.mp3</audio>
+     </choice>
+<correct>3</correct>
+<correct_answer>correct.mp3</correct_answer>
+<wrong_answer>wrong.mp3</wrong_answer>
+<next>L3P47Q2</next>
+</unit>
+
+<unit id="L3P47Q2" style="M2">
+     <audio-text>ចូរចុចពាក្យដែលអ្នកបានឮ</audio-text>
+     <pre-audio>M2.mp3</pre-audio>
+     <audio>L3P47_5.mp3</audio>
+     <image>question.jpg</image>
+     <choice id="1">
+       <text>បញ្ជី</text>
+       <audio>L3P47_4.mp3</audio>
+     </choice>
+     <choice id="2">
+       <text>ពង្រាយ</text>
+       <audio>L3P47_6.mp3</audio>
+     </choice>
+     <choice id="3">
+       <text>បញ្ឈប់</text>
+       <audio>L3P47_7.mp3</audio>
+     </choice>
+     <choice id="4">
+       <text>បញ្ឈរ</text>
+       <audio>L3P47_5.mp3</audio>
+     </choice>
+<correct>4</correct>
+<correct_answer>correct.mp3</correct_answer>
+<wrong_answer>wrong.mp3</wrong_answer>
+<next>L3P47Q3</next>
+</unit>
+
+<unit id="L3P47Q3" style="M3">
+     <audio-text>ចូរជ្រើសរើសរូបភាពឱ្យត្រូវនឹងពាក្យ</audio-text>
+     <pre-audio>M3.mp3</pre-audio>
+     <text>បង្អែម</text>
+     <choice id="1">
+       <image>L3.4P47.jpg</image>
+       <audio>L3P47_8.mp3</audio>
+     </choice>
+     <choice id="2">
+       <image>L3.1P47.jpg</image>
+       <audio>L3P47_9.mp3</audio>
+     </choice>
+     <choice id="3">
+       <image>L3.2P47.jpg</image>
+       <audio>L3P47_3.mp3</audio>
+     </choice>
+     <choice id="4">
+       <image>L3.3P47.jpg</image>
+       <audio>L3P47_10.mp3</audio>
+     </choice>
+<correct>2</correct>
+<correct_answer>correct.mp3</correct_answer>
+<wrong_answer>wrong.mp3</wrong_answer>
+<next>L3P47Q4</next>
+</unit>
+
+<unit id="L3P47Q4" style="M1">
+     <audio-text>ចូរជ្រើសរើសពាក្យឱ្យត្រូវនឹងរូបភាព</audio-text>
+     <pre-audio>M1.mp3</pre-audio>
+     <audio></audio>
+     <image>L3.4P47.jpg</image>
+     <choice id="1">
+       <text>ជញ្ជូន</text>
+       <audio>L3P47_11.mp3</audio>
+     </choice>
+     <choice id="2">
+       <text>គីង្គក់</text>
+       <audio>L3P47_9.mp3</audio>
+     </choice>
+     <choice id="3">
+       <text>បញ្ញើ</text>
+       <audio>L3P47_12.mp3</audio>
+     </choice>
+     <choice id="4">
+       <text>ជញ្ជីង</text>
+       <audio>L3P47_8.mp3</audio>
+     </choice>
+<correct>4</correct>
+<correct_answer>correct.mp3</correct_answer>
+<wrong_answer>wrong.mp3</wrong_answer>
+<next>L3P47Q5</next>
+</unit>
+
+<unit id="L3P47Q5" style="M2">
+     <audio-text>ចូរចុចពាក្យដែលអ្នកបានឮ</audio-text>
+     <pre-audio>M2.mp3</pre-audio>
+     <audio>L3P47_11.mp3</audio>
+     <image>question.jpg</image>
+     <choice id="1">
+       <text>បញ្ជើ”</text>
+       <audio>L3P47_12.mp3</audio>
+     </choice>
+     <choice id="2">
+       <text>ជញ្ជូូន</text>
+       <audio>L3P47_11.mp3</audio>
+     </choice>
+     <choice id="3">
+       <text>ពង្រឹង</text>
+       <audio>L3P47_13.mp3</audio>
+     </choice>
+     <choice id="4">
+       <text>សង្ឈឹម</text>
+       <audio>L3P47_1.mp3</audio>
+     </choice>
+<correct>2</correct>
+<correct_answer>correct.mp3</correct_answer>
+<wrong_answer>wrong.mp3</wrong_answer>
+<next>L3P47Q6</next>
+</unit>
+
+<unit id="L3P47Q6" style="M3">
+     <audio-text>ចូរជ្រើសរើសរូបភាពឱ្យត្រូវនឹងពាក្យ</audio-text>
+     <pre-audio>M3.mp3</pre-audio>
+     <text>គីង្គក់</text>
+     <choice id="1">
+       <image>L3.2P47.jpg</image>
+       <audio>L3P47_3.mp3</audio>
+     </choice>
+     <choice id="2">
+       <image>L3.3P47.jpg</image>
+       <audio>L3P47_10.mp3</audio>
+     </choice>
+     <choice id="3">
+       <image>L3.1P47.jpg</image>
+       <audio>L3P47_9.mp3</audio>
+     </choice>
+     <choice id="4">
+       <image>L3.4P47.jpg</image>
+       <audio>L3P47_8.mp3</audio>
+     </choice>
+<correct>2</correct>
+<correct_answer>correct.mp3</correct_answer>
+<wrong_answer>wrong.mp3</wrong_answer>
+<next>L3P47Q7</next>
+</unit>
+
 
 </elements>
