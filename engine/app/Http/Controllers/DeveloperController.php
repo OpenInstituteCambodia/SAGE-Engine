@@ -190,5 +190,18 @@ class DeveloperController extends Controller
       }
     }
 
+    public function crawler()
+    {
+      $client = new \GuzzleHttp\Client();
 
+      $res = $client->request(
+        'GET',
+        'https://medium.com/'
+      );
+      $content = $res->getBody();
+      $crawler = new \DOMDocument();
+
+      dd($res);
+      return '';
+    }
 }
