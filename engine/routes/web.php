@@ -40,6 +40,8 @@ Route::group(['prefix' => 'project'], function(){
 Route::group(['prefix' => 'developer', 'middleware' => 'auth'], function(){
   Route::get('/', 'DeveloperController@index')->name('developer');
 
+  // crawler
+  Route::get('crawler', 'DeveloperController@crawler');
 
   Route::group(['prefix' => 'template'], function(){
     Route::get('info', 'DeveloperController@getActiveTemplateInfo');

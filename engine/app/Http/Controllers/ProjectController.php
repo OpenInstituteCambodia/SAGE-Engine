@@ -199,6 +199,9 @@ class ProjectController extends Controller
       // Generating HTML Template with XML file
       $htmlTemplate = self::prepareHTML($xPath);
 
+      // Genrating SQL stateme
+      $sqlTemplate = self::generateSQL($xPath);
+
       // Reading HTML base Template HTML file for replacing content
       $htmlSource = Storage::get('ionic/'.$this->templateVersion.'/src/pages/question/question.html');
 
@@ -209,6 +212,7 @@ class ProjectController extends Controller
       ], $htmlSource);
 
       Storage::put('projects/'.$userEmail.'/'.$projectName.'/src/pages/question/question.html', $htmlFinalized);
+      Storage::put('projects/'.$userEmail.'/'.$projectName.'/datasql.sql', $sqlTemplate);
       return redirect()->route('project.edit', [$projectName]);
     }
 
@@ -269,6 +273,74 @@ class ProjectController extends Controller
       }
 
       return $htmlOut;
+    }
+
+    public function generateSQL($xPath)
+    {
+      if ($xPath->query('/elements')->length > 0) {
+        $rootElement = '/elements/unit';
+      }else {
+        $rootElement = '/unit';
+      }
+
+      // Replacing Placeholder with XML Data
+      $sqlOut = '';
+      for ($i=1; $i <= $xPath->query($rootElement)->length; $i++) {
+
+        $selectedStyle = $xPath->evaluate('string('.$rootElement.'['.$i.']/@style)');
+        $t = <<<EOF
+INSERT INTO units( unit_id, unit_style, unit_content, unit_audio_1, unit_audio_2, choice_1_content, choice_1_audio, choice_2_content, choice_2_audio, choice_3_content, choice_3_audio, choice_4_content, choice_4_audio, choice_correct_id, choice_correct_audio, choice_wrong_audio, unit_next_id)
+VALUES ( '{unit_id}', '{unit_style}', '{unit_content}', '{unit_audio_1}', '{unit_audio_2}', '{choice_1_content}', '{choice_1_audio}', '{choice_2_content}', '{choice_2_audio}', '{choice_3_content}', '{choice_3_audio}', '{choice_4_content}', '{choice_4_audio}', '{choice_correct_id}', '{choice_correct_audio}', '{choice_wrong_audio}', '{unit_next_id}');
+EOF;
+
+          // Unit Content
+          $unit_content = $xPath->evaluate('string('.$rootElement.'['.$i.']/text)');
+          if (empty($unit_content)) {
+            $unit_content = $xPath->evaluate('string('.$rootElement.'['.$i.']/image)');
+          }
+
+        // Unit
+        $t = str_replace([
+            '{unit_id}',
+            '{unit_style}',
+            '{unit_content}',
+            '{unit_audio_1}',
+            '{unit_audio_2}',
+            '{choice_correct_id}',
+            '{choice_correct_audio}',
+            '{choice_wrong_audio}',
+            '{unit_next_id}'
+          ],[
+            $xPath->evaluate('string('.$rootElement.'['.$i.']/@id)'),
+            $xPath->evaluate('string('.$rootElement.'['.$i.']/@style)'),
+            $unit_content,
+            $xPath->evaluate('string('.$rootElement.'['.$i.']/pre-audio)'),
+            $xPath->evaluate('string('.$rootElement.'['.$i.']/audio)'),
+            $xPath->evaluate('string('.$rootElement.'['.$i.']/correct)'),
+            $xPath->evaluate('string('.$rootElement.'['.$i.']/correct_answer)'),
+            $xPath->evaluate('string('.$rootElement.'['.$i.']/wrong_answer)'),
+            $xPath->evaluate('string('.$rootElement.'['.$i.']/next)')
+          ],
+        $t);
+
+        // Choices
+        for ($c=1; $c <= $xPath->query($rootElement.'['.$i.']/choice')->length; $c++) {
+          $choice_content = $xPath->evaluate('string('.$rootElement.'['.$i.']/choice['.$c.']/text)');
+          if (empty($choice_content)) {
+            $choice_content = $xPath->evaluate('string('.$rootElement.'['.$i.']/choice['.$c.']/image)');
+          }
+          $t = str_replace([
+            '{choice_'.$c.'_content}',
+            '{choice_'.$c.'_audio}',
+          ],[
+            $choice_content,
+            $xPath->evaluate('string('.$rootElement.'['.$i.']/choice['.$c.']/audio)')
+          ], $t);
+        }
+        $sqlOut = $sqlOut.$t;
+      }
+
+      return $sqlOut;
     }
 
 }
