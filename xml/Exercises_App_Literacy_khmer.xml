@@ -4903,19 +4903,19 @@
      <audio>L3P48_9.mp3</audio>
      <image>question.jpg</image>
      <choice id="1">
-       <text>បង្គន់</text>
+       <text>ឈឺ</text>
        <audio>L3P48_10.mp3</audio>
      </choice>
      <choice id="2">
-       <text>អនាម័យ</text>
+       <text>ថែរក្សា</text>
        <audio>L3P48_11.mp3</audio>
      </choice>
      <choice id="3">
-       <text>ជំងឺ</text>
+       <text>ញឹក</text>
        <audio>L3P48_12.mp3</audio>
      </choice>
      <choice id="4">
-       <text>វេចខ្ចប់</text>
+       <text>ខ្សោយ</text>
        <audio>L3P48_9.mp3</audio>
      </choice>
 <correct>4</correct>
