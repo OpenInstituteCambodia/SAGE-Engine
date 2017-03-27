@@ -7858,7 +7858,7 @@
      <image>question.jpg</image>
      <choice id="1">
        <text>ករណីយកិច្ច</text>
-       <audio>L8P92_14.mp3</audio>
+       <audio>L8P92_13.mp3</audio>
      </choice>
      <choice id="2">
        <text>អាណាព្យាបាល</text>
@@ -7875,7 +7875,7 @@
 <correct>4</correct>
 <correct_answer>correct.mp3</correct_answer>
 <wrong_answer>wrong.mp3</wrong_answer>
-<next>L8P93Q1</next>
+<next>root</next>
 </unit>
 
 <!-- END LESSON 8 -->
