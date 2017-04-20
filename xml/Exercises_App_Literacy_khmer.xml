@@ -1363,10 +1363,10 @@
 <next>L1P20Q4</next>
 </unit>
 
-<unit id="L1P20Q4" style="M2">
-     <audio-text>ចូរចុចពាក្យដែលអ្នកបានឮ</audio-text>
-     <pre-audio>M2.mp3</pre-audio>
-     <audio>L1P20_12.mp3</audio>
+<unit id="L1P20Q4" style="M4">
+     <audio-text>ចូរផ្គុំពាក្យអោយក្លាយជាពាក្យមានន័យ</audio-text>
+     <pre-audio>M4.mp3</pre-audio>
+     <text>អត់</text>
      <image>question.jpg</image>
      <choice id="1">
        <text>ពុក</text>
@@ -1389,6 +1389,7 @@
 <wrong_answer>wrong.mp3</wrong_answer>
 <next>L1P20Q5</next>
 </unit>
+
 
 <unit id="L1P20Q5" style="M2">
      <audio-text>ចូរចុចពាក្យដែលអ្នកបានឮ</audio-text>
@@ -2148,7 +2149,7 @@
      <audio></audio>
      <image>L2.1P28.jpg</image>
      <choice id="1">
-       <text>ភាជន៏</text>
+       <text>ភាជន៍</text>
        <audio>L2P28_9.mp3</audio>
      </choice>
      <choice id="2">
@@ -2168,6 +2169,7 @@
 <wrong_answer>wrong.mp3</wrong_answer>
 <next>L2P28Q4</next>
 </unit>
+
 
 <unit id="L2P28Q4" style="M2">
      <audio-text>ចូរចុចពាក្យដែលអ្នកបានឮ</audio-text>
@@ -2210,7 +2212,7 @@
        <audio>L2P28_4.mp3</audio>
      </choice>
      <choice id="3">
-       <text>ភាជន៏</text>
+       <text>ភាជន៍</text>
        <audio>L2P28_9.mp3</audio>
      </choice>
      <choice id="4">
@@ -2222,6 +2224,7 @@
 <wrong_answer>wrong.mp3</wrong_answer>
 <next>L2P28Q6</next>
 </unit>
+
 
 <unit id="L2P28Q6" style="M2">
      <audio-text>ចូរចុចពាក្យដែលអ្នកបានឮ</audio-text>
@@ -2936,7 +2939,7 @@
        <audio>L3P36_7.mp3</audio>
      </choice>
      <choice id="3">
-       <text>សរសរ</text>
+       <text>សសរ</text>
        <audio>L3P36_8.mp3</audio>
      </choice>
      <choice id="4">
@@ -2948,6 +2951,7 @@
 <wrong_answer>wrong.mp3</wrong_answer>
 <next>L3P36Q3</next>
 </unit>
+
 
 <unit id="L3P36Q3" style="M3">
      <audio-text>ចូរជ្រើសរើសរូបភាពឱ្យត្រូវនឹងពាក្យ</audio-text>
@@ -3047,13 +3051,14 @@
      </choice>
      <choice id="4">
        <image>L3.4P36.jpg</image>
-       <audio>L3P36_8.mp3</audio>
+       <audio>L3P36_11.mp3</audio>
      </choice>
 <correct>1</correct>
 <correct_answer>correct.mp3</correct_answer>
 <wrong_answer>wrong.mp3</wrong_answer>
 <next>L3P37Q1</next>
 </unit>
+
 
 <unit id="L3P37Q1" style="M1">
      <audio-text>ចូរជ្រើសរើសពាក្យឱ្យត្រូវនឹងរូបភាព</audio-text>
@@ -3441,7 +3446,7 @@
        <audio>L3P39_9.mp3</audio>
      </choice>
      <choice id="2">
-       <text>ហ៊ឺហារ</text>
+       <text>ហ៊ឺហា</text>
        <audio>L3P39_10.mp3</audio>
      </choice>
      <choice id="3">
@@ -3476,7 +3481,7 @@
        <audio>L3P39_12.mp3</audio>
      </choice>
      <choice id="4">
-       <text>ហ៊ឺហារ</text>
+       <text>ហ៊ឺហា</text>
        <audio>L3P39_10.mp3</audio>
      </choice>
 <correct>3</correct>
@@ -3484,6 +3489,7 @@
 <wrong_answer>wrong.mp3</wrong_answer>
 <next>L3P39Q5</next>
 </unit>
+
 
 <unit id="L3P39Q5" style="M1">
      <audio-text>ចូរជ្រើសរើសពាក្យឱ្យត្រូវនឹងរូបភាព</audio-text>
@@ -3626,7 +3632,7 @@
      <image>L3.1P40.jpg</image>
      <choice id="1">
        <text>បាទ</text>
-       <audio>L3P40.mp3</audio>
+       <audio>L3P40_10.mp3</audio>
      </choice>
      <choice id="2">
        <text>កូន</text>
@@ -3645,6 +3651,7 @@
 <wrong_answer>wrong.mp3</wrong_answer>
 <next>L3P40Q5</next>
 </unit>
+
 
 <unit id="L3P40Q5" style="M2">
      <audio-text>ចូរចុចពាក្យដែលអ្នកបានឮ</audio-text>
@@ -4951,10 +4958,11 @@
 <next>L3P48Q6</next>
 </unit>
 
+
 <unit id="L3P48Q6" style="M2">
      <audio-text>ចូរចុចពាក្យដែលអ្នកបានឮ</audio-text>
      <pre-audio>M2.mp3</pre-audio>
-     <audio>L3P48_13.mp3</audio>
+     <audio>L3P48_14.mp3</audio>
      <image>question.jpg</image>
      <choice id="1">
        <text>ថែរក្សា</text>
@@ -4977,6 +4985,7 @@
 <wrong_answer>wrong.mp3</wrong_answer>
 <next>L4P52Q1</next>
 </unit>
+
 
 <!-- END LESSON 3 -->
 
@@ -5146,7 +5155,7 @@
      <audio-text>ចូរជ្រើសរើសពាក្យឱ្យត្រូវនឹងរូបភាព</audio-text>
      <pre-audio>M1.mp3</pre-audio>
      <audio></audio>
-     <image>L4.1P53.jpg</image>
+     <image>L4.3P53.jpg</image>
      <choice id="1">
        <text>យួរ</text>
        <audio>L4P53_1.mp3</audio>
@@ -5168,6 +5177,7 @@
 <wrong_answer>wrong.mp3</wrong_answer>
 <next>L4P53Q2</next>
 </unit>
+
 
 <unit id="L4P53Q2" style="M2">
      <audio-text>ចូរចុចពាក្យដែលអ្នកបានឮ</audio-text>
@@ -5359,7 +5369,7 @@
 <unit id="L4P54Q3" style="M3">
      <audio-text>ចូរជ្រើសរើសរូបភាពឱ្យត្រូវនឹងពាក្យ</audio-text>
      <pre-audio>M3.mp3</pre-audio>
-     <text>វ៉ាលីស</text>
+     <text>វ៉ាលិស</text>
      <choice id="1">
        <image>L4.1P54.jpg</image>
        <audio>L4P54_8.mp3</audio>
@@ -5381,6 +5391,7 @@
 <wrong_answer>wrong.mp3</wrong_answer>
 <next>L4P54Q4</next>
 </unit>
+
 
 <unit id="L4P54Q4" style="M1">
      <audio-text>ចូរជ្រើសរើសពាក្យឱ្យត្រូវនឹងរូបភាព</audio-text>
@@ -6245,11 +6256,11 @@
      <audio>L4P59_6.mp3</audio>
      <image>question.jpg</image>
      <choice id="1">
-       <text>ងើយ</text>
+       <text>ភ្ងើយ</text>
        <audio>L4P59_7.mp3</audio>
      </choice>
      <choice id="2">
-       <text>ជួរ</text>
+       <text>ភ្ជួរ</text>
        <audio>L4P59_6.mp3</audio>
      </choice>
      <choice id="3">
@@ -6265,6 +6276,7 @@
 <wrong_answer>wrong.mp3</wrong_answer>
 <next>L4P60Q1</next>
 </unit>
+
 
 <unit id="L4P60Q1" style="M1">
      <audio-text>ចូរជ្រើសរើសពាក្យឱ្យត្រូវនឹងរូបភាព</audio-text>
@@ -6380,7 +6392,7 @@
      <image>question.jpg</image>
      <choice id="1">
        <text>ម្ជូរ</text>
-       <audio>L4P60_6.mp3</audio>
+       <audio>L4P60_1.mp3</audio>
      </choice>
      <choice id="2">
        <text>ម្តាយ</text>
@@ -6391,7 +6403,7 @@
        <audio>L4P60_12.mp3</audio>
      </choice>
      <choice id="4">
-       <text>ម្នាស់</text>
+       <text>ម្ចាស់</text>
        <audio>L4P60_4.mp3</audio>
      </choice>
 <correct>2</correct>
@@ -6399,6 +6411,7 @@
 <wrong_answer>wrong.mp3</wrong_answer>
 <next>L4P60Q6</next>
 </unit>
+
 
 <unit id="L4P60Q6" style="M3">
      <audio-text>ចូរជ្រើសរើសរូបភាពឱ្យត្រូវនឹងពាក្យ</audio-text>
@@ -7621,7 +7634,7 @@
        <audio>L7P84_2.mp3</audio>
      </choice>
      <choice id="3">
-       <text>ប្រហែល</text>
+       <text>ប្រហែស</text>
        <audio>L7P84_9.mp3</audio>
      </choice>
      <choice id="4">
@@ -7633,6 +7646,7 @@
 <wrong_answer>wrong.mp3</wrong_answer>
 <next>L7P84Q4</next>
 </unit>
+
 
 <unit id="L7P84Q4" style="M2">
      <audio-text>ចូរចុចពាក្យដែលអ្នកបានឮ</audio-text>
@@ -7796,6 +7810,7 @@
 <wrong_answer>wrong.mp3</wrong_answer>
 <next>L8P92Q4</next>
 </unit>
+
 
 <unit id="L8P92Q4" style="M2">
      <audio-text>ចូរចុចពាក្យដែលអ្នកបានឮ</audio-text>
